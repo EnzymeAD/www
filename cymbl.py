@@ -52,7 +52,7 @@ def dox_get_resource(path):  # pragma: no cover
 
 @app.route('/rust', defaults={'path': ''})
 @app.route('/rust/<path:path>')
-def dox_get_resource(path):  # pragma: no cover
+def rust_get_resource(path):  # pragma: no cover
     mimetypes = {
         ".css": "text/css",
         ".html": "text/html",
