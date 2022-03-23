@@ -1,0 +1,14 @@
+.. _exhale_variable_GradientUtils_8h_1ab3835585e55b6018f8ef6fced7daea77:
+
+Variable customFwdCallHandlers
+==============================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: customFwdCallHandlers
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_variable_Utils_8h_1abd8dfe5fc9ac51a32eccd2c675dcb953:
+
+Variable EnzymePrintPerf
+========================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: EnzymePrintPerf
+   :project: Enzyme

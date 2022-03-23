@@ -1,0 +1,43 @@
+.. _exhale_class_classGradientUtils:
+
+Class GradientUtils
+===================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structGradientUtils_1_1Rematerializer`
+- :ref:`exhale_struct_structGradientUtils_1_1ShadowRematerializer`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public CacheUtility`` (:ref:`exhale_class_classCacheUtility`)
+
+
+Derived Type
+************
+
+- ``public DiffeGradientUtils`` (:ref:`exhale_class_classDiffeGradientUtils`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: GradientUtils
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

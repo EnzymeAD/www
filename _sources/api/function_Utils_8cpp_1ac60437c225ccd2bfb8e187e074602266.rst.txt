@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8cpp_1ac60437c225ccd2bfb8e187e074602266:
+
+Function mayExecuteAfter(llvm::SmallVectorImpl<llvm::Instruction \*>&, llvm::Instruction \*, const llvm::SmallPtrSetImpl<Instruction \*>&, const llvm::Loop \*)
+===============================================================================================================================================================
+
+- Defined in :ref:`file_Utils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: mayExecuteAfter(llvm::SmallVectorImpl<llvm::Instruction *>&, llvm::Instruction *, const llvm::SmallPtrSetImpl<Instruction *>&, const llvm::Loop *)
+   :project: Enzyme

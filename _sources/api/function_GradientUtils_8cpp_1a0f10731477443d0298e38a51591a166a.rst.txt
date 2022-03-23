@@ -1,0 +1,14 @@
+.. _exhale_function_GradientUtils_8cpp_1a0f10731477443d0298e38a51591a166a:
+
+Function EnzymeLoopInvariantCache
+=================================
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeLoopInvariantCache("enzyme-loop-invariant-cache", cl::init(true), cl::Hidden, cl::desc("Attempt to hoist cache outside of loop"))
+   :project: Enzyme

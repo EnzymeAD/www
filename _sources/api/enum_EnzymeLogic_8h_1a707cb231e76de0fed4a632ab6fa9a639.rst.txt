@@ -1,0 +1,14 @@
+.. _exhale_enum_EnzymeLogic_8h_1a707cb231e76de0fed4a632ab6fa9a639:
+
+Enum CacheType
+==============
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: CacheType
+   :project: Enzyme

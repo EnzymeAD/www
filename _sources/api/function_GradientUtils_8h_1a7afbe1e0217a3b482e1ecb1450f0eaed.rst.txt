@@ -1,0 +1,14 @@
+.. _exhale_function_GradientUtils_8h_1a7afbe1e0217a3b482e1ecb1450f0eaed:
+
+Function SubTransferHelper(GradientUtils \*, DerivativeMode, Type \*, Intrinsic::ID, unsigned, unsigned, unsigned, bool, Value \*, bool, Value \*, Value \*, Value \*, llvm::CallInst \*, bool, bool, bool)
+===========================================================================================================================================================================================================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: SubTransferHelper(GradientUtils *, DerivativeMode, Type *, Intrinsic::ID, unsigned, unsigned, unsigned, bool, Value *, bool, Value *, Value *, Value *, llvm::CallInst *, bool, bool, bool)
+   :project: Enzyme

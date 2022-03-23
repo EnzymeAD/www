@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8h_1aa8c601ce7ea8062c299dd39ce8ee2347:
+
+Function getExitBlocks
+======================
+
+- Defined in :ref:`file_FunctionUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getExitBlocks(const llvm::Loop *, llvm::SmallPtrSetImpl<llvm::BasicBlock *>&)
+   :project: Enzyme

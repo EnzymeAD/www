@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1aa44395e6ba7a0e228ba08174a81b307f:
+
+Template Function dumpSet
+=========================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: dumpSet(const llvm::SmallPtrSetImpl<T *>&)
+   :project: Enzyme

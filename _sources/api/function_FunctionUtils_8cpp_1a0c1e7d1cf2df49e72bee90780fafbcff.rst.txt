@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a0c1e7d1cf2df49e72bee90780fafbcff:
+
+Function couldFunctionArgumentCapture(llvm::CallInst \*, llvm::Value \*)
+========================================================================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: couldFunctionArgumentCapture(llvm::CallInst *, llvm::Value *)
+   :project: Enzyme

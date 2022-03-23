@@ -1,0 +1,82 @@
+
+.. _file_DifferentialUseAnalysis.h:
+
+File DifferentialUseAnalysis.h
+==============================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``DifferentialUseAnalysis.h``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_DifferentialUseAnalysis.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``GradientUtils.h`` (:ref:`file_GradientUtils.h`)
+
+- ``deque``
+
+- ``map``
+
+- ``set``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_AdjointGenerator.h`
+
+- :ref:`file_GradientUtils.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structNode`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1a6ac621a6b66a84b4382700dc68fae701`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1ab9dca260d56d9614fe97c3f4c8d9b632`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1a561030bfd21f03363df912867905fa9c`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1a5d5bb734ecb4c6ed3a4efddd0f90a3d6`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1a24bc29a80c110f1e6dc97d0cf96742b3`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1a37753244262afe54893222c1b85b03f4`
+
+- :ref:`exhale_function_DifferentialUseAnalysis_8h_1af948c7303f6bccae808fb77542888cea`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_DifferentialUseAnalysis_8h_1ae9dbbf3b8897c7a657c64668d0966166`
+
+- :ref:`exhale_typedef_DifferentialUseAnalysis_8h_1aa528f29fdd193694820f11dc70f13d64`
+

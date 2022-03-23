@@ -1,0 +1,14 @@
+.. _exhale_typedef_DifferentialUseAnalysis_8h_1ae9dbbf3b8897c7a657c64668d0966166:
+
+Typedef Graph
+=============
+
+- Defined in :ref:`file_DifferentialUseAnalysis.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: Graph
+   :project: Enzyme

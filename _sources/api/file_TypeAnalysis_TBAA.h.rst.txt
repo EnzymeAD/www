@@ -1,0 +1,109 @@
+
+.. _file_TypeAnalysis_TBAA.h:
+
+File TBAA.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_TypeAnalysis>` (``TypeAnalysis``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``TypeAnalysis/TBAA.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_TypeAnalysis_TBAA.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseType.h`` (:ref:`file_TypeAnalysis_BaseType.h`)
+
+- ``ConcreteType.h`` (:ref:`file_TypeAnalysis_ConcreteType.h`)
+
+- ``TypeTree.h`` (:ref:`file_TypeAnalysis_TypeTree.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_ActivityAnalysis.cpp`
+
+- :ref:`file_AdjointGenerator.h`
+
+- :ref:`file_GradientUtils.cpp`
+
+- :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+- :ref:`file_Utils.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classTBAANodeImpl`
+
+- :ref:`exhale_class_classTBAAStructTagNodeImpl`
+
+- :ref:`exhale_class_classTBAAStructTypeNode`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_TBAA_8h_1a8d53f2631eef08b435600317867bd2da`
+
+- :ref:`exhale_function_TBAA_8h_1a66b20112a6738d5f07822a8fe992aad4`
+
+- :ref:`exhale_function_TBAA_8h_1a300b9644a2901b17f577305b92fe848c`
+
+- :ref:`exhale_function_TBAA_8h_1a4b94e695b8f423ac3a4ed6b810791b79`
+
+- :ref:`exhale_function_TBAA_8h_1af57c107a53cbdcf68ebee86aa45665b1`
+
+- :ref:`exhale_function_TBAA_8h_1a5e19d69f8c65d343b518e66bef56db58`
+
+- :ref:`exhale_function_TBAA_8h_1ab37576cdea21e420154e1efbc57f2218`
+
+- :ref:`exhale_function_TBAA_8h_1aaf7bf6a4b01d27cdab0bc430008f39c1`
+
+- :ref:`exhale_function_TBAA_8h_1a2d9b447572fa5028facc0c971890db11`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_TBAA_8h_1a07c2f7d6997f3accaa109dce694cc061`
+
+- :ref:`exhale_typedef_TBAA_8h_1ab9f563eade735ebc4bdc6944602c3b05`
+
+- :ref:`exhale_typedef_TBAA_8h_1a8744272b5213661a92f57b6ae1b5c2d0`
+
+- :ref:`exhale_typedef_TBAA_8h_1a2995d0d6901107014803e186a5663735`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_TBAA_8h_1a81388b0fe345fc8d0c25067a6681d7fa`
+

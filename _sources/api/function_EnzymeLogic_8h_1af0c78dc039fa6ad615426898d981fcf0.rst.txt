@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8h_1af0c78dc039fa6ad615426898d981fcf0:
+
+Function operator<<(llvm::raw_ostream&, AugmentedStruct)
+========================================================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator<<(llvm::raw_ostream&, AugmentedStruct)
+   :project: Enzyme

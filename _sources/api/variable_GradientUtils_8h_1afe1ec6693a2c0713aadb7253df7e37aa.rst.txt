@@ -1,0 +1,14 @@
+.. _exhale_variable_GradientUtils_8h_1afe1ec6693a2c0713aadb7253df7e37aa:
+
+Variable EnzymeFreeInternalAllocations
+======================================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: EnzymeFreeInternalAllocations
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_DifferentialUseAnalysis_8h_1ab9dca260d56d9614fe97c3f4c8d9b632:
+
+Function cmpLoopNest
+====================
+
+- Defined in :ref:`file_DifferentialUseAnalysis.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: cmpLoopNest(Loop *, Loop *)
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a998bfeb839f833edd52ef614843ddff2:
+
+Function getOrInsertExponentialAllocator(llvm::Module&, bool)
+=============================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getOrInsertExponentialAllocator(llvm::Module&, bool)
+   :project: Enzyme

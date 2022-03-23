@@ -1,0 +1,14 @@
+.. _exhale_function_LibraryFuncs_8h_1aaf85e263c45010aefadb4ca2bb6a92ba:
+
+Function isAllocationFunction
+=============================
+
+- Defined in :ref:`file_LibraryFuncs.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: isAllocationFunction(const llvm::Function&, const llvm::TargetLibraryInfo&)
+   :project: Enzyme

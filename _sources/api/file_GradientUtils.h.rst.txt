@@ -1,0 +1,156 @@
+
+.. _file_GradientUtils.h:
+
+File GradientUtils.h
+====================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``GradientUtils.h``)
+--------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_GradientUtils.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ActivityAnalysis.h`` (:ref:`file_ActivityAnalysis.h`)
+
+- ``CacheUtility.h`` (:ref:`file_CacheUtility.h`)
+
+- ``EnzymeLogic.h`` (:ref:`file_EnzymeLogic.h`)
+
+- ``LibraryFuncs.h`` (:ref:`file_LibraryFuncs.h`)
+
+- ``MustExitScalarEvolution.h`` (:ref:`file_MustExitScalarEvolution.h`)
+
+- ``SCEV/ScalarEvolution.h``
+
+- ``SCEV/ScalarEvolutionExpander.h``
+
+- ``Utils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``algorithm``
+
+- ``deque``
+
+- ``llvm-c/Core.h``
+
+- ``llvm/ADT/SmallVector.h``
+
+- ``llvm/ADT/Triple.h``
+
+- ``llvm/Analysis/AliasAnalysis.h``
+
+- ``llvm/Analysis/AssumptionCache.h``
+
+- ``llvm/Analysis/LoopInfo.h``
+
+- ``llvm/Analysis/PostDominators.h``
+
+- ``llvm/Analysis/ValueTracking.h``
+
+- ``llvm/Config/llvm-config.h``
+
+- ``llvm/IR/BasicBlock.h``
+
+- ``llvm/IR/DebugInfoMetadata.h``
+
+- ``llvm/IR/Dominators.h``
+
+- ``llvm/IR/IRBuilder.h``
+
+- ``llvm/IR/Instructions.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/IR/Value.h``
+
+- ``llvm/Support/Casting.h``
+
+- ``llvm/Support/ErrorHandling.h``
+
+- ``llvm/Transforms/Utils/BasicBlockUtils.h``
+
+- ``llvm/Transforms/Utils/ValueMapper.h``
+
+- ``map``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_DifferentialUseAnalysis.h`
+
+- :ref:`file_AdjointGenerator.h`
+
+- :ref:`file_Enzyme.cpp`
+
+- :ref:`file_EnzymeLogic.cpp`
+
+- :ref:`file_FunctionUtils.cpp`
+
+- :ref:`file_GradientUtils.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structGradientUtils_1_1Rematerializer`
+
+- :ref:`exhale_struct_structGradientUtils_1_1ShadowRematerializer`
+
+- :ref:`exhale_struct_structInvertedPointerConfig`
+
+- :ref:`exhale_class_classDiffeGradientUtils`
+
+- :ref:`exhale_class_classGradientUtils`
+
+- :ref:`exhale_class_classInvertedPointerVH`
+
+- :ref:`exhale_class_classValueMapConfig`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_GradientUtils_8h_1add0d3d3a0591ed3a53174f5e1e109204`
+
+- :ref:`exhale_function_GradientUtils_8h_1a7afbe1e0217a3b482e1ecb1450f0eaed`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_GradientUtils_8h_1a4784bbcec3edb0ca94773bf9e64b504d`
+
+- :ref:`exhale_variable_GradientUtils_8h_1ab3835585e55b6018f8ef6fced7daea77`
+
+- :ref:`exhale_variable_GradientUtils_8h_1afe1ec6693a2c0713aadb7253df7e37aa`
+
+- :ref:`exhale_variable_GradientUtils_8h_1a027f32d1062ffc4615772d19595023dc`
+
+- :ref:`exhale_variable_GradientUtils_8h_1a060c3e46115666483f4a512e80a62000`
+
+- :ref:`exhale_variable_GradientUtils_8h_1ab84135b40ee99fc3cd59679b965a0fa5`
+
+- :ref:`exhale_variable_GradientUtils_8h_1a4f97d04e0de6715fb9c94337d0965a64`
+

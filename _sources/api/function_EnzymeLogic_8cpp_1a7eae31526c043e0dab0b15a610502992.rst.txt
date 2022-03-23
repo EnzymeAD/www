@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1a7eae31526c043e0dab0b15a610502992:
+
+Function looseTypeAnalysis
+==========================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: looseTypeAnalysis("enzyme-loose-types", cl::init(false), cl::Hidden, cl::desc("Allow looser use of types"))
+   :project: Enzyme

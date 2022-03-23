@@ -1,0 +1,129 @@
+
+.. _file_Enzyme.cpp:
+
+File Enzyme.cpp
+===============
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``Enzyme.cpp``)
+---------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_Enzyme.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ActivityAnalysis.h`` (:ref:`file_ActivityAnalysis.h`)
+
+- ``CApi.h``
+
+- ``EnzymeLogic.h`` (:ref:`file_EnzymeLogic.h`)
+
+- ``GradientUtils.h`` (:ref:`file_GradientUtils.h`)
+
+- ``SCEV/ScalarEvolution.h``
+
+- ``SCEV/ScalarEvolutionExpander.h``
+
+- ``Utils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``llvm-c/Core.h``
+
+- ``llvm-c/DataTypes.h``
+
+- ``llvm-c/Initialization.h``
+
+- ``llvm-c/Target.h``
+
+- ``llvm-c/Types.h``
+
+- ``llvm/ADT/ArrayRef.h``
+
+- ``llvm/ADT/MapVector.h``
+
+- ``llvm/ADT/SetVector.h``
+
+- ``llvm/ADT/SmallVector.h``
+
+- ``llvm/Analysis/BasicAliasAnalysis.h``
+
+- ``llvm/Analysis/GlobalsModRef.h``
+
+- ``llvm/Analysis/InlineCost.h``
+
+- ``llvm/Analysis/ScalarEvolution.h``
+
+- ``llvm/Analysis/TargetLibraryInfo.h``
+
+- ``llvm/Config/llvm-config.h``
+
+- ``llvm/IR/BasicBlock.h``
+
+- ``llvm/IR/Constants.h``
+
+- ``llvm/IR/Function.h``
+
+- ``llvm/IR/IRBuilder.h``
+
+- ``llvm/IR/InstrTypes.h``
+
+- ``llvm/IR/Instructions.h``
+
+- ``llvm/IR/LegacyPassManager.h``
+
+- ``llvm/IR/MDBuilder.h``
+
+- ``llvm/IR/Metadata.h``
+
+- ``llvm/Passes/PassBuilder.h``
+
+- ``llvm/Support/Debug.h``
+
+- ``llvm/Transforms/Scalar.h``
+
+- ``llvm/Transforms/Utils.h``
+
+- ``llvm/Transforms/Utils/Cloning.h``
+
+- ``stddef.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_Enzyme_8cpp_1a5887ddd44e75da570d176c8e91079a51`
+
+- :ref:`exhale_function_Enzyme_8cpp_1a7b7f1611ed276cd36d66bac8da8a9c9b`
+
+- :ref:`exhale_function_Enzyme_8cpp_1a11f9571d24cc2241683717daa3692d6d`
+
+- :ref:`exhale_function_Enzyme_8cpp_1a3ae815d62b8bf27da00be8c72a2bf1a7`
+
+- :ref:`exhale_function_Enzyme_8cpp_1a22fccbf8ed04ebfa39a91c723674dbf4`
+
+- :ref:`exhale_function_Enzyme_8cpp_1a2abcc06ce985d89f703954d110f60c0b`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_Enzyme_8cpp_1ad78e062f62e0d6e453941fb4ca843e4d`
+

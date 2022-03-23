@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1ab274adfc3ea5ecc518f809aa41a70fa4:
+
+Template Function min
+=====================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: min(T, T)
+   :project: Enzyme

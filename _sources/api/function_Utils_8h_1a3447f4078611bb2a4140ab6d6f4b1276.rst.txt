@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a3447f4078611bb2a4140ab6d6f4b1276:
+
+Function overwritesToMemoryReadBy(llvm::AAResults&, llvm::ScalarEvolution&, llvm::LoopInfo&, llvm::DominatorTree&, llvm::Instruction \*, llvm::Instruction \*, llvm::Loop \*)
+=============================================================================================================================================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: overwritesToMemoryReadBy(llvm::AAResults&, llvm::ScalarEvolution&, llvm::LoopInfo&, llvm::DominatorTree&, llvm::Instruction *, llvm::Instruction *, llvm::Loop *)
+   :project: Enzyme

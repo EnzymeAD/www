@@ -1,0 +1,14 @@
+.. _exhale_variable_EnzymeLogic_8h_1aa48dac54f03271a570fcfda0c259d059:
+
+Variable looseTypeAnalysis
+==========================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: looseTypeAnalysis
+   :project: Enzyme

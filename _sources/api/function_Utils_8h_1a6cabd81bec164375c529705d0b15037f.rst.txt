@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a6cabd81bec164375c529705d0b15037f:
+
+Function hasMetadata(const llvm::Instruction \*, llvm::StringRef)
+=================================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: hasMetadata(const llvm::Instruction *, llvm::StringRef)
+   :project: Enzyme

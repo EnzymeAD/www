@@ -1,0 +1,69 @@
+
+.. _file_TypeAnalysis_ConcreteType.h:
+
+File ConcreteType.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir_TypeAnalysis>` (``TypeAnalysis``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``TypeAnalysis/ConcreteType.h``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_TypeAnalysis_ConcreteType.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``BaseType.h`` (:ref:`file_TypeAnalysis_BaseType.h`)
+
+- ``llvm/IR/InstrTypes.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/Support/ErrorHandling.h``
+
+- ``string``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_TypeAnalysis_TypeTree.h`
+
+- :ref:`file_Utils.h`
+
+- :ref:`file_TypeAnalysis_TBAA.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classConcreteType`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_ConcreteType_8h_1a5aea8157871bae9d51237eef21094458`
+

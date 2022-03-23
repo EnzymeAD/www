@@ -1,0 +1,123 @@
+
+.. _file_EnzymeLogic.h:
+
+File EnzymeLogic.h
+==================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``EnzymeLogic.h``)
+------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_EnzymeLogic.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``ActivityAnalysis.h`` (:ref:`file_ActivityAnalysis.h`)
+
+- ``FunctionUtils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``SCEV/ScalarEvolutionExpander.h``
+
+- ``SCEV/TargetLibraryInfo.h``
+
+- ``TypeAnalysis/TypeAnalysis.h`` (:ref:`file_TypeAnalysis_TypeAnalysis.h`)
+
+- ``Utils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``llvm/Analysis/AliasAnalysis.h``
+
+- ``llvm/IR/Function.h``
+
+- ``llvm/IR/Module.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/Support/CommandLine.h``
+
+- ``set``
+
+- ``utility``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_GradientUtils.h`
+
+- :ref:`file_AdjointGenerator.h`
+
+- :ref:`file_Enzyme.cpp`
+
+- :ref:`file_FunctionUtils.cpp`
+
+- :ref:`file_GradientUtils.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structReverseCacheKey`
+
+- :ref:`exhale_class_classAugmentedReturn`
+
+- :ref:`exhale_class_classEnzymeLogic`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_EnzymeLogic_8h_1acca9062403f914d0fa1fa795c3dcee9a`
+
+- :ref:`exhale_enum_EnzymeLogic_8h_1a707cb231e76de0fed4a632ab6fa9a639`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_EnzymeLogic_8h_1af78c7c28e150e2ba91bfa9d09dbc7dc9`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1afe07b8c5a084ff0fa8fb4e71c3bb0932`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1aa7b24e9c99b58904e2868b2e6754a23e`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1af0c78dc039fa6ad615426898d981fcf0`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1a9a6176ed8c07687019736d6dd69be184`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1a71bf0c134e46a61144dd5a5e0e1ee532`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1a766e45357c26eee57fbb27c8b1286428`
+
+- :ref:`exhale_function_EnzymeLogic_8h_1a7bc778d7617ecd5f05182ec6beef32f8`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_EnzymeLogic_8h_1a1d050b2c6bf0edd97b7b125c211c3c8d`
+
+- :ref:`exhale_variable_EnzymeLogic_8h_1aa48dac54f03271a570fcfda0c259d059`
+
+- :ref:`exhale_variable_EnzymeLogic_8h_1ab2e1bef73e684dc65fe8504ae4022a07`
+

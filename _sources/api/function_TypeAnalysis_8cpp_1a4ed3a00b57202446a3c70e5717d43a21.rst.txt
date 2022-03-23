@@ -1,0 +1,14 @@
+.. _exhale_function_TypeAnalysis_8cpp_1a4ed3a00b57202446a3c70e5717d43a21:
+
+Template Function analyzeFuncTypes
+==================================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: analyzeFuncTypes(RT(*)(Args...), CallInst&, TypeAnalyzer&)
+   :project: Enzyme

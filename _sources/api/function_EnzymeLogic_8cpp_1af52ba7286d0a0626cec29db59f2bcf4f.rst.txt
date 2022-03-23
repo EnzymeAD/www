@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1af52ba7286d0a0626cec29db59f2bcf4f:
+
+Function calculateUnusedValuesInFunction
+========================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: calculateUnusedValuesInFunction(Function&, llvm::SmallPtrSetImpl<const Value *>&, llvm::SmallPtrSetImpl<const Instruction *>&, bool, DerivativeMode, TypeResults&, GradientUtils *, TargetLibraryInfo&, const std::vector<DIFFE_TYPE>&, const llvm::SmallPtrSetImpl<BasicBlock *>&)
+   :project: Enzyme

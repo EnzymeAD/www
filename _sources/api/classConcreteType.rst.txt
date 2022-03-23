@@ -1,0 +1,17 @@
+.. _exhale_class_classConcreteType:
+
+Class ConcreteType
+==================
+
+- Defined in :ref:`file_TypeAnalysis_ConcreteType.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ConcreteType
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a516b00de68cf2ba43d78311a6b56f3c7:
+
+Template Function EmitWarning(llvm::StringRef, const llvm::Function \*, const Args&...)
+=======================================================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EmitWarning(llvm::StringRef, const llvm::Function *, const Args&...)
+   :project: Enzyme

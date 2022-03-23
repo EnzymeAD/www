@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1a1734a186611b2bdd324954fd5dcd3c0c:
+
+Function getDefaultFunctionTypeForAugmentation(FunctionType \*, bool, DIFFE_TYPE)
+=================================================================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getDefaultFunctionTypeForAugmentation(FunctionType *, bool, DIFFE_TYPE)
+   :project: Enzyme

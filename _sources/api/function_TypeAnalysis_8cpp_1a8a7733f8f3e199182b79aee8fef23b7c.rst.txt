@@ -1,0 +1,14 @@
+.. _exhale_function_TypeAnalysis_8cpp_1a8a7733f8f3e199182b79aee8fef23b7c:
+
+Function getConstantAnalysis
+============================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getConstantAnalysis(Constant *, TypeAnalyzer&, std::map<llvm::Value *, TypeTree>&)
+   :project: Enzyme

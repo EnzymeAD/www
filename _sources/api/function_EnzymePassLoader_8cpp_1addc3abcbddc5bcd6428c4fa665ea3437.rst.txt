@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymePassLoader_8cpp_1addc3abcbddc5bcd6428c4fa665ea3437:
+
+Function loadPass
+=================
+
+- Defined in :ref:`file_Clang_EnzymePassLoader.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: loadPass(const PassManagerBuilder&, legacy::PassManagerBase&)
+   :project: Enzyme

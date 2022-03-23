@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1ad5829f71cfd8945568749a8250a00bc6:
+
+Function EnzymeSelectOpt
+========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeSelectOpt("enzyme-select-opt", cl::init(true), cl::Hidden, cl::desc("Run Enzyme select optimization"))
+   :project: Enzyme

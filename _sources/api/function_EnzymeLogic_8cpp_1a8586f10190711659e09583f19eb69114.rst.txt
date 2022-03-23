@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1a8586f10190711659e09583f19eb69114:
+
+Function nonmarkedglobals_inactiveloads
+=======================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: nonmarkedglobals_inactiveloads("enzyme_nonmarkedglobals_inactiveloads", cl::init(true), cl::Hidden, cl::desc("Consider loads of nonmarked globals to be inactive"))
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8h_1ac574fb0576e4c6377f0fd00fbc4538a0:
+
+Function calculateUnusedStores
+==============================
+
+- Defined in :ref:`file_FunctionUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: calculateUnusedStores(const llvm::Function&, llvm::SmallPtrSetImpl<const llvm::Instruction *>&, std::function<bool(const llvm::Instruction *)>)
+   :project: Enzyme

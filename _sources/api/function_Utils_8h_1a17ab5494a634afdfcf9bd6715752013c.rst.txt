@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a17ab5494a634afdfcf9bd6715752013c:
+
+Function allUnsyncdPredecessorsOf
+=================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: allUnsyncdPredecessorsOf(llvm::Instruction *, std::function<bool(llvm::Instruction *)>, std::function<void()>)
+   :project: Enzyme

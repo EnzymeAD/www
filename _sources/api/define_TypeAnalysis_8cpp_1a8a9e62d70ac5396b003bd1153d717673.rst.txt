@@ -1,0 +1,14 @@
+.. _exhale_define_TypeAnalysis_8cpp_1a8a9e62d70ac5396b003bd1153d717673:
+
+Define CONSIDER2
+================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CONSIDER2
+   :project: Enzyme

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="13px"
+   height="13px"
+   viewBox="0 0 13 13"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="arrow-right-with-tail.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="95.733942"
+     inkscape:cx="5.5361765"
+     inkscape:cy="3.864878"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="01_Home" />
+  <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title2">Page 1</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <defs
+     id="defs6" />
+  <g
+     id="desktop"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd">
+    <g
+       id="01_Home"
+       transform="translate(-1202.000000, -1930.000000)"
+       fill="#EE4C2C">
+      <g
+         id="community"
+         transform="translate(-18.000000, 1075.000000)"
+         style="fill:#0094e8;fill-opacity:1">
+        <g
+           id="newsletter"
+           transform="translate(740.000000, 843.000000)"
+           style="fill:#0094e8;fill-opacity:1">
+          <g
+             id="Page-1"
+             transform="translate(480.000000, 12.000000)"
+             style="fill:#0094e8;fill-opacity:1">
+            <polygon
+               id="Fill-1"
+               points="4.87266 1.28206 8.83939333 5.24792667 8.83939333 2.68346 6.15532667 0.00026"
+               style="fill:#0094e8;fill-opacity:1" />
+            <polygon
+               id="Fill-2"
+               points="8.83896 5.24836 -0.000173333333 5.24836 -0.000173333333 7.06142667 8.83896 7.06142667 4.87222667 11.02816 6.15489333 12.3108267 12.3108267 6.15489333 11.4034267 5.24836"
+               style="fill:#0094e8;fill-opacity:1" />
+          </g>
+        </g>
+      </g>
+      <path
+         style="fill:#0094e8;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+         d="m 1214.3108,1936.1549 -6.1555,-6.1546 -1.2826,1.2818 3.9663,3.9663 1.4281,1.0627 z"
+         id="path1040" />
+    </g>
+  </g>
+  <metadata
+     id="metadata834">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Page 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,14 @@
+.. _exhale_function_DifferentialUseAnalysis_8h_1a561030bfd21f03363df912867905fa9c:
+
+Function dump
+=============
+
+- Defined in :ref:`file_DifferentialUseAnalysis.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: dump(Graph&)
+   :project: Enzyme

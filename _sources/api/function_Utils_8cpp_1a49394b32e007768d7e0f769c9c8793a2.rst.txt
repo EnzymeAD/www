@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8cpp_1a49394b32e007768d7e0f769c9c8793a2:
+
+Function getOrInsertOpFloatSum(llvm::Module&, llvm::Type \*, ConcreteType, llvm::Type \*, IRBuilder<>&)
+=======================================================================================================
+
+- Defined in :ref:`file_Utils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getOrInsertOpFloatSum(llvm::Module&, llvm::Type *, ConcreteType, llvm::Type *, IRBuilder<>&)
+   :project: Enzyme

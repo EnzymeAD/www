@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a6c0e6b902ee5c0d2eb11fbc4d0dd1ee3:
+
+Function EnzymeInline
+=====================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeInline("enzyme-inline", cl::init(false), cl::Hidden, cl::desc("Force inlining of autodiff"))
+   :project: Enzyme

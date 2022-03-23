@@ -1,0 +1,14 @@
+.. _exhale_function_TypeTree_8cpp_1aeaf85ba305c97dcffbae44ec37dee3a4:
+
+Function MaxTypeOffset
+======================
+
+- Defined in :ref:`file_TypeAnalysis_TypeTree.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: MaxTypeOffset("enzyme-max-type-offset", cl::init(500), cl::Hidden, cl::desc("Maximum type tree offset"))
+   :project: Enzyme

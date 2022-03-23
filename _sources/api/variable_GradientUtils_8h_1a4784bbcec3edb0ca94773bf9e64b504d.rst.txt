@@ -1,0 +1,14 @@
+.. _exhale_variable_GradientUtils_8h_1a4784bbcec3edb0ca94773bf9e64b504d:
+
+Variable customCallHandlers
+===========================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: customCallHandlers
+   :project: Enzyme

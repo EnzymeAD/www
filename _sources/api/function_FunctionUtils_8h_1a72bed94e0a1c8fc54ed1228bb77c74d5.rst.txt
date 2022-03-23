@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8h_1a72bed94e0a1c8fc54ed1228bb77c74d5:
+
+Function getLatches
+===================
+
+- Defined in :ref:`file_FunctionUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getLatches(const llvm::Loop *, const llvm::SmallPtrSetImpl<llvm::BasicBlock *>&)
+   :project: Enzyme

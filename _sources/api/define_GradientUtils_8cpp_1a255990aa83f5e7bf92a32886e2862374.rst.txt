@@ -1,0 +1,14 @@
+.. _exhale_define_GradientUtils_8cpp_1a255990aa83f5e7bf92a32886e2862374:
+
+Define getOp
+============
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: getOp
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_enum_Utils_8h_1ab0df38968e4f03a3f1f6d6df0f31f45a:
+
+Enum ErrorType
+==============
+
+- Defined in :ref:`file_Utils.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: ErrorType
+   :project: Enzyme

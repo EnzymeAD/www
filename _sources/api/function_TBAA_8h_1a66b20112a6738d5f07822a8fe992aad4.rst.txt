@@ -1,0 +1,14 @@
+.. _exhale_function_TBAA_8h_1a66b20112a6738d5f07822a8fe992aad4:
+
+Function getAccessNameTBAA(const MDNode \*, const std::set<std::string>&)
+=========================================================================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getAccessNameTBAA(const MDNode *, const std::set<std::string>&)
+   :project: Enzyme

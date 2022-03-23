@@ -1,0 +1,14 @@
+.. _exhale_function_BaseType_8h_1a306a5d981978efa0b56ee6a049749b2a:
+
+Function to_string(BaseType)
+============================
+
+- Defined in :ref:`file_TypeAnalysis_BaseType.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: to_string(BaseType)
+   :project: Enzyme

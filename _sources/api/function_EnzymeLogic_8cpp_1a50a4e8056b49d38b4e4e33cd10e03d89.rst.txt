@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1a50a4e8056b49d38b4e4e33cd10e03d89:
+
+Function getDefaultFunctionTypeForGradient(FunctionType \*, DIFFE_TYPE)
+=======================================================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getDefaultFunctionTypeForGradient(FunctionType *, DIFFE_TYPE)
+   :project: Enzyme

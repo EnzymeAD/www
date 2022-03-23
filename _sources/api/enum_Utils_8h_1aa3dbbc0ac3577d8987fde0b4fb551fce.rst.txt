@@ -1,0 +1,14 @@
+.. _exhale_enum_Utils_8h_1aa3dbbc0ac3577d8987fde0b4fb551fce:
+
+Enum MPI_CallType
+=================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: MPI_CallType
+   :project: Enzyme

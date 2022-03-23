@@ -1,0 +1,14 @@
+.. _exhale_variable_ActivityAnalysis_8cpp_1a6e90992cfb2e8565168bf4a01cb6c9e0:
+
+Variable KnownInactiveFunctionsStartingWith
+===========================================
+
+- Defined in :ref:`file_ActivityAnalysis.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: KnownInactiveFunctionsStartingWith
+   :project: Enzyme

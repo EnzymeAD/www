@@ -1,0 +1,79 @@
+
+.. _file_AdjointGenerator.h:
+
+File AdjointGenerator.h
+=======================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``AdjointGenerator.h``)
+-----------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_AdjointGenerator.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``DifferentialUseAnalysis.h`` (:ref:`file_DifferentialUseAnalysis.h`)
+
+- ``EnzymeLogic.h`` (:ref:`file_EnzymeLogic.h`)
+
+- ``FunctionUtils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``GradientUtils.h`` (:ref:`file_GradientUtils.h`)
+
+- ``LibraryFuncs.h`` (:ref:`file_LibraryFuncs.h`)
+
+- ``TypeAnalysis/TBAA.h`` (:ref:`file_TypeAnalysis_TBAA.h`)
+
+- ``llvm/ADT/ArrayRef.h``
+
+- ``llvm/ADT/SmallVector.h``
+
+- ``llvm/Analysis/ValueTracking.h``
+
+- ``llvm/IR/Constants.h``
+
+- ``llvm/IR/DerivedTypes.h``
+
+- ``llvm/IR/Value.h``
+
+- ``llvm/Transforms/Utils/BasicBlockUtils.h``
+
+- ``llvm/Transforms/Utils/Cloning.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_EnzymeLogic.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classAdjointGenerator`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_AdjointGenerator_8h_1ad78e062f62e0d6e453941fb4ca843e4d`
+

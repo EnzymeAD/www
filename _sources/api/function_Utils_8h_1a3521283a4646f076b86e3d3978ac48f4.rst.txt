@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a3521283a4646f076b86e3d3978ac48f4:
+
+Function IntToFloatTy
+=====================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: IntToFloatTy(llvm::Type *)
+   :project: Enzyme

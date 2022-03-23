@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8h_1ac0228d6069f06fe4b501b79bf6e334c7:
+
+Function getGuaranteedUnreachable
+=================================
+
+- Defined in :ref:`file_FunctionUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getGuaranteedUnreachable(llvm::Function *)
+   :project: Enzyme

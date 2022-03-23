@@ -1,0 +1,14 @@
+.. _exhale_enum_EnzymeLogic_8h_1acca9062403f914d0fa1fa795c3dcee9a:
+
+Enum AugmentedStruct
+====================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: AugmentedStruct
+   :project: Enzyme

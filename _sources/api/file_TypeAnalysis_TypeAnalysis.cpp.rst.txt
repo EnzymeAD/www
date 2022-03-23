@@ -1,0 +1,161 @@
+
+.. _file_TypeAnalysis_TypeAnalysis.cpp:
+
+File TypeAnalysis.cpp
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir_TypeAnalysis>` (``TypeAnalysis``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``TypeAnalysis/TypeAnalysis.cpp``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_TypeAnalysis_TypeAnalysis.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``../FunctionUtils.h``
+
+- ``../LibraryFuncs.h``
+
+- ``../Utils.h``
+
+- ``RustDebugInfo.h`` (:ref:`file_TypeAnalysis_RustDebugInfo.h`)
+
+- ``TBAA.h`` (:ref:`file_TypeAnalysis_TBAA.h`)
+
+- ``TypeAnalysis.h`` (:ref:`file_TypeAnalysis_TypeAnalysis.h`)
+
+- ``cstdint``
+
+- ``deque``
+
+- ``llvm/Config/llvm-config.h``
+
+- ``llvm/IR/Constants.h``
+
+- ``llvm/IR/Function.h``
+
+- ``llvm/IR/InlineAsm.h``
+
+- ``llvm/IR/InstIterator.h``
+
+- ``llvm/IR/InstrTypes.h``
+
+- ``llvm/IR/Instructions.h``
+
+- ``llvm/IR/IntrinsicInst.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/IR/Value.h``
+
+- ``llvm/Support/CommandLine.h``
+
+- ``llvm/Support/raw_ostream.h``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structFunctionArgumentIterator`
+
+- :ref:`exhale_struct_structFunctionArgumentIterator_3_01Arg0_00_01Args_8_8_8_01_4`
+
+- :ref:`exhale_struct_structTypeHandler`
+
+- :ref:`exhale_struct_structTypeHandler_3_01double_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01double_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01float_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01float_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01double_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01double_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01long_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01long_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01long_01unsigned_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01long_01unsigned_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01unsigned_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01long_01unsigned_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01unsigned_01int_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01unsigned_01int_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01void_01_5_01_4`
+
+- :ref:`exhale_struct_structTypeHandler_3_01void_01_4`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1a4ed3a00b57202446a3c70e5717d43a21`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1abea4498b7e68934d45108303dc62c90a`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1ad7b504ba3bed719e3b3920ebe9ff1714`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1a8a7733f8f3e199182b79aee8fef23b7c`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1a7423d4c61b23ff1296336a56cda3a042`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1a604f9a21fa8120873ec907c6b0a0f0a3`
+
+- :ref:`exhale_function_TypeAnalysis_8cpp_1a77f59bf761b36080f375dc6bdd02ef63`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_TypeAnalysis_8cpp_1a1b67c33dbdfe03d57e604d5529efe9ee`
+
+- :ref:`exhale_define_TypeAnalysis_8cpp_1a8a9e62d70ac5396b003bd1153d717673`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_TypeAnalysis_8cpp_1a9d90fa3d4f03d5989da435d35f4696ab`
+

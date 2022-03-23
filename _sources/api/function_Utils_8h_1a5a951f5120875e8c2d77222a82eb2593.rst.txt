@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a5a951f5120875e8c2d77222a82eb2593:
+
+Function whatType
+=================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: whatType(llvm::Type *, DerivativeMode, std::set<llvm::Type *>)
+   :project: Enzyme

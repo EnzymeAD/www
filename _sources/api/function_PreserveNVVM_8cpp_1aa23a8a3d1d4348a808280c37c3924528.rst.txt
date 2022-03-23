@@ -1,0 +1,14 @@
+.. _exhale_function_PreserveNVVM_8cpp_1aa23a8a3d1d4348a808280c37c3924528:
+
+Function AddPreserveNVVMPass
+============================
+
+- Defined in :ref:`file_PreserveNVVM.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: AddPreserveNVVMPass(LLVMPassManagerRef, uint8_t)
+   :project: Enzyme

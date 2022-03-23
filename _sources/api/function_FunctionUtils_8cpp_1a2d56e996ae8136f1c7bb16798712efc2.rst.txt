@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a2d56e996ae8136f1c7bb16798712efc2:
+
+Function RemoveRedundantPHI
+===========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: RemoveRedundantPHI(Function *, FunctionAnalysisManager&)
+   :project: Enzyme

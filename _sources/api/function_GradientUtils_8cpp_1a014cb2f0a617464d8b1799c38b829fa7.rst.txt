@@ -1,0 +1,14 @@
+.. _exhale_function_GradientUtils_8cpp_1a014cb2f0a617464d8b1799c38b829fa7:
+
+Function EnzymeRegisterReduce
+=============================
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeRegisterReduce("enzyme-register-reduce", cl::init(false), cl::Hidden, cl::desc("Reduce the amount of register reduce"))
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1ab7307541f13d9f3f142885c9b7ba6662:
+
+Function UpgradeAllocasToMallocs
+================================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: UpgradeAllocasToMallocs(Function *, DerivativeMode)
+   :project: Enzyme

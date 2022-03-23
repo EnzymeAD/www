@@ -1,0 +1,14 @@
+.. _exhale_function_TBAA_8h_1aaf7bf6a4b01d27cdab0bc430008f39c1:
+
+Function parseTBAA(const MDNode \*, Instruction&, const llvm::DataLayout&)
+==========================================================================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: parseTBAA(const MDNode *, Instruction&, const llvm::DataLayout&)
+   :project: Enzyme

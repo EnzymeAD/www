@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1af971fade8ed5f1fb85299470939e8082:
+
+Function EnzymePrintUnnecessary
+===============================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymePrintUnnecessary("enzyme-print-unnecessary", cl::init(false), cl::Hidden, cl::desc("Print unnecessary values in function"))
+   :project: Enzyme

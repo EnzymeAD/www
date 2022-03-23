@@ -1,0 +1,14 @@
+.. _exhale_function_CacheUtility_8cpp_1aefaac154f66802835ee316334f08c266:
+
+Function FindCanonicalIV
+========================
+
+- Defined in :ref:`file_CacheUtility.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: FindCanonicalIV(Loop *, Type *)
+   :project: Enzyme

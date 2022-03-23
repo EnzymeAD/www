@@ -1,0 +1,14 @@
+.. _exhale_function_ActivityAnalysis_8cpp_1a382db6b45c1a8d41c2b343c40cea1192:
+
+Function EnzymeGlobalActivity
+=============================
+
+- Defined in :ref:`file_ActivityAnalysis.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeGlobalActivity("enzyme-global-activity", cl::init(false), cl::Hidden, cl::desc("Enable correct global activity analysis"))
+   :project: Enzyme

@@ -1,0 +1,26 @@
+.. _exhale_class_classMustExitScalarEvolution:
+
+Class MustExitScalarEvolution
+=============================
+
+- Defined in :ref:`file_MustExitScalarEvolution.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public ScalarEvolution``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MustExitScalarEvolution
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

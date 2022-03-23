@@ -1,0 +1,60 @@
+
+.. _file_Clang_EnzymePassLoader.cpp:
+
+File EnzymePassLoader.cpp
+=========================
+
+|exhale_lsh| :ref:`Parent directory <dir_Clang>` (``Clang``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``Clang/EnzymePassLoader.cpp``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_Clang_EnzymePassLoader.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``../Enzyme.h``
+
+- ``../PreserveNVVM.h``
+
+- ``llvm/IR/LegacyPassManager.h``
+
+- ``llvm/LinkAllPasses.h``
+
+- ``llvm/Transforms/IPO/PassManagerBuilder.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_EnzymePassLoader_8cpp_1af151867c73283ded6c71cee501e2794c`
+
+- :ref:`exhale_function_EnzymePassLoader_8cpp_1a54899cac2a1393496cd05cc7fa83b1c1`
+
+- :ref:`exhale_function_EnzymePassLoader_8cpp_1a41dd00f2bf2b2a952fb7b3bdc333aaad`
+
+- :ref:`exhale_function_EnzymePassLoader_8cpp_1a2b719dd58ad760f24af463eecb2ea426`
+
+- :ref:`exhale_function_EnzymePassLoader_8cpp_1addc3abcbddc5bcd6428c4fa665ea3437`
+

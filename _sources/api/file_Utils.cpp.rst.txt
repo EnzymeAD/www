@@ -1,0 +1,95 @@
+
+.. _file_Utils.cpp:
+
+File Utils.cpp
+==============
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``Utils.cpp``)
+--------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_Utils.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``SCEV/ScalarEvolution.h``
+
+- ``SCEV/ScalarEvolutionExpander.h``
+
+- ``TypeAnalysis/TBAA.h`` (:ref:`file_TypeAnalysis_TBAA.h`)
+
+- ``TypeAnalysis/TypeAnalysis.h`` (:ref:`file_TypeAnalysis_TypeAnalysis.h`)
+
+- ``Utils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``llvm/IR/BasicBlock.h``
+
+- ``llvm/IR/DerivedTypes.h``
+
+- ``llvm/IR/Function.h``
+
+- ``llvm/IR/IRBuilder.h``
+
+- ``llvm/IR/InlineAsm.h``
+
+- ``llvm/IR/Module.h``
+
+- ``llvm/IR/Type.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_Utils_8cpp_1aca7c8bf29c803a2e068abfa3edf81c1c`
+
+- :ref:`exhale_function_Utils_8cpp_1abf7050f4ac9dc23c869b0fc66a3eeab1`
+
+- :ref:`exhale_function_Utils_8cpp_1a394ce49e4a0c6e02d5bfb8aef6ebc105`
+
+- :ref:`exhale_function_Utils_8cpp_1acdcc9cbdc70ac0d148e9a396dc761617`
+
+- :ref:`exhale_function_Utils_8cpp_1a2803eb11cc884abe45380964c1dc82d6`
+
+- :ref:`exhale_function_Utils_8cpp_1a35fc04cbfc166c6cb36dfbd974d73cf2`
+
+- :ref:`exhale_function_Utils_8cpp_1a7a440c61001c2e6ad3c9995cff020802`
+
+- :ref:`exhale_function_Utils_8cpp_1a49394b32e007768d7e0f769c9c8793a2`
+
+- :ref:`exhale_function_Utils_8cpp_1ac60437c225ccd2bfb8e187e074602266`
+
+- :ref:`exhale_function_Utils_8cpp_1a7a0f494b884211ddf353188b04a9942f`
+
+- :ref:`exhale_function_Utils_8cpp_1a5a1d5301ce7fae64ff15f67c43e7ca2c`
+
+- :ref:`exhale_function_Utils_8cpp_1ab97ae58c11d229b6c5b60412bcaa1ca6`
+
+- :ref:`exhale_function_Utils_8cpp_1ae2a43ccc0d14fff8a57b45be87d3e1b3`
+
+- :ref:`exhale_function_Utils_8cpp_1ae901804c691760a21395130d6451c8d7`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_Utils_8cpp_1a8482e83d6d4ab014c2fd61d0818ba8d8`
+

@@ -1,0 +1,14 @@
+.. _exhale_function_GradientUtils_8cpp_1a059718e54eaf8add9c95bbdb4e25b3b5:
+
+Function EnzymeSharedForward
+============================
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeSharedForward("enzyme-shared-forward", cl::init(false), cl::Hidden, cl::desc("Forward Shared Memory from definitions"))
+   :project: Enzyme

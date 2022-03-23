@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1aac89a9caa5ae2961977ce4d532cb7062:
+
+Function CanonicalizeLoops
+==========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: CanonicalizeLoops(Function *, FunctionAnalysisManager&)
+   :project: Enzyme

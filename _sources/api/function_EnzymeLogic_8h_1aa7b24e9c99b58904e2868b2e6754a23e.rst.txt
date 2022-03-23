@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8h_1aa7b24e9c99b58904e2868b2e6754a23e:
+
+Function legalCombinedForwardReverse(llvm::CallInst \*, const std::map<llvm::ReturnInst \*, llvm::StoreInst \*>&, std::vector<llvm::Instruction \*>&, std::vector<llvm::Instruction \*>&, GradientUtils \*, TypeResults&, const llvm::SmallPtrSetImpl<const llvm::Instruction \*>&, const llvm::SmallPtrSetImpl<llvm::BasicBlock \*>&, const bool)
+==================================================================================================================================================================================================================================================================================================================================================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: legalCombinedForwardReverse(llvm::CallInst *, const std::map<llvm::ReturnInst *, llvm::StoreInst *>&, std::vector<llvm::Instruction *>&, std::vector<llvm::Instruction *>&, GradientUtils *, TypeResults&, const llvm::SmallPtrSetImpl<const llvm::Instruction *>&, const llvm::SmallPtrSetImpl<llvm::BasicBlock *>&, const bool)
+   :project: Enzyme

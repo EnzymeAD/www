@@ -1,0 +1,663 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Struct LoopContext &mdash; Enzyme Sphinx Theme 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct Node" href="structNode.html" />
+    <link rel="prev" title="Struct InvertedPointerConfig" href="structInvertedPointerConfig.html" />
+  <!-- Google Analytics -->
+  
+  <!-- End Google Analytics -->
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-orange-arrow">
+                Languages
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="doc-dropdown-option nav-dropdown-item" href="https://enzyme.mit.edu/docs/stable/index.html">
+                  <span class="dropdown-title">Julia</span>
+                  <p></p>
+                </a>
+                <a class="doc-dropdown-option nav-dropdown-item" href="">
+                  <span class="dropdown-title">Rust</span>
+                  <p></p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-arrow">
+                Resources
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="https://enzyme.mit.edu/features">
+                  <span class="dropdown-title">About</span>
+                  <p>Learn about Enzyme’s features and capabilities</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community</span>
+                  <p>Join the Enzyme developer community to contribute, learn, and get your questions answered.</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Developer Resources</span>
+                  <p>Developer documentation, templates and tools </p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class="dropdown-title">Forums</span>
+                  <p>A place to discuss Enzyme code, issues, install.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+<body class="enzyme-body">
+
+   
+
+    
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="enzyme-left-menu" id="enzyme-left-menu">
+      <div class="enzyme-side-scroll">
+        <div class="enzyme-menu enzyme-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="enzyme-left-menu-search">
+            
+
+            
+              
+              
+                <div class="version">
+                  0.0.1
+                </div>
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../starting/ad_intro_using_enzyme.html">Introduction to Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/compiler_based_ad.html">The Stages of Compiler-based Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/multi_source_ad.html">AD of Multi-Source Programs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Language Bindings</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/cpp/">C/C++</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/fortran/">Fortran</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/julia/">Julia</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/rust/">Rust</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/swift/">Swift</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../calling_convention.html">Calling Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting_and_tips.html">Troubleshooting and Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Applications and Code Examples of Enzyme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talks_and_tutorials.html">Talks and Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/advanced_options.html">Advanced options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/cuda_guide.html">CUDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/mpi_guide.html">MPI-Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/openmp_guide.html">OpenMP Directives and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/rocm_guide.html">ROCm</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="enzyme-container">
+      <div class="enzyme-page-level-bar" id="enzyme-page-level-bar">
+        <div class="enzyme-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="enzyme-breadcrumbs">
+    
+      <li>
+        <a href="../index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+          <li><a href="library_root.html">Library API</a> &gt;</li>
+        
+      <li>Struct LoopContext</li>
+    
+    
+      <li class="enzyme-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/structLoopContext.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="enzyme-shortcuts-wrapper" id="enzyme-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="enzyme-content-wrap" class="enzyme-content-wrap">
+        <div class="enzyme-content-left">
+
+        
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="enzyme-article" class="enzyme-article">
+              
+  <section id="struct-loopcontext">
+<span id="exhale-struct-structloopcontext"></span><h1>Struct LoopContext<a class="headerlink" href="#struct-loopcontext" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_CacheUtility.h.html#file-cacheutility-h"><span class="std std-ref">File CacheUtility.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411LoopContext">
+<span id="_CPPv311LoopContext"></span><span id="_CPPv211LoopContext"></span><span id="LoopContext"></span><span class="target" id="structLoopContext"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LoopContext</span></span></span><a class="headerlink" href="#_CPPv411LoopContext" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Container for all loop information to synthesize gradients. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext3varE">
+<span id="_CPPv3N11LoopContext3varE"></span><span id="_CPPv2N11LoopContext3varE"></span><span id="LoopContext::var__llvm::AssertingVH:llvm::PHINode:"></span><span class="target" id="structLoopContext_1ab5b24e4eea0555462eb9f47f68864165"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AssertingVH</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PHINode</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">var</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext3varE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Canonical induction variable of the loop. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext6incvarE">
+<span id="_CPPv3N11LoopContext6incvarE"></span><span id="_CPPv2N11LoopContext6incvarE"></span><span id="LoopContext::incvar__llvm::AssertingVH:llvm::Instruction:"></span><span class="target" id="structLoopContext_1a2304fb14e9702be0cb2452c8ddf30f92"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AssertingVH</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incvar</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext6incvarE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Increment of the induction. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext12antivarallocE">
+<span id="_CPPv3N11LoopContext12antivarallocE"></span><span id="_CPPv2N11LoopContext12antivarallocE"></span><span id="LoopContext::antivaralloc__llvm::AssertingVH:llvm::AllocaInst:"></span><span class="target" id="structLoopContext_1a8b5740714e967000427de2132f39bdef"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AssertingVH</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AllocaInst</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">antivaralloc</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext12antivarallocE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Allocation of induction variable of reverse pass. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext6headerE">
+<span id="_CPPv3N11LoopContext6headerE"></span><span id="_CPPv2N11LoopContext6headerE"></span><span id="LoopContext::header__llvm::BasicBlockP"></span><span class="target" id="structLoopContext_1a05ef387af75a96d8aa4f6c1d17854e9b"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BasicBlock</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">header</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext6headerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Header of this loop. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext9preheaderE">
+<span id="_CPPv3N11LoopContext9preheaderE"></span><span id="_CPPv2N11LoopContext9preheaderE"></span><span id="LoopContext::preheader__llvm::BasicBlockP"></span><span class="target" id="structLoopContext_1ad49e0aba18fa0eac093d4cd6981888d0"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BasicBlock</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">preheader</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext9preheaderE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Preheader of this loop. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext7dynamicE">
+<span id="_CPPv3N11LoopContext7dynamicE"></span><span id="_CPPv2N11LoopContext7dynamicE"></span><span id="LoopContext::dynamic__b"></span><span class="target" id="structLoopContext_1a3d5ed79869bd08b0ebbba17c6fb1d8c5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dynamic</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext7dynamicE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether this loop has a statically analyzable number of iterations. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext8maxLimitE">
+<span id="_CPPv3N11LoopContext8maxLimitE"></span><span id="_CPPv2N11LoopContext8maxLimitE"></span><span id="LoopContext::maxLimit__AssertingReplacingVH"></span><span class="target" id="structLoopContext_1aed84e688f8a459fb7c480e1c46844fbe"></span><a class="reference internal" href="classAssertingReplacingVH.html#_CPPv420AssertingReplacingVH" title="AssertingReplacingVH"><span class="n"><span class="pre">AssertingReplacingVH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maxLimit</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext8maxLimitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>limit is last value of a canonical induction variable iters is number of times loop is run (thus iters = limit + 1) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext9trueLimitE">
+<span id="_CPPv3N11LoopContext9trueLimitE"></span><span id="_CPPv2N11LoopContext9trueLimitE"></span><span id="LoopContext::trueLimit__AssertingReplacingVH"></span><span class="target" id="structLoopContext_1afccb35de560f60a47e5f30baffc41f51"></span><a class="reference internal" href="classAssertingReplacingVH.html#_CPPv420AssertingReplacingVH" title="AssertingReplacingVH"><span class="n"><span class="pre">AssertingReplacingVH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trueLimit</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext9trueLimitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext6offsetE">
+<span id="_CPPv3N11LoopContext6offsetE"></span><span id="_CPPv2N11LoopContext6offsetE"></span><span id="LoopContext::offset__AssertingReplacingVH"></span><span class="target" id="structLoopContext_1ac596b1c53ab6c800b0608aac3400b2cd"></span><a class="reference internal" href="classAssertingReplacingVH.html#_CPPv420AssertingReplacingVH" title="AssertingReplacingVH"><span class="n"><span class="pre">AssertingReplacingVH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An offset to add to the index when getting the cache pointer. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext10allocLimitE">
+<span id="_CPPv3N11LoopContext10allocLimitE"></span><span id="_CPPv2N11LoopContext10allocLimitE"></span><span id="LoopContext::allocLimit__AssertingReplacingVH"></span><span class="target" id="structLoopContext_1afa2afb1f967666ba585acd8763559d74"></span><a class="reference internal" href="classAssertingReplacingVH.html#_CPPv420AssertingReplacingVH" title="AssertingReplacingVH"><span class="n"><span class="pre">AssertingReplacingVH</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allocLimit</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext10allocLimitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An overriding allocation limit size. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext10exitBlocksE">
+<span id="_CPPv3N11LoopContext10exitBlocksE"></span><span id="_CPPv2N11LoopContext10exitBlocksE"></span><span id="LoopContext::exitBlocks__llvm::SmallPtrSet:llvm::BasicBlockP.8:"></span><span class="target" id="structLoopContext_1a4c8c0bea73ec0e4fdaf5aa6ee0ac599c"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SmallPtrSet</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BasicBlock</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">8</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exitBlocks</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext10exitBlocksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>All blocks this loop exits too. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11LoopContext6parentE">
+<span id="_CPPv3N11LoopContext6parentE"></span><span id="_CPPv2N11LoopContext6parentE"></span><span id="LoopContext::parent__llvm::LoopP"></span><span class="target" id="structLoopContext_1a057496a2d41d12d41970475e469f9a2d"></span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Loop</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">parent</span></span></span><a class="headerlink" href="#_CPPv4N11LoopContext6parentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parent loop of this loop. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structNode.html" class="btn btn-neutral float-right" title="Struct Node" accesskey="n" rel="next">Next <img src="../_static/images/chevron-right-blue.svg" class="next-page"></a>
+      
+      
+        <a href="structInvertedPointerConfig.html" class="btn btn-neutral" title="Struct InvertedPointerConfig" accesskey="p" rel="prev"><img src="../_static/images/chevron-right-blue.svg" class="previous-page"> Previous</a>
+      
+    </div>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Enzyme.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/EnzymeAD/enzyme_sphinx_theme">theme</a> provided by <a href="https://enzyme.mit.edu">Enzyme</a>.
+      </div>
+      <br>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="enzyme-content-right" id="enzyme-content-right">
+          <div class="enzyme-right-menu" id="enzyme-right-menu">
+            <div class="enzyme-side-scroll" id="enzyme-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Struct LoopContext</a><ul>
+<li><a class="reference internal" href="#struct-documentation">Struct Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+         <script src="../_static/jquery.js"></script>
+         <script src="../_static/underscore.js"></script>
+         <script src="../_static/doctools.js"></script>
+         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+     
+
+  
+
+  <script type="text/javascript" src="../_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="../_static/js/vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <!-- Begin Footer -->
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="https://enzyme.mit.edu" class="footer-logo"></a>
+      </div>
+
+      <div class="footer-links-wrapper">
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://enzyme.mit.edu">Enzyme</a></li>
+            <li><a href="https://enzyme.mit.edu/get-started">Get Started</a></li>
+            <li><a href="https://enzyme.mit.edu/features">Features</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="">Resources</a></li>
+            <li><a href="https://enzyme.mit.edu/tutorials">Tutorials</a></li>
+            <li><a href="https://enzyme.mit.edu/docs/stable/index.html">Docs</a></li>
+            <li><a href="" target="_blank">Discuss</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/issues" target="_blank">Github Issues</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col follow-us-col">
+          <ul>
+            <li class="list-title">Stay Connected</li>
+            <li>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://groups.google.com/d/forum/enzyme-dev"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="email-subscribe-form validate"
+                  target="_blank"
+                  novalidate>
+                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
+
+                    <div class="clear">
+                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="">Mobile</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Hub</a>
+          </li>
+
+          <li>
+            <a href="">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://enzyme.mit.edu/tutorials">Tutorials</a>
+          </li>
+
+          <li class="resources-mobile-menu-title">
+            Docs
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="https://enzyme.mit.edu/docs/stable/index.html">PyTorch</a>
+            </li>
+
+            <li>
+              <a href="">torchaudio</a>
+            </li>
+
+            <li>
+              <a href="">torchtext</a>
+            </li>
+
+            <li>
+              <a href="">torchvision</a>
+            </li>
+
+            <li>
+              <a href="">TorchElastic</a>
+            </li>
+
+            <li>
+              <a href="">TorchServe</a>
+            </li>
+
+            <li>
+              <a href="">PyTorch on XLA Devices</a>
+            </li>
+          </ul>
+
+          <li class="resources-mobile-menu-title">
+            Resources
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="">Developer Resources</a>
+            </li>
+
+            <li>
+              <a href="https://enzyme.mit.edu/features">About</a>
+            </li>
+
+            <li>
+              <a href="">Models (Beta)</a>
+            </li>
+
+            <li>
+              <a href="">Community</a>
+            </li>
+
+            <li>
+              <a href="">Forums</a>
+            </li>
+          </ul>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="../_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      enzymeAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+      filterTags.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.enzyme-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>

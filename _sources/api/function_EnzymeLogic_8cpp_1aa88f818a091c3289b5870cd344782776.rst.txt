@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1aa88f818a091c3289b5870cd344782776:
+
+Function preventTypeAnalysisLoops
+=================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: preventTypeAnalysisLoops(const FnTypeInfo&, llvm::Function *)
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8h_1a3abf6b9602b01ecf87d6906c20d3a88e:
+
+Function getFunctionTypeForClone(llvm::FunctionType \*, DerivativeMode, unsigned, llvm::Type \*, const std::vector<DIFFE_TYPE>&, bool, ReturnType, DIFFE_TYPE)
+==============================================================================================================================================================
+
+- Defined in :ref:`file_FunctionUtils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getFunctionTypeForClone(llvm::FunctionType *, DerivativeMode, unsigned, llvm::Type *, const std::vector<DIFFE_TYPE>&, bool, ReturnType, DIFFE_TYPE)
+   :project: Enzyme

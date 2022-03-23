@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymePassLoader_8cpp_1af151867c73283ded6c71cee501e2794c:
+
+Function clangtoolLoader_O0
+===========================
+
+- Defined in :ref:`file_Clang_EnzymePassLoader.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: clangtoolLoader_O0(PassManagerBuilder::EP_EnabledOnOptLevel0, loadPass)
+   :project: Enzyme

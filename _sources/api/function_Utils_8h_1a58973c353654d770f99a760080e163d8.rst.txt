@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a58973c353654d770f99a760080e163d8:
+
+Function getOrInsertDifferentialMPI_Wait(llvm::Module&, llvm::ArrayRef<llvm::Type \*>, llvm::Type \*)
+=====================================================================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getOrInsertDifferentialMPI_Wait(llvm::Module&, llvm::ArrayRef<llvm::Type *>, llvm::Type *)
+   :project: Enzyme

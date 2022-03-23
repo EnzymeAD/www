@@ -1,0 +1,14 @@
+.. _exhale_function_TypeAnalysis_8cpp_1a7423d4c61b23ff1296336a56cda3a042:
+
+Template Function getSet
+========================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getSet(const std::vector<std::set<T>>&, size_t)
+   :project: Enzyme

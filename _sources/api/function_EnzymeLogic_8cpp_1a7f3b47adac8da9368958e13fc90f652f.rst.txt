@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1a7f3b47adac8da9368958e13fc90f652f:
+
+Function calculateUnusedStoresInFunction
+========================================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: calculateUnusedStoresInFunction(Function&, llvm::SmallPtrSetImpl<const Instruction *>&, const llvm::SmallPtrSetImpl<const Instruction *>&, GradientUtils *)
+   :project: Enzyme

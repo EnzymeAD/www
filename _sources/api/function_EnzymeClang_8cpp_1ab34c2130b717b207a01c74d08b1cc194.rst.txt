@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeClang_8cpp_1ab34c2130b717b207a01c74d08b1cc194:
+
+Function X("enzyme", "Enzyme Plugin")
+=====================================
+
+- Defined in :ref:`file_Clang_EnzymeClang.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: X("enzyme", "Enzyme Plugin")
+   :project: Enzyme

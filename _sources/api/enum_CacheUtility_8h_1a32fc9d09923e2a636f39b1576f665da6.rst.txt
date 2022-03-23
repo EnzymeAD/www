@@ -1,0 +1,14 @@
+.. _exhale_enum_CacheUtility_8h_1a32fc9d09923e2a636f39b1576f665da6:
+
+Enum UnwrapMode
+===============
+
+- Defined in :ref:`file_CacheUtility.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: UnwrapMode
+   :project: Enzyme

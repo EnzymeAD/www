@@ -1,0 +1,17 @@
+.. _exhale_struct_structTypeHandler_3_01double_01_4:
+
+Template Struct TypeHandler< double >
+=====================================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: TypeHandler< double >
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

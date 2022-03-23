@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a3eb05adfd9c3c98326dd877959907ce5:
+
+Function getFast
+================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getFast()
+   :project: Enzyme

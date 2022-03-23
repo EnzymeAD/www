@@ -1,0 +1,17 @@
+.. _exhale_struct_structFnTypeInfo:
+
+Struct FnTypeInfo
+=================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: FnTypeInfo
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

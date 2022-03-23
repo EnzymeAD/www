@@ -1,0 +1,14 @@
+.. _exhale_typedef_TBAA_8h_1a2995d0d6901107014803e186a5663735:
+
+Typedef TBAAStructTagNode
+=========================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: TBAAStructTagNode
+   :project: Enzyme

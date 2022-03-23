@@ -1,0 +1,895 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File EnzymeLogic.h &mdash; Enzyme Sphinx Theme 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <!-- Google Analytics -->
+  
+  <!-- End Google Analytics -->
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-orange-arrow">
+                Languages
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="doc-dropdown-option nav-dropdown-item" href="https://enzyme.mit.edu/docs/stable/index.html">
+                  <span class="dropdown-title">Julia</span>
+                  <p></p>
+                </a>
+                <a class="doc-dropdown-option nav-dropdown-item" href="">
+                  <span class="dropdown-title">Rust</span>
+                  <p></p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-arrow">
+                Resources
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="https://enzyme.mit.edu/features">
+                  <span class="dropdown-title">About</span>
+                  <p>Learn about Enzyme’s features and capabilities</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community</span>
+                  <p>Join the Enzyme developer community to contribute, learn, and get your questions answered.</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Developer Resources</span>
+                  <p>Developer documentation, templates and tools </p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class="dropdown-title">Forums</span>
+                  <p>A place to discuss Enzyme code, issues, install.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+<body class="enzyme-body">
+
+   
+
+    
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="enzyme-left-menu" id="enzyme-left-menu">
+      <div class="enzyme-side-scroll">
+        <div class="enzyme-menu enzyme-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="enzyme-left-menu-search">
+            
+
+            
+              
+              
+                <div class="version">
+                  0.0.1
+                </div>
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../starting/ad_intro_using_enzyme.html">Introduction to Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/compiler_based_ad.html">The Stages of Compiler-based Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/multi_source_ad.html">AD of Multi-Source Programs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Language Bindings</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/cpp/">C/C++</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/fortran/">Fortran</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/julia/">Julia</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/rust/">Rust</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/swift/">Swift</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../calling_convention.html">Calling Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting_and_tips.html">Troubleshooting and Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Applications and Code Examples of Enzyme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talks_and_tutorials.html">Talks and Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/advanced_options.html">Advanced options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/cuda_guide.html">CUDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/mpi_guide.html">MPI-Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/openmp_guide.html">OpenMP Directives and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/rocm_guide.html">ROCm</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="enzyme-container">
+      <div class="enzyme-page-level-bar" id="enzyme-page-level-bar">
+        <div class="enzyme-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="enzyme-breadcrumbs">
+    
+      <li>
+        <a href="../index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+      <li>Program Listing for File EnzymeLogic.h</li>
+    
+    
+      <li class="enzyme-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_EnzymeLogic.h.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="enzyme-shortcuts-wrapper" id="enzyme-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="enzyme-content-wrap" class="enzyme-content-wrap">
+        <div class="enzyme-content-left">
+
+        
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="enzyme-article" class="enzyme-article">
+              
+  <section id="program-listing-for-file-enzymelogic-h">
+<span id="program-listing-file-enzymelogic-h"></span><h1>Program Listing for File EnzymeLogic.h<a class="headerlink" href="#program-listing-for-file-enzymelogic-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_EnzymeLogic.h.html#file-enzymelogic-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">EnzymeLogic.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//===- EnzymeLogic.h - Implementation of forward and reverse pass generation==//</span>
+<span class="c1">//</span>
+<span class="c1">//                             Enzyme Project</span>
+<span class="c1">//</span>
+<span class="c1">// Part of the Enzyme Project, under the Apache License v2.0 with LLVM</span>
+<span class="c1">// Exceptions. See https://llvm.org/LICENSE.txt for license information.</span>
+<span class="c1">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception</span>
+<span class="c1">//</span>
+<span class="c1">// If using this code in an academic setting, please cite the following:</span>
+<span class="c1">// @incollection{enzymeNeurips,</span>
+<span class="c1">// title = {Instead of Rewriting Foreign Code for Machine Learning,</span>
+<span class="c1">//          Automatically Synthesize Fast Gradients},</span>
+<span class="c1">// author = {Moses, William S. and Churavy, Valentin},</span>
+<span class="c1">// booktitle = {Advances in Neural Information Processing Systems 33},</span>
+<span class="c1">// year = {2020},</span>
+<span class="c1">// note = {To appear in},</span>
+<span class="c1">// }</span>
+<span class="c1">//</span>
+<span class="c1">//===----------------------------------------------------------------------===//</span>
+<span class="c1">//</span>
+<span class="c1">// This file declares two functions CreatePrimalAndGradient and</span>
+<span class="c1">// CreateAugmentedPrimal. CreatePrimalAndGradient takes a function, known</span>
+<span class="c1">// TypeResults of the calling context, known activity analysis of the</span>
+<span class="c1">// arguments and a bool `topLevel`. It creates a corresponding gradient</span>
+<span class="c1">// function, computing the forward pass as well if at `topLevel`.</span>
+<span class="c1">// CreateAugmentedPrimal takes similar arguments and creates an augmented</span>
+<span class="c1">// forward pass.</span>
+<span class="c1">//</span>
+<span class="c1">//===----------------------------------------------------------------------===//</span>
+<span class="cp">#ifndef ENZYME_LOGIC_H</span>
+<span class="cp">#define ENZYME_LOGIC_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;set&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utility&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SCEV/ScalarEvolutionExpander.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;SCEV/TargetLibraryInfo.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/IR/Function.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/IR/Module.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/IR/Type.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Support/CommandLine.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Analysis/AliasAnalysis.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ActivityAnalysis.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;FunctionUtils.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;TypeAnalysis/TypeAnalysis.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Utils.h&quot;</span><span class="cp"></span>
+
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">extern</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">cl</span><span class="o">::</span><span class="n">opt</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EnzymePrint</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AugmentedStruct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Tape</span><span class="p">,</span><span class="w"> </span><span class="n">Return</span><span class="p">,</span><span class="w"> </span><span class="n">DifferentialReturn</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">AugmentedStruct</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">AugmentedStruct</span><span class="o">::</span><span class="n">Tape</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;tape&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">AugmentedStruct</span><span class="o">::</span><span class="n">Return</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;return&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">AugmentedStruct</span><span class="o">::</span><span class="n">DifferentialReturn</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;DifferentialReturn&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm_unreachable</span><span class="p">(</span><span class="s">&quot;unknown cache type&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">o</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                            </span><span class="n">AugmentedStruct</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CacheType</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Self</span><span class="p">,</span><span class="w"> </span><span class="n">Shadow</span><span class="p">,</span><span class="w"> </span><span class="n">Tape</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">CacheType</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">CacheType</span><span class="o">::</span><span class="n">Self</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;self&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">CacheType</span><span class="o">::</span><span class="n">Shadow</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;shadow&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">CacheType</span><span class="o">::</span><span class="n">Tape</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;tape&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">default</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm_unreachable</span><span class="p">(</span><span class="s">&quot;unknown cache type&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">o</span><span class="p">,</span><span class="w"> </span><span class="n">CacheType</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">//! return structtype if recursive function</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AugmentedReturn</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">fn</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//! return structtype if recursive function</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">tapeType</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">CacheType</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tapeIndices</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">//! Map from original call to sub augmentation data</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AugmentedReturn</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">subaugmentations</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">//! Map from information desired from a augmented return to its index in the</span>
+<span class="w">  </span><span class="c1">//! returned struct</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">AugmentedStruct</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">returns</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">uncacheable_args_map</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">can_modref_map</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">ssize_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tapeIndiciesToFree</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">AugmentedReturn</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">fn</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">tapeType</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">CacheType</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tapeIndices</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">AugmentedStruct</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">returns</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="w">          </span><span class="n">uncacheable_args_map</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">can_modref_map</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">fn</span><span class="p">(</span><span class="n">fn</span><span class="p">),</span><span class="w"> </span><span class="n">tapeType</span><span class="p">(</span><span class="n">tapeType</span><span class="p">),</span><span class="w"> </span><span class="n">tapeIndices</span><span class="p">(</span><span class="n">tapeIndices</span><span class="p">),</span><span class="w"> </span><span class="n">returns</span><span class="p">(</span><span class="n">returns</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">uncacheable_args_map</span><span class="p">(</span><span class="n">uncacheable_args_map</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">can_modref_map</span><span class="p">(</span><span class="n">can_modref_map</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">ReverseCacheKey</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">todiff</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="n">retType</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DIFFE_TYPE</span><span class="o">&gt;</span><span class="w"> </span><span class="n">constant_args</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uncacheable_args</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">returnUsed</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">shadowReturnUsed</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">DerivativeMode</span><span class="w"> </span><span class="n">mode</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">freeMemory</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">AtomicAdd</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">additionalType</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">FnTypeInfo</span><span class="w"> </span><span class="n">typeInfo</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="cm">/*</span>
+<span class="cm">  inline bool operator==(const ReverseCacheKey&amp; rhs) const {</span>
+<span class="cm">      return todiff == rhs.todiff &amp;&amp;</span>
+<span class="cm">             retType == rhs.retType &amp;&amp;</span>
+<span class="cm">             constant_args == rhs.constant_args &amp;&amp;</span>
+<span class="cm">             uncacheable_args == rhs.uncacheable_args &amp;&amp;</span>
+<span class="cm">             returnUsed == rhs.returnUsed &amp;&amp;</span>
+<span class="cm">             shadowReturnUsed == rhs.shadowReturnUsed &amp;&amp;</span>
+<span class="cm">             mode == rhs.mode &amp;&amp;</span>
+<span class="cm">             freeMemory == rhs.freeMemory &amp;&amp;</span>
+<span class="cm">             AtomicAdd == rhs.AtomicAdd &amp;&amp;</span>
+<span class="cm">             additionalType == rhs.additionalType &amp;&amp;</span>
+<span class="cm">             typeInfo == rhs.typeInfo;</span>
+<span class="cm">  }</span>
+<span class="cm">  */</span><span class="w"></span>
+
+<span class="w">  </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ReverseCacheKey</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">todiff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">todiff</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">todiff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">todiff</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">retType</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">retType</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">retType</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">retType</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">constant_args</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">constant_args</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">constant_args</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">constant_args</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">todiff</span><span class="o">-&gt;</span><span class="n">args</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">foundLHS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uncacheable_args</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">foundLHS</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">uncacheable_args</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">foundRHS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">uncacheable_args</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">foundRHS</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">uncacheable_args</span><span class="p">.</span><span class="n">end</span><span class="p">());</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">foundLHS</span><span class="o">-&gt;</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">foundRHS</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">foundRHS</span><span class="o">-&gt;</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">foundLHS</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">returnUsed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">returnUsed</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">returnUsed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">returnUsed</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">shadowReturnUsed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">shadowReturnUsed</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">shadowReturnUsed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">shadowReturnUsed</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">freeMemory</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">freeMemory</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">freeMemory</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">freeMemory</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AtomicAdd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">AtomicAdd</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">AtomicAdd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">AtomicAdd</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">additionalType</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">additionalType</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">additionalType</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">additionalType</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">typeInfo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">typeInfo</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">typeInfo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">typeInfo</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// equal</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">EnzymeLogic</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">PreProcessCache</span><span class="w"> </span><span class="n">PPC</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// \p PostOpt is whether to perform basic</span>
+<span class="w">  </span><span class="c1">///  optimization of the function after synthesis</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">PostOpt</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">EnzymeLogic</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">PostOpt</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">PostOpt</span><span class="p">(</span><span class="n">PostOpt</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">AugmentedCacheKey</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="cm">/*retType*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DIFFE_TYPE</span><span class="o">&gt;</span><span class="w"> </span><span class="cm">/*constant_args*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="cm">/*uncacheable_args*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="kt">bool</span><span class="w"> </span><span class="cm">/*returnUsed*/</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="cm">/*shadowReturnUsed*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="k">const</span><span class="w"> </span><span class="n">FnTypeInfo</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">AugmentedCacheKey</span><span class="p">,</span><span class="w"> </span><span class="n">AugmentedReturn</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AugmentedCachedFunctions</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">AugmentedCacheKey</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AugmentedCachedFinished</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Create an augmented forward pass.</span>
+<span class="w">  </span><span class="c1">///  \p todiff is the function to differentiate</span>
+<span class="w">  </span><span class="c1">///  \p retType is the activity info of the return</span>
+<span class="w">  </span><span class="c1">///  \p constant_args is the activity info of the arguments</span>
+<span class="w">  </span><span class="c1">///  \p returnUsed is whether the primal&#39;s return should also be returned</span>
+<span class="w">  </span><span class="c1">///  \p typeInfo is the type info information about the calling context</span>
+<span class="w">  </span><span class="c1">///  \p _uncacheable_args marks whether an argument may be rewritten before</span>
+<span class="w">  </span><span class="c1">///  loads in the generated function (and thus cannot be cached). \p</span>
+<span class="w">  </span><span class="c1">///  forceAnonymousTape forces the tape to be an i8* rather than the true tape</span>
+<span class="w">  </span><span class="c1">///  structure \p AtomicAdd is whether to perform all adjoint updates to</span>
+<span class="w">  </span><span class="c1">///  memory in an atomic way</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">AugmentedReturn</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">CreateAugmentedPrimal</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">todiff</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="n">retType</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DIFFE_TYPE</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">constant_args</span><span class="p">,</span><span class="w"> </span><span class="n">TypeAnalysis</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TA</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">returnUsed</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">shadowReturnUsed</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FnTypeInfo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">typeInfo</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_uncacheable_args</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">forceAnonymousTape</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AtomicAdd</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">omp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">ReverseCacheKey</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">ReverseCachedFunctions</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">ForwardCacheKey</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="cm">/*retType*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DIFFE_TYPE</span><span class="o">&gt;</span><span class="w"> </span><span class="cm">/*constant_args*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="cm">/*uncacheable_args*/</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="kt">bool</span><span class="w"> </span><span class="cm">/*retval*/</span><span class="p">,</span><span class="w"> </span><span class="n">DerivativeMode</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="k">const</span><span class="w"> </span><span class="n">FnTypeInfo</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">ForwardCacheKey</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">ForwardCachedFunctions</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Create the derivative function itself.</span>
+<span class="w">  </span><span class="c1">///  \p todiff is the function to differentiate</span>
+<span class="w">  </span><span class="c1">///  \p retType is the activity info of the return</span>
+<span class="w">  </span><span class="c1">///  \p constant_args is the activity info of the arguments</span>
+<span class="w">  </span><span class="c1">///  \p returnValue is whether the primal&#39;s return should also be returned</span>
+<span class="w">  </span><span class="c1">///  \p dretUsed is whether the shadow return value should also be returned</span>
+<span class="w">  </span><span class="c1">///  \p additionalArg is the type (or null) of an additional type in the</span>
+<span class="w">  </span><span class="c1">///  signature to hold the tape. \p typeInfo is the type info information</span>
+<span class="w">  </span><span class="c1">///  about the calling context \p _uncacheable_args marks whether an argument</span>
+<span class="w">  </span><span class="c1">///  may be rewritten before loads in the generated function (and thus cannot</span>
+<span class="w">  </span><span class="c1">///  be cached). \p augmented is the data structure created by prior call to</span>
+<span class="w">  </span><span class="c1">///  an augmented forward pass \p AtomicAdd is whether to perform all adjoint</span>
+<span class="w">  </span><span class="c1">///  updates to memory in an atomic way</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="nf">CreatePrimalAndGradient</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ReverseCacheKey</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">key</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                          </span><span class="n">TypeAnalysis</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TA</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                          </span><span class="k">const</span><span class="w"> </span><span class="n">AugmentedReturn</span><span class="w"> </span><span class="o">*</span><span class="n">augmented</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                          </span><span class="kt">bool</span><span class="w"> </span><span class="n">omp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="w">  </span><span class="nf">CreateForwardDiff</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">todiff</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="n">retType</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">DIFFE_TYPE</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">constant_args</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="n">TypeAnalysis</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TA</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">returnValue</span><span class="p">,</span><span class="w"> </span><span class="n">DerivativeMode</span><span class="w"> </span><span class="n">mode</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="kt">bool</span><span class="w"> </span><span class="n">freeMemory</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">additionalArg</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">FnTypeInfo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">typeInfo</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Argument</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_uncacheable_args</span><span class="p">,</span><span class="w"></span>
+<span class="w">                    </span><span class="k">const</span><span class="w"> </span><span class="n">AugmentedReturn</span><span class="w"> </span><span class="o">*</span><span class="n">augmented</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">omp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">();</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">extern</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">cl</span><span class="o">::</span><span class="n">opt</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">looseTypeAnalysis</span><span class="p">;</span><span class="w"></span>
+<span class="k">extern</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">cl</span><span class="o">::</span><span class="n">opt</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nonmarkedglobals_inactiveloads</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">GradientUtils</span><span class="p">;</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">shouldAugmentCall</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="w"> </span><span class="o">*</span><span class="n">op</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">GradientUtils</span><span class="w"> </span><span class="o">*</span><span class="n">gutils</span><span class="p">,</span><span class="w"></span>
+<span class="w">                       </span><span class="n">TypeResults</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TR</span><span class="p">);</span><span class="w"></span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">legalCombinedForwardReverse</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="w"> </span><span class="o">*</span><span class="n">origop</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">ReturnInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">StoreInst</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">replacedReturns</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">postCreate</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">userReplace</span><span class="p">,</span><span class="w"> </span><span class="n">GradientUtils</span><span class="w"> </span><span class="o">*</span><span class="n">gutils</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">TypeResults</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TR</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallPtrSetImpl</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">unnecessaryInstructions</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallPtrSetImpl</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">oldUnreachable</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">subretused</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallVector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallVector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="n">getDefaultFunctionTypeForAugmentation</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">FunctionType</span><span class="w"> </span><span class="o">*</span><span class="n">called</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                      </span><span class="kt">bool</span><span class="w"> </span><span class="n">returnUsed</span><span class="p">,</span><span class="w"> </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="n">retType</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallVector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallVector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="n">getDefaultFunctionTypeForGradient</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">FunctionType</span><span class="w"> </span><span class="o">*</span><span class="n">called</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                  </span><span class="n">DIFFE_TYPE</span><span class="w"> </span><span class="n">retType</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Enzyme.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/EnzymeAD/enzyme_sphinx_theme">theme</a> provided by <a href="https://enzyme.mit.edu">Enzyme</a>.
+      </div>
+      <br>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="enzyme-content-right" id="enzyme-content-right">
+          <div class="enzyme-right-menu" id="enzyme-right-menu">
+            <div class="enzyme-side-scroll" id="enzyme-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Program Listing for File EnzymeLogic.h</a></li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+         <script src="../_static/jquery.js"></script>
+         <script src="../_static/underscore.js"></script>
+         <script src="../_static/doctools.js"></script>
+         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+     
+
+  
+
+  <script type="text/javascript" src="../_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="../_static/js/vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <!-- Begin Footer -->
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="https://enzyme.mit.edu" class="footer-logo"></a>
+      </div>
+
+      <div class="footer-links-wrapper">
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://enzyme.mit.edu">Enzyme</a></li>
+            <li><a href="https://enzyme.mit.edu/get-started">Get Started</a></li>
+            <li><a href="https://enzyme.mit.edu/features">Features</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="">Resources</a></li>
+            <li><a href="https://enzyme.mit.edu/tutorials">Tutorials</a></li>
+            <li><a href="https://enzyme.mit.edu/docs/stable/index.html">Docs</a></li>
+            <li><a href="" target="_blank">Discuss</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/issues" target="_blank">Github Issues</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col follow-us-col">
+          <ul>
+            <li class="list-title">Stay Connected</li>
+            <li>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://groups.google.com/d/forum/enzyme-dev"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="email-subscribe-form validate"
+                  target="_blank"
+                  novalidate>
+                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
+
+                    <div class="clear">
+                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="">Mobile</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Hub</a>
+          </li>
+
+          <li>
+            <a href="">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://enzyme.mit.edu/tutorials">Tutorials</a>
+          </li>
+
+          <li class="resources-mobile-menu-title">
+            Docs
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="https://enzyme.mit.edu/docs/stable/index.html">PyTorch</a>
+            </li>
+
+            <li>
+              <a href="">torchaudio</a>
+            </li>
+
+            <li>
+              <a href="">torchtext</a>
+            </li>
+
+            <li>
+              <a href="">torchvision</a>
+            </li>
+
+            <li>
+              <a href="">TorchElastic</a>
+            </li>
+
+            <li>
+              <a href="">TorchServe</a>
+            </li>
+
+            <li>
+              <a href="">PyTorch on XLA Devices</a>
+            </li>
+          </ul>
+
+          <li class="resources-mobile-menu-title">
+            Resources
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="">Developer Resources</a>
+            </li>
+
+            <li>
+              <a href="https://enzyme.mit.edu/features">About</a>
+            </li>
+
+            <li>
+              <a href="">Models (Beta)</a>
+            </li>
+
+            <li>
+              <a href="">Community</a>
+            </li>
+
+            <li>
+              <a href="">Forums</a>
+            </li>
+          </ul>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="../_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      enzymeAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+      filterTags.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.enzyme-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>

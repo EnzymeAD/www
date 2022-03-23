@@ -1,0 +1,36 @@
+.. _exhale_class_classCacheUtility:
+
+Class CacheUtility
+==================
+
+- Defined in :ref:`file_CacheUtility.h`
+
+
+Nested Relationships
+--------------------
+
+
+Nested Types
+************
+
+- :ref:`exhale_struct_structCacheUtility_1_1LimitContext`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Type
+************
+
+- ``public GradientUtils`` (:ref:`exhale_class_classGradientUtils`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: CacheUtility
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

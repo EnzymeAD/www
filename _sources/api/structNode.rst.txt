@@ -1,0 +1,17 @@
+.. _exhale_struct_structNode:
+
+Struct Node
+===========
+
+- Defined in :ref:`file_DifferentialUseAnalysis.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: Node
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

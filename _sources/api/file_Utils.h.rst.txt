@@ -1,0 +1,248 @@
+
+.. _file_Utils.h:
+
+File Utils.h
+============
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``Utils.h``)
+------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_Utils.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``TypeAnalysis/ConcreteType.h`` (:ref:`file_TypeAnalysis_ConcreteType.h`)
+
+- ``deque``
+
+- ``functional``
+
+- ``llvm/ADT/SmallPtrSet.h``
+
+- ``llvm/Analysis/AliasAnalysis.h``
+
+- ``llvm/Analysis/LoopInfo.h``
+
+- ``llvm/Analysis/OptimizationRemarkEmitter.h``
+
+- ``llvm/IR/CFG.h``
+
+- ``llvm/IR/DiagnosticInfo.h``
+
+- ``llvm/IR/Dominators.h``
+
+- ``llvm/IR/Function.h``
+
+- ``llvm/IR/IRBuilder.h``
+
+- ``llvm/IR/IntrinsicInst.h``
+
+- ``llvm/IR/Module.h``
+
+- ``llvm/IR/Operator.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/IR/ValueMap.h``
+
+- ``llvm/Support/Casting.h``
+
+- ``llvm/Support/CommandLine.h``
+
+- ``llvm/Support/raw_ostream.h``
+
+- ``map``
+
+- ``set``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_ActivityAnalysis.h`
+
+- :ref:`file_ActivityAnalysis.cpp`
+
+- :ref:`file_FunctionUtils.h`
+
+- :ref:`file_ActivityAnalysisPrinter.cpp`
+
+- :ref:`file_GradientUtils.h`
+
+- :ref:`file_EnzymeLogic.h`
+
+- :ref:`file_Enzyme.cpp`
+
+- :ref:`file_EnzymeLogic.cpp`
+
+- :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+- :ref:`file_TypeAnalysis_TypeAnalysisPrinter.cpp`
+
+- :ref:`file_Utils.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_llvm`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classAssertingReplacingVH`
+
+- :ref:`exhale_class_classEnzymeFailure`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_Utils_8h_1af56f7e5b2d541b03c77f85a93ec637cd`
+
+- :ref:`exhale_enum_Utils_8h_1a42d89ce89fd7603afbf337dc2083d1d1`
+
+- :ref:`exhale_enum_Utils_8h_1ab0df38968e4f03a3f1f6d6df0f31f45a`
+
+- :ref:`exhale_enum_Utils_8h_1aa3dbbc0ac3577d8987fde0b4fb551fce`
+
+- :ref:`exhale_enum_Utils_8h_1a8b4ef81f44073760aa3bf519ebff295b`
+
+- :ref:`exhale_enum_Utils_8h_1a36a419f0b50a0c1d2d4cf712e0ba64cc`
+
+- :ref:`exhale_enum_Utils_8h_1ad9971b6ef33e02ba2c75d19c1d2518a1`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_Utils_8h_1a6fbf502243811115ec8007d8e8266f75`
+
+- :ref:`exhale_function_Utils_8h_1acc01a4baf33f2c86e4f115cc6c18036c`
+
+- :ref:`exhale_function_Utils_8h_1adfc5b142a9a1464b89bc61bd5c3b18ab`
+
+- :ref:`exhale_function_Utils_8h_1a32a16494a477d7e5ed56d54b3f8782a4`
+
+- :ref:`exhale_function_Utils_8h_1a17ab5494a634afdfcf9bd6715752013c`
+
+- :ref:`exhale_function_Utils_8h_1a632218df1ffd81438960a6216bf09861`
+
+- :ref:`exhale_function_Utils_8h_1aa44395e6ba7a0e228ba08174a81b307f`
+
+- :ref:`exhale_function_Utils_8h_1a63b252cd0fa7a00c072b07fbd89e6c34`
+
+- :ref:`exhale_function_Utils_8h_1a8197f90c1d3abc04e9be81ea9a878a4d`
+
+- :ref:`exhale_function_Utils_8h_1a516b00de68cf2ba43d78311a6b56f3c7`
+
+- :ref:`exhale_function_Utils_8h_1a5813bc652c0fe73ba9d66a925d79a132`
+
+- :ref:`exhale_function_Utils_8h_1a792c6705500ca96d0aad2858266d6b4d`
+
+- :ref:`exhale_function_Utils_8h_1ac531e066c4710af1ac021939f7222027`
+
+- :ref:`exhale_function_Utils_8h_1a3eb05adfd9c3c98326dd877959907ce5`
+
+- :ref:`exhale_function_Utils_8h_1a171dedae5a7ffa27c0918ded07a82508`
+
+- :ref:`exhale_function_Utils_8h_1abfeea71874c7d10164cf50fd14a97ec2`
+
+- :ref:`exhale_function_Utils_8h_1accffaa4bfccc7e56dfacfd81ca8058a1`
+
+- :ref:`exhale_function_Utils_8h_1ae5673fb44b9f320840220a6b33d9bc79`
+
+- :ref:`exhale_function_Utils_8h_1adfb750e574be81c775235114450e02d2`
+
+- :ref:`exhale_function_Utils_8h_1afe9d3a3f94a1933593ce04c7ef25eaa2`
+
+- :ref:`exhale_function_Utils_8h_1ab81503ea53b023bd2114b08a6643fe44`
+
+- :ref:`exhale_function_Utils_8h_1af06adc4b2cb3890b97d9a4e359ccbdbb`
+
+- :ref:`exhale_function_Utils_8h_1a58973c353654d770f99a760080e163d8`
+
+- :ref:`exhale_function_Utils_8h_1ade87227d33e2a1aa27dbbf3179647283`
+
+- :ref:`exhale_function_Utils_8h_1a998bfeb839f833edd52ef614843ddff2`
+
+- :ref:`exhale_function_Utils_8h_1a3044006971de85bafec635b557ec6e5e`
+
+- :ref:`exhale_function_Utils_8h_1a179f9e589669ffaa6ae7d32662668d08`
+
+- :ref:`exhale_function_Utils_8h_1a2adfa5bb20942ec65a13b62ffa2a9922`
+
+- :ref:`exhale_function_Utils_8h_1a6cabd81bec164375c529705d0b15037f`
+
+- :ref:`exhale_function_Utils_8h_1afaede37fe61a0c0c3aa04f018750b1ef`
+
+- :ref:`exhale_function_Utils_8h_1ac9ef4a96f1078fd4d2c3e63d2743e0e3`
+
+- :ref:`exhale_function_Utils_8h_1a3521283a4646f076b86e3d3978ac48f4`
+
+- :ref:`exhale_function_Utils_8h_1a3032a0dce980c76abdbdfa8c647446b0`
+
+- :ref:`exhale_function_Utils_8h_1a3df2e00e713e4daad22d710b8bdac1b4`
+
+- :ref:`exhale_function_Utils_8h_1a3ccf995f183092ae6fcaad18e67e87ad`
+
+- :ref:`exhale_function_Utils_8h_1a5939deb29234c89e05ce43b876219585`
+
+- :ref:`exhale_function_Utils_8h_1a70ca6d6ebf5f5be2616da160c293cf96`
+
+- :ref:`exhale_function_Utils_8h_1a252d9e4653f8e2fdc3047e1fe5d5ed58`
+
+- :ref:`exhale_function_Utils_8h_1ae69b2beec1e19ddec7dc4cb3a7964128`
+
+- :ref:`exhale_function_Utils_8h_1ab274adfc3ea5ecc518f809aa41a70fa4`
+
+- :ref:`exhale_function_Utils_8h_1a7a0f494b884211ddf353188b04a9942f`
+
+- :ref:`exhale_function_Utils_8h_1a3447f4078611bb2a4140ab6d6f4b1276`
+
+- :ref:`exhale_function_Utils_8h_1ade0bb3d45dbbebdbd5536a2b2f2d95bb`
+
+- :ref:`exhale_function_Utils_8h_1a2c72fa6cfd63c8d1c51775e61f54057a`
+
+- :ref:`exhale_function_Utils_8h_1a4c5ed7b169c861a5802c67d446e1dffd`
+
+- :ref:`exhale_function_Utils_8h_1a4b7c233620f9d046460f54cf61e6657c`
+
+- :ref:`exhale_function_Utils_8h_1a5a951f5120875e8c2d77222a82eb2593`
+
+- :ref:`exhale_function_Utils_8h_1ae901804c691760a21395130d6451c8d7`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_Utils_8h_1a8482e83d6d4ab014c2fd61d0818ba8d8`
+
+- :ref:`exhale_variable_Utils_8h_1abd8dfe5fc9ac51a32eccd2c675dcb953`
+
+- :ref:`exhale_variable_Utils_8h_1aede1ed722e85220b99a30df3b5eb6131`
+

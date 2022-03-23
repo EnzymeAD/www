@@ -1,0 +1,14 @@
+.. _exhale_function_PreserveNVVM_8cpp_1a8b97332bcac9251f9adb4a3870638290:
+
+Function X("preserve-nvvm", "Preserve NVVM Pass")
+=================================================
+
+- Defined in :ref:`file_PreserveNVVM.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: X("preserve-nvvm", "Preserve NVVM Pass")
+   :project: Enzyme

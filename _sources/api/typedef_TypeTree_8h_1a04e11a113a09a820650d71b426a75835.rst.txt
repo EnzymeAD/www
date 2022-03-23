@@ -1,0 +1,14 @@
+.. _exhale_typedef_TypeTree_8h_1a04e11a113a09a820650d71b426a75835:
+
+Typedef TypeTreeMapType
+=======================
+
+- Defined in :ref:`file_TypeAnalysis_TypeTree.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: TypeTreeMapType
+   :project: Enzyme

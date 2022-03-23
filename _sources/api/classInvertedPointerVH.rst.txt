@@ -1,0 +1,26 @@
+.. _exhale_class_classInvertedPointerVH:
+
+Class InvertedPointerVH
+=======================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public CallbackVH``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: InvertedPointerVH
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

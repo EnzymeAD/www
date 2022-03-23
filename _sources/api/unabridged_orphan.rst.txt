@@ -1,0 +1,198 @@
+:orphan:
+
+
+Full API
+========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_Clang.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_TypeAnalysis.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file_ActivityAnalysis.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_ActivityAnalysis.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_ActivityAnalysisPrinter.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_AdjointGenerator.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_BaseType.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_CacheUtility.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_CacheUtility.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_CMakeLists.txt.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_ConcreteType.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_DifferentialUseAnalysis.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Enzyme.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Enzyme.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Clang_EnzymeClang.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_EnzymeLogic.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_EnzymeLogic.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Clang_EnzymePassLoader.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_FunctionUtils.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_FunctionUtils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_GradientUtils.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_GradientUtils.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_LibraryFuncs.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_MustExitScalarEvolution.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_MustExitScalarEvolution.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_PreserveNVVM.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_PreserveNVVM.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_RustDebugInfo.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_RustDebugInfo.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TBAA.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TypeAnalysis.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TypeAnalysis.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TypeAnalysisPrinter.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TypeTree.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_TypeAnalysis_TypeTree.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Utils.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_Utils.h.rst

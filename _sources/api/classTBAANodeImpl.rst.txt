@@ -1,0 +1,17 @@
+.. _exhale_class_classTBAANodeImpl:
+
+Template Class TBAANodeImpl
+===========================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: TBAANodeImpl
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

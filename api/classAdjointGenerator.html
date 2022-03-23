@@ -1,0 +1,854 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Template Class AdjointGenerator &mdash; Enzyme Sphinx Theme 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class AssertingReplacingVH" href="classAssertingReplacingVH.html" />
+    <link rel="prev" title="Class ActivityAnalyzer" href="classActivityAnalyzer.html" />
+  <!-- Google Analytics -->
+  
+  <!-- End Google Analytics -->
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-orange-arrow">
+                Languages
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="doc-dropdown-option nav-dropdown-item" href="https://enzyme.mit.edu/docs/stable/index.html">
+                  <span class="dropdown-title">Julia</span>
+                  <p></p>
+                </a>
+                <a class="doc-dropdown-option nav-dropdown-item" href="">
+                  <span class="dropdown-title">Rust</span>
+                  <p></p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-arrow">
+                Resources
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="https://enzyme.mit.edu/features">
+                  <span class="dropdown-title">About</span>
+                  <p>Learn about Enzyme’s features and capabilities</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community</span>
+                  <p>Join the Enzyme developer community to contribute, learn, and get your questions answered.</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Developer Resources</span>
+                  <p>Developer documentation, templates and tools </p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class="dropdown-title">Forums</span>
+                  <p>A place to discuss Enzyme code, issues, install.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+<body class="enzyme-body">
+
+   
+
+    
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="enzyme-left-menu" id="enzyme-left-menu">
+      <div class="enzyme-side-scroll">
+        <div class="enzyme-menu enzyme-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="enzyme-left-menu-search">
+            
+
+            
+              
+              
+                <div class="version">
+                  0.0.1
+                </div>
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../starting/ad_intro_using_enzyme.html">Introduction to Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/compiler_based_ad.html">The Stages of Compiler-based Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/multi_source_ad.html">AD of Multi-Source Programs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Language Bindings</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/cpp/">C/C++</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/fortran/">Fortran</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/julia/">Julia</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/rust/">Rust</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/swift/">Swift</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../calling_convention.html">Calling Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting_and_tips.html">Troubleshooting and Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Applications and Code Examples of Enzyme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talks_and_tutorials.html">Talks and Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/advanced_options.html">Advanced options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/cuda_guide.html">CUDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/mpi_guide.html">MPI-Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/openmp_guide.html">OpenMP Directives and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/rocm_guide.html">ROCm</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="enzyme-container">
+      <div class="enzyme-page-level-bar" id="enzyme-page-level-bar">
+        <div class="enzyme-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="enzyme-breadcrumbs">
+    
+      <li>
+        <a href="../index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+          <li><a href="library_root.html">Library API</a> &gt;</li>
+        
+      <li>Template Class AdjointGenerator</li>
+    
+    
+      <li class="enzyme-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/classAdjointGenerator.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="enzyme-shortcuts-wrapper" id="enzyme-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="enzyme-content-wrap" class="enzyme-content-wrap">
+        <div class="enzyme-content-left">
+
+        
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="enzyme-article" class="enzyme-article">
+              
+  <section id="template-class-adjointgenerator">
+<span id="exhale-class-classadjointgenerator"></span><h1>Template Class AdjointGenerator<a class="headerlink" href="#template-class-adjointgenerator" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_AdjointGenerator.h.html#file-adjointgenerator-h"><span class="std std-ref">File AdjointGenerator.h</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">llvm::InstVisitor&lt;</span> <span class="pre">AdjointGenerator&lt;</span> <span class="pre">AugmentedReturn</span> <span class="pre">*</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0E16AdjointGenerator">
+<span id="_CPPv3I0E16AdjointGenerator"></span><span id="_CPPv2I0E16AdjointGenerator"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AugmentedReturnType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classAugmentedReturn.html#_CPPv415AugmentedReturn" title="AugmentedReturn"><span class="n"><span class="pre">AugmentedReturn</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAdjointGenerator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjointGenerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">InstVisitor</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0E16AdjointGenerator" title="AdjointGenerator"><span class="n"><span class="pre">AdjointGenerator</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classAugmentedReturn.html#_CPPv415AugmentedReturn" title="AugmentedReturn"><span class="n"><span class="pre">AugmentedReturn</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0E16AdjointGenerator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator16AdjointGeneratorE14DerivativeModeP13GradientUtilsRKNSt6vectorI10DIFFE_TYPEEE10DIFFE_TYPER11TypeResultsNSt8functionIFjP11Instruction9CacheTypeEEEKNSt3mapIP8CallInstKNSt3mapIP8ArgumentbEEEEPK15SmallPtrSetImplIP11InstructionE19AugmentedReturnTypePKNSt3mapIP10ReturnInstP9StoreInstEERK15SmallPtrSetImplIPK5ValueERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIP10BasicBlockEP10AllocaInst">
+<span id="_CPPv3N16AdjointGenerator16AdjointGeneratorE14DerivativeModeP13GradientUtilsRKNSt6vectorI10DIFFE_TYPEEE10DIFFE_TYPER11TypeResultsNSt8functionIFjP11Instruction9CacheTypeEEEKNSt3mapIP8CallInstKNSt3mapIP8ArgumentbEEEEPK15SmallPtrSetImplIP11InstructionE19AugmentedReturnTypePKNSt3mapIP10ReturnInstP9StoreInstEERK15SmallPtrSetImplIPK5ValueERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIP10BasicBlockEP10AllocaInst"></span><span id="_CPPv2N16AdjointGenerator16AdjointGeneratorE14DerivativeModeP13GradientUtilsRKNSt6vectorI10DIFFE_TYPEEE10DIFFE_TYPER11TypeResultsNSt8functionIFjP11Instruction9CacheTypeEEEKNSt3mapIP8CallInstKNSt3mapIP8ArgumentbEEEEPK15SmallPtrSetImplIP11InstructionE19AugmentedReturnTypePKNSt3mapIP10ReturnInstP9StoreInstEERK15SmallPtrSetImplIPK5ValueERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIP10BasicBlockEP10AllocaInst"></span><span class="target" id="classAdjointGenerator_1a71487c8c87d4073d47fa4db748c80d59"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjointGenerator</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="enum_Utils_8h_1af56f7e5b2d541b03c77f85a93ec637cd.html#_CPPv414DerivativeMode" title="DerivativeMode"><span class="n"><span class="pre">DerivativeMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Mode</span></span>, <a class="reference internal" href="classGradientUtils.html#_CPPv413GradientUtils" title="GradientUtils"><span class="n"><span class="pre">GradientUtils</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">gutils</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="enum_Utils_8h_1a42d89ce89fd7603afbf337dc2083d1d1.html#_CPPv410DIFFE_TYPE" title="DIFFE_TYPE"><span class="n"><span class="pre">DIFFE_TYPE</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">constant_args</span></span>, <a class="reference internal" href="enum_Utils_8h_1a42d89ce89fd7603afbf337dc2083d1d1.html#_CPPv410DIFFE_TYPE" title="DIFFE_TYPE"><span class="n"><span class="pre">DIFFE_TYPE</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">retType</span></span>, <a class="reference internal" href="classTypeResults.html#_CPPv411TypeResults" title="TypeResults"><span class="n"><span class="pre">TypeResults</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TR</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="enum_EnzymeLogic_8h_1a707cb231e76de0fed4a632ab6fa9a639.html#_CPPv49CacheType" title="CacheType"><span class="n"><span class="pre">CacheType</span></span></a><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">getIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CallInst</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Argument</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncacheable_args_map</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">SmallPtrSetImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">returnuses</span></span>, <a class="reference internal" href="#_CPPv4I0E16AdjointGenerator" title="AdjointGenerator::AugmentedReturnType"><span class="n"><span class="pre">AugmentedReturnType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">augmentedReturn</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">ReturnInst</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">StoreInst</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">replacedReturns</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">SmallPtrSetImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Value</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">unnecessaryValues</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">SmallPtrSetImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">unnecessaryInstructions</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">SmallPtrSetImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">unnecessaryStores</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">SmallPtrSetImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">BasicBlock</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">oldUnreachable</span></span>, <span class="n"><span class="pre">AllocaInst</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dretAlloca</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator16AdjointGeneratorE14DerivativeModeP13GradientUtilsRKNSt6vectorI10DIFFE_TYPEEE10DIFFE_TYPER11TypeResultsNSt8functionIFjP11Instruction9CacheTypeEEEKNSt3mapIP8CallInstKNSt3mapIP8ArgumentbEEEEPK15SmallPtrSetImplIP11InstructionE19AugmentedReturnTypePKNSt3mapIP10ReturnInstP9StoreInstEERK15SmallPtrSetImplIPK5ValueERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIPK11InstructionERK15SmallPtrSetImplIP10BasicBlockEP10AllocaInst" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13eraseIfUnusedERN4llvm11InstructionEbb">
+<span id="_CPPv3N16AdjointGenerator13eraseIfUnusedERN4llvm11InstructionEbb"></span><span id="_CPPv2N16AdjointGenerator13eraseIfUnusedERN4llvm11InstructionEbb"></span><span id="AdjointGenerator::eraseIfUnused__llvm::InstructionR.b.b"></span><span class="target" id="classAdjointGenerator_1a08d58e54c953e1b0b8d85722f141bd05"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eraseIfUnused</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">erase</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">check</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13eraseIfUnusedERN4llvm11InstructionEbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13MPI_TYPE_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type">
+<span id="_CPPv3N16AdjointGenerator13MPI_TYPE_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="_CPPv2N16AdjointGenerator13MPI_TYPE_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="AdjointGenerator::MPI_TYPE_SIZE__llvm::ValueP.IRBuilder::R.TypeP"></span><span class="target" id="classAdjointGenerator_1a08aa25daacc7d1ced0cfd0c049ccce31"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MPI_TYPE_SIZE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">DT</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">B</span></span>, <span class="n"><span class="pre">Type</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">intType</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13MPI_TYPE_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13MPI_COMM_RANKEPN4llvm5ValueER9IRBuilderIEP4Type">
+<span id="_CPPv3N16AdjointGenerator13MPI_COMM_RANKEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="_CPPv2N16AdjointGenerator13MPI_COMM_RANKEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="AdjointGenerator::MPI_COMM_RANK__llvm::ValueP.IRBuilder::R.TypeP"></span><span class="target" id="classAdjointGenerator_1a8a551389fb85a918c65ecd5f1d2e1c37"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MPI_COMM_RANK</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">comm</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">B</span></span>, <span class="n"><span class="pre">Type</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rankTy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13MPI_COMM_RANKEPN4llvm5ValueER9IRBuilderIEP4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13MPI_COMM_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type">
+<span id="_CPPv3N16AdjointGenerator13MPI_COMM_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="_CPPv2N16AdjointGenerator13MPI_COMM_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type"></span><span id="AdjointGenerator::MPI_COMM_SIZE__llvm::ValueP.IRBuilder::R.TypeP"></span><span class="target" id="classAdjointGenerator_1af584d0214f746876a35e35149b981607"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">MPI_COMM_SIZE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">comm</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">B</span></span>, <span class="n"><span class="pre">Type</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rankTy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13MPI_COMM_SIZEEPN4llvm5ValueER9IRBuilderIEP4Type" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator16visitInstructionERN4llvm11InstructionE">
+<span id="_CPPv3N16AdjointGenerator16visitInstructionERN4llvm11InstructionE"></span><span id="_CPPv2N16AdjointGenerator16visitInstructionERN4llvm11InstructionE"></span><span id="AdjointGenerator::visitInstruction__llvm::InstructionR"></span><span class="target" id="classAdjointGenerator_1a00e257a9d8fd5aeccb7413ecbaaa446c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitInstruction</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">inst</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator16visitInstructionERN4llvm11InstructionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator15visitAllocaInstERN4llvm10AllocaInstE">
+<span id="_CPPv3N16AdjointGenerator15visitAllocaInstERN4llvm10AllocaInstE"></span><span id="_CPPv2N16AdjointGenerator15visitAllocaInstERN4llvm10AllocaInstE"></span><span id="AdjointGenerator::visitAllocaInst__llvm::AllocaInstR"></span><span class="target" id="classAdjointGenerator_1aa2ab3b5c43b9857cbaeabc427c0e4c5c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitAllocaInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AllocaInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator15visitAllocaInstERN4llvm10AllocaInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitICmpInstERN4llvm8ICmpInstE">
+<span id="_CPPv3N16AdjointGenerator13visitICmpInstERN4llvm8ICmpInstE"></span><span id="_CPPv2N16AdjointGenerator13visitICmpInstERN4llvm8ICmpInstE"></span><span id="AdjointGenerator::visitICmpInst__llvm::ICmpInstR"></span><span class="target" id="classAdjointGenerator_1a01a741cdc06b6263e2cb72c0c8fe75f6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitICmpInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ICmpInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitICmpInstERN4llvm8ICmpInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitFCmpInstERN4llvm8FCmpInstE">
+<span id="_CPPv3N16AdjointGenerator13visitFCmpInstERN4llvm8FCmpInstE"></span><span id="_CPPv2N16AdjointGenerator13visitFCmpInstERN4llvm8FCmpInstE"></span><span id="AdjointGenerator::visitFCmpInst__llvm::FCmpInstR"></span><span class="target" id="classAdjointGenerator_1ac7d9fc14d86463e839a0c1be1c10dfb0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitFCmpInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">FCmpInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitFCmpInstERN4llvm8FCmpInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitLoadLikeERN4llvm11InstructionEjbP5ValueP5ValueP5Value">
+<span id="_CPPv3N16AdjointGenerator13visitLoadLikeERN4llvm11InstructionEjbP5ValueP5ValueP5Value"></span><span id="_CPPv2N16AdjointGenerator13visitLoadLikeERN4llvm11InstructionEjbP5ValueP5ValueP5Value"></span><span id="AdjointGenerator::visitLoadLike__llvm::InstructionR.unsigned.b.ValueP.ValueP.ValueP"></span><span class="target" id="classAdjointGenerator_1a563f89f009510da88b4fd56a050be05f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitLoadLike</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alignment</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">constantval</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">OrigOffset</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mask</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">orig_maskInit</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitLoadLikeERN4llvm11InstructionEjbP5ValueP5ValueP5Value" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitLoadInstERN4llvm8LoadInstE">
+<span id="_CPPv3N16AdjointGenerator13visitLoadInstERN4llvm8LoadInstE"></span><span id="_CPPv2N16AdjointGenerator13visitLoadInstERN4llvm8LoadInstE"></span><span id="AdjointGenerator::visitLoadInst__llvm::LoadInstR"></span><span class="target" id="classAdjointGenerator_1ada9424dd30cb3870fda578d4b4d4fcaa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitLoadInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">LoadInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitLoadInstERN4llvm8LoadInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator18visitAtomicRMWInstERN4llvm13AtomicRMWInstE">
+<span id="_CPPv3N16AdjointGenerator18visitAtomicRMWInstERN4llvm13AtomicRMWInstE"></span><span id="_CPPv2N16AdjointGenerator18visitAtomicRMWInstERN4llvm13AtomicRMWInstE"></span><span id="AdjointGenerator::visitAtomicRMWInst__llvm::AtomicRMWInstR"></span><span class="target" id="classAdjointGenerator_1ad8313fcdc5da233c1ec2800055c950a2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitAtomicRMWInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AtomicRMWInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator18visitAtomicRMWInstERN4llvm13AtomicRMWInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator14visitStoreInstERN4llvm9StoreInstE">
+<span id="_CPPv3N16AdjointGenerator14visitStoreInstERN4llvm9StoreInstE"></span><span id="_CPPv2N16AdjointGenerator14visitStoreInstERN4llvm9StoreInstE"></span><span id="AdjointGenerator::visitStoreInst__llvm::StoreInstR"></span><span class="target" id="classAdjointGenerator_1a917b35785a426d167fb948c64003b540"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitStoreInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">StoreInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator14visitStoreInstERN4llvm9StoreInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator16visitCommonStoreERN4llvm11InstructionEP5ValueP5Valuejb14AtomicOrderingN9SyncScope2IDEP5Value">
+<span id="_CPPv3N16AdjointGenerator16visitCommonStoreERN4llvm11InstructionEP5ValueP5Valuejb14AtomicOrderingN9SyncScope2IDEP5Value"></span><span id="_CPPv2N16AdjointGenerator16visitCommonStoreERN4llvm11InstructionEP5ValueP5Valuejb14AtomicOrderingN9SyncScope2IDEP5Value"></span><span id="AdjointGenerator::visitCommonStore__llvm::InstructionR.ValueP.ValueP.unsigned.b.AtomicOrdering.SyncScope::ID.ValueP"></span><span class="target" id="classAdjointGenerator_1adead1ced005c531948962daa0e81266d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitCommonStore</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">orig_ptr</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">orig_val</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">align</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">isVolatile</span></span>, <span class="n"><span class="pre">AtomicOrdering</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ordering</span></span>, <span class="n"><span class="pre">SyncScope</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ID</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">syncScope</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mask</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator16visitCommonStoreERN4llvm11InstructionEP5ValueP5Valuejb14AtomicOrderingN9SyncScope2IDEP5Value" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator22visitGetElementPtrInstERN4llvm17GetElementPtrInstE">
+<span id="_CPPv3N16AdjointGenerator22visitGetElementPtrInstERN4llvm17GetElementPtrInstE"></span><span id="_CPPv2N16AdjointGenerator22visitGetElementPtrInstERN4llvm17GetElementPtrInstE"></span><span id="AdjointGenerator::visitGetElementPtrInst__llvm::GetElementPtrInstR"></span><span class="target" id="classAdjointGenerator_1aea2bacca190cfbd46b5f129d81fe4e8a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitGetElementPtrInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GetElementPtrInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">gep</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator22visitGetElementPtrInstERN4llvm17GetElementPtrInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator12visitPHINodeERN4llvm7PHINodeE">
+<span id="_CPPv3N16AdjointGenerator12visitPHINodeERN4llvm7PHINodeE"></span><span id="_CPPv2N16AdjointGenerator12visitPHINodeERN4llvm7PHINodeE"></span><span id="AdjointGenerator::visitPHINode__llvm::PHINodeR"></span><span class="target" id="classAdjointGenerator_1aabeda2345f2330652514ec02bc7f7bbc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitPHINode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PHINode</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">phi</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator12visitPHINodeERN4llvm7PHINodeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitCastInstERN4llvm8CastInstE">
+<span id="_CPPv3N16AdjointGenerator13visitCastInstERN4llvm8CastInstE"></span><span id="_CPPv2N16AdjointGenerator13visitCastInstERN4llvm8CastInstE"></span><span id="AdjointGenerator::visitCastInst__llvm::CastInstR"></span><span class="target" id="classAdjointGenerator_1a8e48adfe4ca0998e21b6a9c50fce88dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitCastInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CastInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitCastInstERN4llvm8CastInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator15visitSelectInstERN4llvm10SelectInstE">
+<span id="_CPPv3N16AdjointGenerator15visitSelectInstERN4llvm10SelectInstE"></span><span id="_CPPv2N16AdjointGenerator15visitSelectInstERN4llvm10SelectInstE"></span><span id="AdjointGenerator::visitSelectInst__llvm::SelectInstR"></span><span class="target" id="classAdjointGenerator_1a9e905c741bfc2eca773641fd15a1e57b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitSelectInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SelectInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator15visitSelectInstERN4llvm10SelectInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator23createSelectInstAdjointERN4llvm10SelectInstE">
+<span id="_CPPv3N16AdjointGenerator23createSelectInstAdjointERN4llvm10SelectInstE"></span><span id="_CPPv2N16AdjointGenerator23createSelectInstAdjointERN4llvm10SelectInstE"></span><span id="AdjointGenerator::createSelectInstAdjoint__llvm::SelectInstR"></span><span class="target" id="classAdjointGenerator_1a0f01be0f33c19d95998cf1dd0d9d9146"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createSelectInstAdjoint</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SelectInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator23createSelectInstAdjointERN4llvm10SelectInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator20createSelectInstDualERN4llvm10SelectInstE">
+<span id="_CPPv3N16AdjointGenerator20createSelectInstDualERN4llvm10SelectInstE"></span><span id="_CPPv2N16AdjointGenerator20createSelectInstDualERN4llvm10SelectInstE"></span><span id="AdjointGenerator::createSelectInstDual__llvm::SelectInstR"></span><span class="target" id="classAdjointGenerator_1af6aae9802252cacdd410ddc7059cdd96"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createSelectInstDual</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SelectInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator20createSelectInstDualERN4llvm10SelectInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator23visitExtractElementInstERN4llvm18ExtractElementInstE">
+<span id="_CPPv3N16AdjointGenerator23visitExtractElementInstERN4llvm18ExtractElementInstE"></span><span id="_CPPv2N16AdjointGenerator23visitExtractElementInstERN4llvm18ExtractElementInstE"></span><span id="AdjointGenerator::visitExtractElementInst__llvm::ExtractElementInstR"></span><span class="target" id="classAdjointGenerator_1a267b86337f6a5717cacf484cd51037f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitExtractElementInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ExtractElementInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">EEI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator23visitExtractElementInstERN4llvm18ExtractElementInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator22visitInsertElementInstERN4llvm17InsertElementInstE">
+<span id="_CPPv3N16AdjointGenerator22visitInsertElementInstERN4llvm17InsertElementInstE"></span><span id="_CPPv2N16AdjointGenerator22visitInsertElementInstERN4llvm17InsertElementInstE"></span><span id="AdjointGenerator::visitInsertElementInst__llvm::InsertElementInstR"></span><span class="target" id="classAdjointGenerator_1ad706c0c017081e8f094bab2474aad16f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitInsertElementInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">InsertElementInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">IEI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator22visitInsertElementInstERN4llvm17InsertElementInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator22visitShuffleVectorInstERN4llvm17ShuffleVectorInstE">
+<span id="_CPPv3N16AdjointGenerator22visitShuffleVectorInstERN4llvm17ShuffleVectorInstE"></span><span id="_CPPv2N16AdjointGenerator22visitShuffleVectorInstERN4llvm17ShuffleVectorInstE"></span><span id="AdjointGenerator::visitShuffleVectorInst__llvm::ShuffleVectorInstR"></span><span class="target" id="classAdjointGenerator_1acada87602fa76e0c0fc81d1f21269370"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitShuffleVectorInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ShuffleVectorInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">SVI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator22visitShuffleVectorInstERN4llvm17ShuffleVectorInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator21visitExtractValueInstERN4llvm16ExtractValueInstE">
+<span id="_CPPv3N16AdjointGenerator21visitExtractValueInstERN4llvm16ExtractValueInstE"></span><span id="_CPPv2N16AdjointGenerator21visitExtractValueInstERN4llvm16ExtractValueInstE"></span><span id="AdjointGenerator::visitExtractValueInst__llvm::ExtractValueInstR"></span><span class="target" id="classAdjointGenerator_1a902a1176828565e492a6736751fdca57"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitExtractValueInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ExtractValueInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">EVI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator21visitExtractValueInstERN4llvm16ExtractValueInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator20visitInsertValueInstERN4llvm15InsertValueInstE">
+<span id="_CPPv3N16AdjointGenerator20visitInsertValueInstERN4llvm15InsertValueInstE"></span><span id="_CPPv2N16AdjointGenerator20visitInsertValueInstERN4llvm15InsertValueInstE"></span><span id="AdjointGenerator::visitInsertValueInst__llvm::InsertValueInstR"></span><span class="target" id="classAdjointGenerator_1af3ba8a194f54edf655245dd1c43d238b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitInsertValueInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">InsertValueInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">IVI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator20visitInsertValueInstERN4llvm15InsertValueInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator17getReverseBuilderER9IRBuilderIEb">
+<span id="_CPPv3N16AdjointGenerator17getReverseBuilderER9IRBuilderIEb"></span><span id="_CPPv2N16AdjointGenerator17getReverseBuilderER9IRBuilderIEb"></span><span id="AdjointGenerator::getReverseBuilder__IRBuilder::R.b"></span><span class="target" id="classAdjointGenerator_1aaaaddae9d98e0af2b0ecc9e4f931a89b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getReverseBuilder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder2</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">original</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator17getReverseBuilderER9IRBuilderIEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator17getForwardBuilderER9IRBuilderIE">
+<span id="_CPPv3N16AdjointGenerator17getForwardBuilderER9IRBuilderIE"></span><span id="_CPPv2N16AdjointGenerator17getForwardBuilderER9IRBuilderIE"></span><span id="AdjointGenerator::getForwardBuilder__IRBuilder::R"></span><span class="target" id="classAdjointGenerator_1ac56686aee86413ca919875de9fe2f72b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getForwardBuilder</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator17getForwardBuilderER9IRBuilderIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator5diffeEP5ValueR9IRBuilderIE">
+<span id="_CPPv3N16AdjointGenerator5diffeEP5ValueR9IRBuilderIE"></span><span id="_CPPv2N16AdjointGenerator5diffeEP5ValueR9IRBuilderIE"></span><span id="AdjointGenerator::diffe__ValueP.IRBuilder::R"></span><span class="target" id="classAdjointGenerator_1a3eb49f74c1464e1540a2834bf6094ff3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">diffe</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator5diffeEP5ValueR9IRBuilderIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator8setDiffeEP5ValueP5ValueR9IRBuilderIE">
+<span id="_CPPv3N16AdjointGenerator8setDiffeEP5ValueP5ValueR9IRBuilderIE"></span><span id="_CPPv2N16AdjointGenerator8setDiffeEP5ValueP5ValueR9IRBuilderIE"></span><span id="AdjointGenerator::setDiffe__ValueP.ValueP.IRBuilder::R"></span><span class="target" id="classAdjointGenerator_1ab94249fc06d76eb6f5c7ef292bd374a5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDiffe</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dif</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator8setDiffeEP5ValueP5ValueR9IRBuilderIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEP5ValueP4TypeR9IRBuilderIE4FuncDp4Args">
+<span id="_CPPv3I0DpEN16AdjointGenerator14applyChainRuleEP4TypeR9IRBuilderIE4FuncDp4Args"></span><span id="_CPPv2I0DpEN16AdjointGenerator14applyChainRuleEP4TypeR9IRBuilderIE4FuncDp4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Func</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAdjointGenerator_1a57cfa9a6e49b52b8e4f05cfe10f3b692"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">applyChainRule</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Type</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">diffType</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEP5ValueP4TypeR9IRBuilderIE4FuncDp4Args" title="AdjointGenerator::applyChainRule::Func"><span class="n"><span class="pre">Func</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rule</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEP5ValueP4TypeR9IRBuilderIE4FuncDp4Args" title="AdjointGenerator::applyChainRule::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEP5ValueP4TypeR9IRBuilderIE4FuncDp4Args" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Unwraps a vector derivative from its internal representation and applies a function f to each element. Return values of f are collected and wrapped. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEvR9IRBuilderIE4FuncDp4Args">
+<span id="_CPPv3I0DpEN16AdjointGenerator14applyChainRuleER9IRBuilderIE4FuncDp4Args"></span><span id="_CPPv2I0DpEN16AdjointGenerator14applyChainRuleER9IRBuilderIE4FuncDp4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Func</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAdjointGenerator_1ae5c8595a41271f5746dd52a7990de097"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">applyChainRule</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEvR9IRBuilderIE4FuncDp4Args" title="AdjointGenerator::applyChainRule::Func"><span class="n"><span class="pre">Func</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">rule</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEvR9IRBuilderIE4FuncDp4Args" title="AdjointGenerator::applyChainRule::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0DpEN16AdjointGenerator14applyChainRuleEvR9IRBuilderIE4FuncDp4Args" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Unwraps a vector derivative from its internal representation and applies a function f to each element. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator10shouldFreeEv">
+<span id="_CPPv3N16AdjointGenerator10shouldFreeEv"></span><span id="_CPPv2N16AdjointGenerator10shouldFreeEv"></span><span id="AdjointGenerator::shouldFree"></span><span class="target" id="classAdjointGenerator_1a3e222838783379f00ce04a9ba14410f2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shouldFree</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator10shouldFreeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator10addToDiffeEP5ValueP5ValueR9IRBuilderIEP4TypeP5Value">
+<span id="_CPPv3N16AdjointGenerator10addToDiffeEP5ValueP5ValueR9IRBuilderIEP4TypeP5Value"></span><span id="_CPPv2N16AdjointGenerator10addToDiffeEP5ValueP5ValueR9IRBuilderIEP4TypeP5Value"></span><span id="AdjointGenerator::addToDiffe__ValueP.ValueP.IRBuilder::R.TypeP.ValueP"></span><span class="target" id="classAdjointGenerator_1afce579d85baced22c6410cd5a08f6b50"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">SelectInst</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addToDiffe</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dif</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span>, <span class="n"><span class="pre">Type</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">T</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mask</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator10addToDiffeEP5ValueP5ValueR9IRBuilderIEP4TypeP5Value" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator6lookupEP5ValueR9IRBuilderIE">
+<span id="_CPPv3N16AdjointGenerator6lookupEP5ValueR9IRBuilderIE"></span><span id="_CPPv2N16AdjointGenerator6lookupEP5ValueR9IRBuilderIE"></span><span id="AdjointGenerator::lookup__ValueP.IRBuilder::R"></span><span class="target" id="classAdjointGenerator_1a3b8e0337a5c01898df157f8e1c6d04cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lookup</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator6lookupEP5ValueR9IRBuilderIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator19visitBinaryOperatorERN4llvm14BinaryOperatorE">
+<span id="_CPPv3N16AdjointGenerator19visitBinaryOperatorERN4llvm14BinaryOperatorE"></span><span id="_CPPv2N16AdjointGenerator19visitBinaryOperatorERN4llvm14BinaryOperatorE"></span><span id="AdjointGenerator::visitBinaryOperator__llvm::BinaryOperatorR"></span><span class="target" id="classAdjointGenerator_1afffc7271848b81ac5e81b6d8dba490cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitBinaryOperator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BinaryOperator</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">BO</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator19visitBinaryOperatorERN4llvm14BinaryOperatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator27createBinaryOperatorAdjointERN4llvm14BinaryOperatorE">
+<span id="_CPPv3N16AdjointGenerator27createBinaryOperatorAdjointERN4llvm14BinaryOperatorE"></span><span id="_CPPv2N16AdjointGenerator27createBinaryOperatorAdjointERN4llvm14BinaryOperatorE"></span><span id="AdjointGenerator::createBinaryOperatorAdjoint__llvm::BinaryOperatorR"></span><span class="target" id="classAdjointGenerator_1aad3e1de4a767057776f2ebf769c343b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createBinaryOperatorAdjoint</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BinaryOperator</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">BO</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator27createBinaryOperatorAdjointERN4llvm14BinaryOperatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator24createBinaryOperatorDualERN4llvm14BinaryOperatorE">
+<span id="_CPPv3N16AdjointGenerator24createBinaryOperatorDualERN4llvm14BinaryOperatorE"></span><span id="_CPPv2N16AdjointGenerator24createBinaryOperatorDualERN4llvm14BinaryOperatorE"></span><span id="AdjointGenerator::createBinaryOperatorDual__llvm::BinaryOperatorR"></span><span class="target" id="classAdjointGenerator_1a71fdbe9665b8f9f731d8ac736fc60cec"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createBinaryOperatorDual</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">BinaryOperator</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">BO</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator24createBinaryOperatorDualERN4llvm14BinaryOperatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator15visitMemSetInstERN4llvm10MemSetInstE">
+<span id="_CPPv3N16AdjointGenerator15visitMemSetInstERN4llvm10MemSetInstE"></span><span id="_CPPv2N16AdjointGenerator15visitMemSetInstERN4llvm10MemSetInstE"></span><span id="AdjointGenerator::visitMemSetInst__llvm::MemSetInstR"></span><span class="target" id="classAdjointGenerator_1aed8219292250850b71010dd86408b7e3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitMemSetInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MemSetInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">MS</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator15visitMemSetInstERN4llvm10MemSetInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator20visitMemTransferInstERN4llvm15MemTransferInstE">
+<span id="_CPPv3N16AdjointGenerator20visitMemTransferInstERN4llvm15MemTransferInstE"></span><span id="_CPPv2N16AdjointGenerator20visitMemTransferInstERN4llvm15MemTransferInstE"></span><span id="AdjointGenerator::visitMemTransferInst__llvm::MemTransferInstR"></span><span class="target" id="classAdjointGenerator_1a683a3c2a1febe110d23133b0b6c6bc24"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitMemTransferInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MemTransferInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">MTI</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator20visitMemTransferInstERN4llvm15MemTransferInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator22visitMemTransferCommonEN9Intrinsic2IDEjjRN4llvm8CallInstEP5ValueP5ValueP5ValueP5Value">
+<span id="_CPPv3N16AdjointGenerator22visitMemTransferCommonEN9Intrinsic2IDEjjRN4llvm8CallInstEP5ValueP5ValueP5ValueP5Value"></span><span id="_CPPv2N16AdjointGenerator22visitMemTransferCommonEN9Intrinsic2IDEjjRN4llvm8CallInstEP5ValueP5ValueP5ValueP5Value"></span><span id="AdjointGenerator::visitMemTransferCommon__Intrinsic::ID.unsigned.unsigned.llvm::CallInstR.ValueP.ValueP.ValueP.ValueP"></span><span class="target" id="classAdjointGenerator_1a819f9aec391ffbb39b77ca1031f756e6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitMemTransferCommon</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Intrinsic</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ID</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ID</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">srcAlign</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dstAlign</span></span>, <span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">MTI</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">orig_dst</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">orig_src</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">new_size</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">isVolatile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator22visitMemTransferCommonEN9Intrinsic2IDEjjRN4llvm8CallInstEP5ValueP5ValueP5ValueP5Value" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator18visitIntrinsicInstERN4llvm13IntrinsicInstE">
+<span id="_CPPv3N16AdjointGenerator18visitIntrinsicInstERN4llvm13IntrinsicInstE"></span><span id="_CPPv2N16AdjointGenerator18visitIntrinsicInstERN4llvm13IntrinsicInstE"></span><span id="AdjointGenerator::visitIntrinsicInst__llvm::IntrinsicInstR"></span><span class="target" id="classAdjointGenerator_1ab1daee6ccd1799d394aaa621ceb75d43"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitIntrinsicInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">IntrinsicInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">II</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator18visitIntrinsicInstERN4llvm13IntrinsicInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator25handleAdjointForIntrinsicEN9Intrinsic2IDERN4llvm11InstructionER15SmallVectorImplIP5ValueE">
+<span id="_CPPv3N16AdjointGenerator25handleAdjointForIntrinsicEN9Intrinsic2IDERN4llvm11InstructionER15SmallVectorImplIP5ValueE"></span><span id="_CPPv2N16AdjointGenerator25handleAdjointForIntrinsicEN9Intrinsic2IDERN4llvm11InstructionER15SmallVectorImplIP5ValueE"></span><span id="AdjointGenerator::handleAdjointForIntrinsic__Intrinsic::ID.llvm::InstructionR.SmallVectorImpl:ValueP:R"></span><span class="target" id="classAdjointGenerator_1a54b19ff49782425606e75fe13a1c411d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleAdjointForIntrinsic</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Intrinsic</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ID</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ID</span></span>, <span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">I</span></span>, <span class="n"><span class="pre">SmallVectorImpl</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Value</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">orig_ops</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator25handleAdjointForIntrinsicEN9Intrinsic2IDERN4llvm11InstructionER15SmallVectorImplIP5ValueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator12visitOMPCallERN4llvm8CallInstE">
+<span id="_CPPv3N16AdjointGenerator12visitOMPCallERN4llvm8CallInstE"></span><span id="_CPPv2N16AdjointGenerator12visitOMPCallERN4llvm8CallInstE"></span><span id="AdjointGenerator::visitOMPCall__llvm::CallInstR"></span><span class="target" id="classAdjointGenerator_1ab9a37508041ab9b3e8cb8890c8480b83"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitOMPCall</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">call</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator12visitOMPCallERN4llvm8CallInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator27DifferentiableMemCopyFloatsER8CallInstP5ValueP5ValueP5ValueP5ValueR9IRBuilderIE8ArrayRefI16OperandBundleDefE">
+<span id="_CPPv3N16AdjointGenerator27DifferentiableMemCopyFloatsER8CallInstP5ValueP5ValueP5ValueP5ValueR9IRBuilderIE8ArrayRefI16OperandBundleDefE"></span><span id="_CPPv2N16AdjointGenerator27DifferentiableMemCopyFloatsER8CallInstP5ValueP5ValueP5ValueP5ValueR9IRBuilderIE8ArrayRefI16OperandBundleDefE"></span><span id="AdjointGenerator::DifferentiableMemCopyFloats__CallInstR.ValueP.ValueP.ValueP.ValueP.IRBuilder::R.ArrayRef:OperandBundleDef:"></span><span class="target" id="classAdjointGenerator_1a30f0e68f7bf7319234f7ff054fa540c6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DifferentiableMemCopyFloats</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">call</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">origArg</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dsto</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">srco</span></span>, <span class="n"><span class="pre">Value</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">len_arg</span></span>, <span class="n"><span class="pre">IRBuilder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Builder2</span></span>, <span class="n"><span class="pre">ArrayRef</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">OperandBundleDef</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ReverseDefs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator27DifferentiableMemCopyFloatsER8CallInstP5ValueP5ValueP5ValueP5ValueR9IRBuilderIE8ArrayRefI16OperandBundleDefE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator11extractBLASE9StringRefRNSt6stringERNSt6stringE">
+<span id="_CPPv3N16AdjointGenerator11extractBLASE9StringRefRNSt6stringERNSt6stringE"></span><span id="_CPPv2N16AdjointGenerator11extractBLASE9StringRefRNSt6stringERNSt6stringE"></span><span id="AdjointGenerator::extractBLAS__StringRef.ssR.ssR"></span><span class="target" id="classAdjointGenerator_1aeb46f924ced0b27137544147520268f2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">extractBLAS</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">StringRef</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">prefix</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">suffix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator11extractBLASE9StringRefRNSt6stringERNSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator10handleBLASERN4llvm8CallInstEP8Function9StringRef9StringRef9StringRefRKNSt3mapIP8ArgumentbEE">
+<span id="_CPPv3N16AdjointGenerator10handleBLASERN4llvm8CallInstEP8Function9StringRef9StringRef9StringRefRKNSt3mapIP8ArgumentbEE"></span><span id="_CPPv2N16AdjointGenerator10handleBLASERN4llvm8CallInstEP8Function9StringRef9StringRef9StringRefRKNSt3mapIP8ArgumentbEE"></span><span id="AdjointGenerator::handleBLAS__llvm::CallInstR.FunctionP.StringRef.StringRef.StringRef.std::map:ArgumentP.b:CR"></span><span class="target" id="classAdjointGenerator_1a8b631664eeef210c22df3ce0c88594c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleBLAS</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">call</span></span>, <span class="n"><span class="pre">Function</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">called</span></span>, <span class="n"><span class="pre">StringRef</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">funcName</span></span>, <span class="n"><span class="pre">StringRef</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">prefix</span></span>, <span class="n"><span class="pre">StringRef</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">suffix</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Argument</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">uncacheable_args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator10handleBLASERN4llvm8CallInstEP8Function9StringRef9StringRef9StringRefRKNSt3mapIP8ArgumentbEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator9handleMPIERN4llvm8CallInstEP8Function9StringRef">
+<span id="_CPPv3N16AdjointGenerator9handleMPIERN4llvm8CallInstEP8Function9StringRef"></span><span id="_CPPv2N16AdjointGenerator9handleMPIERN4llvm8CallInstEP8Function9StringRef"></span><span id="AdjointGenerator::handleMPI__llvm::CallInstR.FunctionP.StringRef"></span><span class="target" id="classAdjointGenerator_1a5bdef3f352becaaf9f43820af71afc28"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleMPI</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">call</span></span>, <span class="n"><span class="pre">Function</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">called</span></span>, <span class="n"><span class="pre">StringRef</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">funcName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator9handleMPIERN4llvm8CallInstEP8Function9StringRef" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator13visitCallInstERN4llvm8CallInstE">
+<span id="_CPPv3N16AdjointGenerator13visitCallInstERN4llvm8CallInstE"></span><span id="_CPPv2N16AdjointGenerator13visitCallInstERN4llvm8CallInstE"></span><span id="AdjointGenerator::visitCallInst__llvm::CallInstR"></span><span class="target" id="classAdjointGenerator_1a170190a6d1003463d139b09016241434"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visitCallInst</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">llvm</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CallInst</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">call</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AdjointGenerator13visitCallInstERN4llvm8CallInstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16AdjointGenerator6erasedE">
+<span id="_CPPv3N16AdjointGenerator6erasedE"></span><span id="_CPPv2N16AdjointGenerator6erasedE"></span><span id="AdjointGenerator::erased__SmallPtrSet:InstructionP.4:"></span><span class="target" id="classAdjointGenerator_1a2f482312c2d46302ae19ae99118d9d95"></span><span class="n"><span class="pre">SmallPtrSet</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">erased</span></span></span><a class="headerlink" href="#_CPPv4N16AdjointGenerator6erasedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classAssertingReplacingVH.html" class="btn btn-neutral float-right" title="Class AssertingReplacingVH" accesskey="n" rel="next">Next <img src="../_static/images/chevron-right-blue.svg" class="next-page"></a>
+      
+      
+        <a href="classActivityAnalyzer.html" class="btn btn-neutral" title="Class ActivityAnalyzer" accesskey="p" rel="prev"><img src="../_static/images/chevron-right-blue.svg" class="previous-page"> Previous</a>
+      
+    </div>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Enzyme.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/EnzymeAD/enzyme_sphinx_theme">theme</a> provided by <a href="https://enzyme.mit.edu">Enzyme</a>.
+      </div>
+      <br>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="enzyme-content-right" id="enzyme-content-right">
+          <div class="enzyme-right-menu" id="enzyme-right-menu">
+            <div class="enzyme-side-scroll" id="enzyme-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Template Class AdjointGenerator</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+         <script src="../_static/jquery.js"></script>
+         <script src="../_static/underscore.js"></script>
+         <script src="../_static/doctools.js"></script>
+         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+     
+
+  
+
+  <script type="text/javascript" src="../_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="../_static/js/vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <!-- Begin Footer -->
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="https://enzyme.mit.edu" class="footer-logo"></a>
+      </div>
+
+      <div class="footer-links-wrapper">
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://enzyme.mit.edu">Enzyme</a></li>
+            <li><a href="https://enzyme.mit.edu/get-started">Get Started</a></li>
+            <li><a href="https://enzyme.mit.edu/features">Features</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="">Resources</a></li>
+            <li><a href="https://enzyme.mit.edu/tutorials">Tutorials</a></li>
+            <li><a href="https://enzyme.mit.edu/docs/stable/index.html">Docs</a></li>
+            <li><a href="" target="_blank">Discuss</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/issues" target="_blank">Github Issues</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col follow-us-col">
+          <ul>
+            <li class="list-title">Stay Connected</li>
+            <li>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://groups.google.com/d/forum/enzyme-dev"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="email-subscribe-form validate"
+                  target="_blank"
+                  novalidate>
+                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
+
+                    <div class="clear">
+                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="">Mobile</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Hub</a>
+          </li>
+
+          <li>
+            <a href="">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://enzyme.mit.edu/tutorials">Tutorials</a>
+          </li>
+
+          <li class="resources-mobile-menu-title">
+            Docs
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="https://enzyme.mit.edu/docs/stable/index.html">PyTorch</a>
+            </li>
+
+            <li>
+              <a href="">torchaudio</a>
+            </li>
+
+            <li>
+              <a href="">torchtext</a>
+            </li>
+
+            <li>
+              <a href="">torchvision</a>
+            </li>
+
+            <li>
+              <a href="">TorchElastic</a>
+            </li>
+
+            <li>
+              <a href="">TorchServe</a>
+            </li>
+
+            <li>
+              <a href="">PyTorch on XLA Devices</a>
+            </li>
+          </ul>
+
+          <li class="resources-mobile-menu-title">
+            Resources
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="">Developer Resources</a>
+            </li>
+
+            <li>
+              <a href="https://enzyme.mit.edu/features">About</a>
+            </li>
+
+            <li>
+              <a href="">Models (Beta)</a>
+            </li>
+
+            <li>
+              <a href="">Community</a>
+            </li>
+
+            <li>
+              <a href="">Forums</a>
+            </li>
+          </ul>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="../_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      enzymeAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+      filterTags.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.enzyme-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>

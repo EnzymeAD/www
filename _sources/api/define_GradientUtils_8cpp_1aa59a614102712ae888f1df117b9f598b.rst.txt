@@ -1,0 +1,14 @@
+.. _exhale_define_GradientUtils_8cpp_1aa59a614102712ae888f1df117b9f598b:
+
+Define getOpFullest
+===================
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: getOpFullest
+   :project: Enzyme

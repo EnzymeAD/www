@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8h_1a7bc778d7617ecd5f05182ec6beef32f8:
+
+Function str(CacheType)
+=======================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: str(CacheType)
+   :project: Enzyme

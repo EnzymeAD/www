@@ -1,0 +1,14 @@
+.. _exhale_function_Enzyme_8cpp_1a3ae815d62b8bf27da00be8c72a2bf1a7:
+
+Function EnzymeOMPOpt
+=====================
+
+- Defined in :ref:`file_Enzyme.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeOMPOpt("enzyme-omp-opt", cl::init(false), cl::Hidden, cl::desc("Whether to enable openmp opt"))
+   :project: Enzyme

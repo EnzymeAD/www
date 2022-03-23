@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8h_1a766e45357c26eee57fbb27c8b1286428:
+
+Function str(AugmentedStruct)
+=============================
+
+- Defined in :ref:`file_EnzymeLogic.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: str(AugmentedStruct)
+   :project: Enzyme

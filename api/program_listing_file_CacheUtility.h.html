@@ -1,0 +1,973 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Listing for File CacheUtility.h &mdash; Enzyme Sphinx Theme 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <!-- Google Analytics -->
+  
+  <!-- End Google Analytics -->
+  
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="../_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-orange-arrow">
+                Languages
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="doc-dropdown-option nav-dropdown-item" href="https://enzyme.mit.edu/docs/stable/index.html">
+                  <span class="dropdown-title">Julia</span>
+                  <p></p>
+                </a>
+                <a class="doc-dropdown-option nav-dropdown-item" href="">
+                  <span class="dropdown-title">Rust</span>
+                  <p></p>
+                </a>
+            </div>
+          </li>
+
+          <li>
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-arrow">
+                Resources
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="https://enzyme.mit.edu/features">
+                  <span class="dropdown-title">About</span>
+                  <p>Learn about Enzyme’s features and capabilities</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Community</span>
+                  <p>Join the Enzyme developer community to contribute, learn, and get your questions answered.</p>
+                </a>
+                <a class="nav-dropdown-item" href="">
+                  <span class="dropdown-title">Developer Resources</span>
+                  <p>Developer documentation, templates and tools </p>
+                </a>
+                <a class="nav-dropdown-item" href="" target="_blank">
+                  <span class="dropdown-title">Forums</span>
+                  <p>A place to discuss Enzyme code, issues, install.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+<body class="enzyme-body">
+
+   
+
+    
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="enzyme-left-menu" id="enzyme-left-menu">
+      <div class="enzyme-side-scroll">
+        <div class="enzyme-menu enzyme-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="enzyme-left-menu-search">
+            
+
+            
+              
+              
+                <div class="version">
+                  0.0.1
+                </div>
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../starting/ad_intro_using_enzyme.html">Introduction to Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/compiler_based_ad.html">The Stages of Compiler-based Automatic Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/multi_source_ad.html">AD of Multi-Source Programs</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Language Bindings</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/cpp/">C/C++</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/fortran/">Fortran</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/julia/">Julia</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/rust/">Rust</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://enzyme.mit.edu/swift/">Swift</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../calling_convention.html">Calling Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting_and_tips.html">Troubleshooting and Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Applications and Code Examples of Enzyme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../talks_and_tutorials.html">Talks and Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/advanced_options.html">Advanced options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/cuda_guide.html">CUDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/mpi_guide.html">MPI-Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/openmp_guide.html">OpenMP Directives and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/rocm_guide.html">ROCm</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="enzyme-container">
+      <div class="enzyme-page-level-bar" id="enzyme-page-level-bar">
+        <div class="enzyme-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="enzyme-breadcrumbs">
+    
+      <li>
+        <a href="../index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+      <li>Program Listing for File CacheUtility.h</li>
+    
+    
+      <li class="enzyme-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/program_listing_file_CacheUtility.h.rst.txt" rel="nofollow"><img src="../_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="enzyme-shortcuts-wrapper" id="enzyme-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="enzyme-content-wrap" class="enzyme-content-wrap">
+        <div class="enzyme-content-left">
+
+        
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="enzyme-article" class="enzyme-article">
+              
+  <section id="program-listing-for-file-cacheutility-h">
+<span id="program-listing-file-cacheutility-h"></span><h1>Program Listing for File CacheUtility.h<a class="headerlink" href="#program-listing-for-file-cacheutility-h" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_CacheUtility.h.html#file-cacheutility-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">CacheUtility.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//===- CacheUtility.h - Caching values in the forward pass for later use</span>
+<span class="c1">//---===//</span>
+<span class="c1">//</span>
+<span class="c1">//                             Enzyme Project</span>
+<span class="c1">//</span>
+<span class="c1">// Part of the Enzyme Project, under the Apache License v2.0 with LLVM</span>
+<span class="c1">// Exceptions. See https://llvm.org/LICENSE.txt for license information.</span>
+<span class="c1">// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception</span>
+<span class="c1">//</span>
+<span class="c1">// If using this code in an academic setting, please cite the following:</span>
+<span class="c1">// @incollection{enzymeNeurips,</span>
+<span class="c1">// title = {Instead of Rewriting Foreign Code for Machine Learning,</span>
+<span class="c1">//          Automatically Synthesize Fast Gradients},</span>
+<span class="c1">// author = {Moses, William S. and Churavy, Valentin},</span>
+<span class="c1">// booktitle = {Advances in Neural Information Processing Systems 33},</span>
+<span class="c1">// year = {2020},</span>
+<span class="c1">// note = {To appear in},</span>
+<span class="c1">// }</span>
+<span class="c1">//</span>
+<span class="c1">//===----------------------------------------------------------------------===//</span>
+<span class="c1">//</span>
+<span class="c1">// This file declares a base helper class CacheUtility that manages the cache</span>
+<span class="c1">// of values from the forward pass for later use.</span>
+<span class="c1">//</span>
+<span class="c1">//===----------------------------------------------------------------------===//</span>
+
+<span class="cp">#ifndef ENZYME_CACHE_UTILITY_H</span>
+<span class="cp">#define ENZYME_CACHE_UTILITY_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/ADT/SmallPtrSet.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Analysis/LoopInfo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/IR/Instructions.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Analysis/AssumptionCache.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Analysis/TargetLibraryInfo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/IR/Dominators.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Support/CommandLine.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;llvm/Transforms/Utils/ValueMapper.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;FunctionUtils.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MustExitScalarEvolution.h&quot;</span><span class="cp"></span>
+
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="c1">/// Pack 8 bools together in a single byte</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">cl</span><span class="o">::</span><span class="n">opt</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EfficientBoolCache</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">extern</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">cl</span><span class="o">::</span><span class="n">opt</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">EnzymeZeroCache</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">/// Container for all loop information to synthesize gradients</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">LoopContext</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Canonical induction variable of the loop</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">PHINode</span><span class="o">&gt;</span><span class="w"> </span><span class="n">var</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Increment of the induction</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="o">&gt;</span><span class="w"> </span><span class="n">incvar</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Allocation of induction variable of reverse pass</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="o">&gt;</span><span class="w"> </span><span class="n">antivaralloc</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Header of this loop</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">header</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Preheader of this loop</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">preheader</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Whether this loop has a statically analyzable number of iterations</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">dynamic</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// limit is last value of a canonical induction variable</span>
+<span class="w">  </span><span class="c1">/// iters is number of times loop is run (thus iters = limit + 1)</span>
+<span class="w">  </span><span class="n">AssertingReplacingVH</span><span class="w"> </span><span class="n">maxLimit</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">AssertingReplacingVH</span><span class="w"> </span><span class="n">trueLimit</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// An offset to add to the index when getting the cache pointer.</span>
+<span class="w">  </span><span class="n">AssertingReplacingVH</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// An overriding allocation limit size.</span>
+<span class="w">  </span><span class="n">AssertingReplacingVH</span><span class="w"> </span><span class="n">allocLimit</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// All blocks this loop exits too</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallPtrSet</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="o">&gt;</span><span class="w"> </span><span class="n">exitBlocks</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Parent loop of this loop</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Loop</span><span class="w"> </span><span class="o">*</span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">LoopContext</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">LoopContext</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">parent</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">parent</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">/// Modes of potential unwraps</span>
+<span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UnwrapMode</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// It is already known that it is legal to fully unwrap</span>
+<span class="w">  </span><span class="c1">// this instruction. This means unwrap this instruction,</span>
+<span class="w">  </span><span class="c1">// its operands, etc. However, this will stop at known</span>
+<span class="w">  </span><span class="c1">// cached available from a tape.</span>
+<span class="w">  </span><span class="n">LegalFullUnwrap</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Unlike LegalFullUnwrap, this will unwrap through a tape</span>
+<span class="w">  </span><span class="n">LegalFullUnwrapNoTapeReplace</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Attempt to fully unwrap this, looking up whenever it</span>
+<span class="w">  </span><span class="c1">// is not legal to unwrap</span>
+<span class="w">  </span><span class="n">AttemptFullUnwrapWithLookup</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Attempt to fully unwrap this</span>
+<span class="w">  </span><span class="n">AttemptFullUnwrap</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Unwrap the current instruction but not its operand</span>
+<span class="w">  </span><span class="n">AttemptSingleUnwrap</span><span class="p">,</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">raw_ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                            </span><span class="n">UnwrapMode</span><span class="w"> </span><span class="n">mode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="o">::</span><span class="n">LegalFullUnwrap</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;LegalFullUnwrap&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="o">::</span><span class="n">LegalFullUnwrapNoTapeReplace</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;LegalFullUnwrapNoTapeReplace&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="o">::</span><span class="n">AttemptFullUnwrapWithLookup</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;AttemptFullUnwrapWithLookup&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="o">::</span><span class="n">AttemptFullUnwrap</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;AttemptFullUnwrap&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="o">::</span><span class="n">AttemptSingleUnwrap</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;AttemptSingleUnwrap&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CacheUtility</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// The function whose instructions we are caching</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">newFunc</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Various analysis results of newFunc</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">TargetLibraryInfo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TLI</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">DominatorTree</span><span class="w"> </span><span class="n">DT</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">LoopInfo</span><span class="w"> </span><span class="n">LI</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AssumptionCache</span><span class="w"> </span><span class="n">AC</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">MustExitScalarEvolution</span><span class="w"> </span><span class="n">SE</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// Helper basicblock where all new allocations will be added to</span>
+<span class="w">  </span><span class="c1">// This includes allocations for cache variables</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">inversionAllocs</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">CacheUtility</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">TargetLibraryInfo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">TLI</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Function</span><span class="w"> </span><span class="o">*</span><span class="n">newFunc</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">newFunc</span><span class="p">(</span><span class="n">newFunc</span><span class="p">),</span><span class="w"> </span><span class="n">TLI</span><span class="p">(</span><span class="n">TLI</span><span class="p">),</span><span class="w"> </span><span class="n">DT</span><span class="p">(</span><span class="o">*</span><span class="n">newFunc</span><span class="p">),</span><span class="w"> </span><span class="n">LI</span><span class="p">(</span><span class="n">DT</span><span class="p">),</span><span class="w"> </span><span class="n">AC</span><span class="p">(</span><span class="o">*</span><span class="n">newFunc</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="n">SE</span><span class="p">(</span><span class="o">*</span><span class="n">newFunc</span><span class="p">,</span><span class="w"> </span><span class="n">TLI</span><span class="p">,</span><span class="w"> </span><span class="n">AC</span><span class="p">,</span><span class="w"> </span><span class="n">DT</span><span class="p">,</span><span class="w"> </span><span class="n">LI</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">inversionAllocs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">newFunc</span><span class="o">-&gt;</span><span class="n">getContext</span><span class="p">(),</span><span class="w"></span>
+<span class="w">                                               </span><span class="s">&quot;allocsForInversion&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">newFunc</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">CacheUtility</span><span class="p">();</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Map of Loop to requisite loop information needed for AD (forward/reverse</span>
+<span class="w">  </span><span class="c1">/// induction/etc)</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Loop</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">LoopContext</span><span class="o">&gt;</span><span class="w"> </span><span class="n">loopContexts</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Given a BasicBlock BB in newFunc, set loopContext to the relevant</span>
+<span class="w">  </span><span class="c1">/// contained loop and return true. If BB is not in a loop, return false</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">getContext</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">BB</span><span class="p">,</span><span class="w"> </span><span class="n">LoopContext</span><span class="w"> </span><span class="o">&amp;</span><span class="n">loopContext</span><span class="p">,</span><span class="w"></span>
+<span class="w">                  </span><span class="kt">bool</span><span class="w"> </span><span class="n">ReverseLimit</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Return whether the given instruction is used as necessary as part of a</span>
+<span class="w">  </span><span class="c1">/// loop context This includes as the canonical induction variable or</span>
+<span class="w">  </span><span class="c1">/// increment</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isInstructionUsedInLoopInduction</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">&amp;</span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">context</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">loopContexts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">context</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">var</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">I</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">incvar</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">I</span><span class="w"> </span><span class="o">||</span><span class="w"></span>
+<span class="w">          </span><span class="n">context</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">maxLimit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">I</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">trueLimit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="nf">getDynamicLoopLimit</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Loop</span><span class="w"> </span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kt">bool</span><span class="w"> </span><span class="n">ReverseLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Print out all currently cached values</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">dumpScope</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">errs</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;scope:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">scopeMap</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">llvm</span><span class="o">::</span><span class="n">errs</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;   scopeMap[&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;] = &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">first</span><span class="w"></span>
+<span class="w">                   </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; ctx:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">second</span><span class="p">.</span><span class="n">Block</span><span class="o">-&gt;</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">errs</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;end scope</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getCacheAlignment</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">bsize</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">bsize</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">bsize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bsize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bsize</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Erase this instruction both from LLVM modules and any local</span>
+<span class="w">  </span><span class="c1">/// data-structures</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">erase</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="n">I</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Replace this instruction both in LLVM modules and any local</span>
+<span class="w">  </span><span class="c1">/// data-structures</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">replaceAWithB</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">B</span><span class="p">,</span><span class="w"></span>
+<span class="w">                             </span><span class="kt">bool</span><span class="w"> </span><span class="n">storeInCache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">// Context information to request calculation of loop limit information</span>
+<span class="w">  </span><span class="k">struct</span><span class="w"> </span><span class="nc">LimitContext</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Whether the limit needs to be accessible for a reverse pass</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">ReverseLimit</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// A block inside of the loop, defining the location</span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">Block</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Instead of getting the actual limits, return a limit of one</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">ForceSingleIteration</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">LimitContext</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">ReverseLimit</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">Block</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="kt">bool</span><span class="w"> </span><span class="n">ForceSingleIteration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">ReverseLimit</span><span class="p">(</span><span class="n">ReverseLimit</span><span class="p">),</span><span class="w"> </span><span class="n">Block</span><span class="p">(</span><span class="n">Block</span><span class="p">),</span><span class="w"></span>
+<span class="w">          </span><span class="n">ForceSingleIteration</span><span class="p">(</span><span class="n">ForceSingleIteration</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given a LimitContext ctx, representing a location inside a loop nest,</span>
+<span class="w">  </span><span class="c1">/// break each of the loops up into chunks of loops where each chunk&#39;s number</span>
+<span class="w">  </span><span class="c1">/// of iterations can be computed at the chunk preheader. Every dynamic loop</span>
+<span class="w">  </span><span class="c1">/// defines the start of a chunk. SubLimitType is a vector of chunk objects.</span>
+<span class="w">  </span><span class="c1">/// More specifically it is a vector of { # iters in a Chunk (sublimit), Chunk</span>
+<span class="w">  </span><span class="c1">/// } Each chunk object is a vector of loops contained within the chunk. For</span>
+<span class="w">  </span><span class="c1">/// every loop, this returns pair of the LoopContext and the limit of that</span>
+<span class="w">  </span><span class="c1">/// loop Both the vector of Chunks and vector of Loops within a Chunk go from</span>
+<span class="w">  </span><span class="c1">/// innermost loop to outermost loop.</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="w"></span>
+<span class="w">      </span><span class="cm">/*sublimit*/</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="cm">/*loop limits*/</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">LoopContext</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*&gt;&gt;&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">SubLimitType</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">SubLimitType</span><span class="w"> </span><span class="nf">getSubLimits</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">inForwardPass</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">RB</span><span class="p">,</span><span class="w"></span>
+<span class="w">                            </span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">extraSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Internal data structure used by getSubLimit to avoid computing the same</span>
+<span class="w">  </span><span class="c1">/// loop limit multiple times if possible. Map&#39;s a desired limitMinus1 (see</span>
+<span class="w">  </span><span class="c1">/// getSubLimits) and the block the true limit requested to the value of the</span>
+<span class="w">  </span><span class="c1">/// limit accessible at that block</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueMap</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">                 </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">WeakTrackingVH</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">LimitCache</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Internal data structure used by getSubLimit to avoid computing the</span>
+<span class="w">  </span><span class="c1">/// cumulative loop limit multiple times if possible. Map&#39;s a desired pair of</span>
+<span class="w">  </span><span class="c1">/// operands to be multiplied (see getSubLimits) and the block the cumulative</span>
+<span class="w">  </span><span class="c1">/// limit requested to the value of the limit accessible at that block This</span>
+<span class="w">  </span><span class="c1">/// cache is also shared with computeIndexOfChunk</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">SizeCache</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given a loop context, compute the corresponding index into said loop at</span>
+<span class="w">  </span><span class="c1">/// the IRBuilder&lt;&gt;</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="nf">computeIndexOfChunk</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">inForwardPass</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">LoopContext</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">containedloops</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="w"> </span><span class="o">&amp;</span><span class="n">available</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Given a cache allocation and an index denoting how many Chunks deep the</span>
+<span class="w">  </span><span class="c1">/// allocation is being indexed into, return the invariant metadata describing</span>
+<span class="w">  </span><span class="c1">/// used to describe loads/stores to the indexed pointer</span>
+<span class="w">  </span><span class="c1">/// Note that the cache allocation should either be an allocainst (if in</span>
+<span class="w">  </span><span class="c1">/// fwd/both) or an extraction from the tape</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">MDNode</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">CachePointerInvariantGroups</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Given a value being cached, return the invariant metadata of any</span>
+<span class="w">  </span><span class="c1">/// loads/stores to memory storing that value</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">MDNode</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"> </span><span class="n">ValueInvariantGroups</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// A map of values being cached to their underlying allocation/limit context</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">LimitContext</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">scopeMap</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// A map of allocations to a vector of instruction used to create by the</span>
+<span class="w">  </span><span class="c1">/// allocation Keeping track of these values is useful for deallocation. This</span>
+<span class="w">  </span><span class="c1">/// is stored as a vector explicitly to order theses instructions in such a</span>
+<span class="w">  </span><span class="c1">/// way that they can be erased by iterating in reverse order.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="o">&gt;&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">scopeInstructions</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// A map of allocations to a set of instructions which free memory as part of</span>
+<span class="w">  </span><span class="c1">/// the cache.</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="o">&gt;&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">scopeFrees</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// A map of allocations to a set of instructions which allocate memory as</span>
+<span class="w">  </span><span class="c1">/// part of the cache</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">AssertingVH</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">CallInst</span><span class="o">&gt;&gt;&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="n">scopeAllocs</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Perform the final load from the cache, applying requisite invariant</span>
+<span class="w">  </span><span class="c1">/// group and alignment</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="nf">loadFromCachePointer</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                    </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">cptr</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">cache</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">/// Create a cache of Type T at the given LimitContext. If allocateInternal is</span>
+<span class="w">  </span><span class="c1">/// set this will allocate the requesite memory. If extraSize is set,</span>
+<span class="w">  </span><span class="c1">/// allocations will be a factor of extraSize larger</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="n">createCacheForScope</span><span class="p">(</span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">T</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="n">llvm</span><span class="o">::</span><span class="n">StringRef</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">shouldFree</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="kt">bool</span><span class="w"> </span><span class="n">allocateInternal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                        </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">extraSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// High-level utility to &quot;unwrap&quot; an instruction at a new location specified</span>
+<span class="w">  </span><span class="c1">/// by BuilderM. Depending on the mode, it will either just unwrap this</span>
+<span class="w">  </span><span class="c1">/// instruction, all of its instructions operands, and optionally lookup</span>
+<span class="w">  </span><span class="c1">/// values when it is not legal to unwrap. If a value cannot be unwrap&#39;d at a</span>
+<span class="w">  </span><span class="c1">/// given location, this will null. This high-level utility should be</span>
+<span class="w">  </span><span class="c1">/// implemented based off the low-level caching infrastructure provided in</span>
+<span class="w">  </span><span class="c1">/// this class.</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="w">  </span><span class="nf">unwrapM</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="w"> </span><span class="o">&amp;</span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="n">UnwrapMode</span><span class="w"> </span><span class="n">mode</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">scope</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">permitCache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// High-level utility to get the value an instruction at a new location</span>
+<span class="w">  </span><span class="c1">/// specified by BuilderM. Unlike unwrap, this function can never fail --</span>
+<span class="w">  </span><span class="c1">/// falling back to creating a cache if necessary. This function is</span>
+<span class="w">  </span><span class="c1">/// prepopulated with a set of values that are already known to be available</span>
+<span class="w">  </span><span class="c1">/// and may contain optimizations for getting the value in more efficient ways</span>
+<span class="w">  </span><span class="c1">/// (e.g. unwrap&#39;ing when legal, looking up equivalent values, etc). This</span>
+<span class="w">  </span><span class="c1">/// high-level utility should be implemented based off the low-level caching</span>
+<span class="w">  </span><span class="c1">/// infrastructure provided in this class.</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="w"></span>
+<span class="w">  </span><span class="nf">lookupM</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="w"> </span><span class="o">&amp;</span><span class="n">incoming_availalble</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">              </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="p">(),</span><span class="w"></span>
+<span class="w">          </span><span class="kt">bool</span><span class="w"> </span><span class="n">tryLegalityCheck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">assumeDynamicLoopOfSizeOne</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Loop</span><span class="w"> </span><span class="o">*</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// If an allocation is requested to be freed, this subclass will be called to</span>
+<span class="w">  </span><span class="c1">/// chose how and where to free it. It is by default not implemented, falling</span>
+<span class="w">  </span><span class="c1">/// back to an error. Subclasses who want to free memory should implement this</span>
+<span class="w">  </span><span class="c1">/// function.</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">freeCache</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">forwardPreheader</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="k">const</span><span class="w"> </span><span class="n">SubLimitType</span><span class="w"> </span><span class="o">&amp;</span><span class="n">antimap</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="n">alloc</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="n">llvm</span><span class="o">::</span><span class="n">ConstantInt</span><span class="w"> </span><span class="o">*</span><span class="n">byteSizeOfType</span><span class="p">,</span><span class="w"></span>
+<span class="w">                         </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">storeInto</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">MDNode</span><span class="w"> </span><span class="o">*</span><span class="n">InvariantMD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;freeing cache not handled in this scenario&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm_unreachable</span><span class="p">(</span><span class="s">&quot;freeing cache not handled in this scenario&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given an allocation defined at a particular ctx, store the value val</span>
+<span class="w">  </span><span class="c1">/// in the cache at the location defined in the given builder</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">storeInstructionInCache</span><span class="p">(</span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="n">cache</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">llvm</span><span class="o">::</span><span class="n">MDNode</span><span class="w"> </span><span class="o">*</span><span class="n">TBAA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given an allocation defined at a particular ctx, store the instruction</span>
+<span class="w">  </span><span class="c1">/// in the cache right after the instruction is executed</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">storeInstructionInCache</span><span class="p">(</span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="n">inst</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">llvm</span><span class="o">::</span><span class="n">AllocaInst</span><span class="w"> </span><span class="o">*</span><span class="n">cache</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">llvm</span><span class="o">::</span><span class="n">MDNode</span><span class="w"> </span><span class="o">*</span><span class="n">TBAA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given an allocation specified by the LimitContext ctx and cache, compute a</span>
+<span class="w">  </span><span class="c1">/// pointer that can hold the underlying type being cached. This value should</span>
+<span class="w">  </span><span class="c1">/// be computed at BuilderM. Optionally, instructions needed to generate this</span>
+<span class="w">  </span><span class="c1">/// pointer can be stored in scopeInstructions</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="nf">getCachePointer</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">inForwardPass</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">cache</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isi1</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="kt">bool</span><span class="w"> </span><span class="n">storeInInstructionsMap</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="w"> </span><span class="o">&amp;</span><span class="n">available</span><span class="p">,</span><span class="w"></span>
+<span class="w">                               </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">extraSize</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="c1">/// Given an allocation specified by the LimitContext ctx and cache, lookup</span>
+<span class="w">  </span><span class="c1">/// the underlying cached value.</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="nf">lookupValueFromCache</span><span class="p">(</span><span class="w"></span>
+<span class="w">      </span><span class="kt">bool</span><span class="w"> </span><span class="n">inForwardPass</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">IRBuilder</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">BuilderM</span><span class="p">,</span><span class="w"> </span><span class="n">LimitContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">cache</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isi1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">ValueToValueMapTy</span><span class="w"> </span><span class="o">&amp;</span><span class="n">available</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">extraSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="n">extraOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">protected</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// List of values loaded from the cache</span>
+<span class="w">  </span><span class="n">llvm</span><span class="o">::</span><span class="n">SmallPtrSet</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">LoadInst</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w"> </span><span class="n">CacheLookups</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="c1">// Create a new canonical induction variable of Type Ty for Loop L</span>
+<span class="c1">// Return the variable and the increment instruction</span>
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">llvm</span><span class="o">::</span><span class="n">PHINode</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*&gt;</span><span class="w"></span>
+<span class="n">InsertNewCanonicalIV</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Loop</span><span class="w"> </span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="o">*</span><span class="n">Ty</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;iv&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Attempt to rewrite all phinode&#39;s in the loop in terms of the</span>
+<span class="c1">// induction variable</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">RemoveRedundantIVs</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">BasicBlock</span><span class="w"> </span><span class="o">*</span><span class="n">Header</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">PHINode</span><span class="w"> </span><span class="o">*</span><span class="n">CanonicalIV</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="n">Increment</span><span class="p">,</span><span class="w"> </span><span class="n">MustExitScalarEvolution</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SE</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">llvm</span><span class="o">::</span><span class="n">Value</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">replacer</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="n">llvm</span><span class="o">::</span><span class="n">Instruction</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">eraser</span><span class="p">);</span><span class="w"></span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Enzyme.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/EnzymeAD/enzyme_sphinx_theme">theme</a> provided by <a href="https://enzyme.mit.edu">Enzyme</a>.
+      </div>
+      <br>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="enzyme-content-right" id="enzyme-content-right">
+          <div class="enzyme-right-menu" id="enzyme-right-menu">
+            <div class="enzyme-side-scroll" id="enzyme-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Program Listing for File CacheUtility.h</a></li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+         <script src="../_static/jquery.js"></script>
+         <script src="../_static/underscore.js"></script>
+         <script src="../_static/doctools.js"></script>
+         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+     
+
+  
+
+  <script type="text/javascript" src="../_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="../_static/js/vendor/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <!-- Begin Footer -->
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="https://enzyme.mit.edu" class="footer-logo"></a>
+      </div>
+
+      <div class="footer-links-wrapper">
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://enzyme.mit.edu">Enzyme</a></li>
+            <li><a href="https://enzyme.mit.edu/get-started">Get Started</a></li>
+            <li><a href="https://enzyme.mit.edu/features">Features</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/blob/master/CONTRIBUTING.md">Contributing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="">Resources</a></li>
+            <li><a href="https://enzyme.mit.edu/tutorials">Tutorials</a></li>
+            <li><a href="https://enzyme.mit.edu/docs/stable/index.html">Docs</a></li>
+            <li><a href="" target="_blank">Discuss</a></li>
+            <li><a href="https://github.com/EnzymeAD/enzyme/issues" target="_blank">Github Issues</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col follow-us-col">
+          <ul>
+            <li class="list-title">Stay Connected</li>
+            <li>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://groups.google.com/d/forum/enzyme-dev"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="email-subscribe-form validate"
+                  target="_blank"
+                  novalidate>
+                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
+
+                    <div class="clear">
+                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://enzyme.mit.edu" aria-label="PyTorch"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://enzyme.mit.edu/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="">Mobile</a>
+          </li>
+
+          <li>
+            <a href="">PyTorch Hub</a>
+          </li>
+
+          <li>
+            <a href="">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://enzyme.mit.edu/tutorials">Tutorials</a>
+          </li>
+
+          <li class="resources-mobile-menu-title">
+            Docs
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="https://enzyme.mit.edu/docs/stable/index.html">PyTorch</a>
+            </li>
+
+            <li>
+              <a href="">torchaudio</a>
+            </li>
+
+            <li>
+              <a href="">torchtext</a>
+            </li>
+
+            <li>
+              <a href="">torchvision</a>
+            </li>
+
+            <li>
+              <a href="">TorchElastic</a>
+            </li>
+
+            <li>
+              <a href="">TorchServe</a>
+            </li>
+
+            <li>
+              <a href="">PyTorch on XLA Devices</a>
+            </li>
+          </ul>
+
+          <li class="resources-mobile-menu-title">
+            Resources
+          </li>
+
+          <ul class="resources-mobile-menu-items">
+            <li>
+              <a href="">Developer Resources</a>
+            </li>
+
+            <li>
+              <a href="https://enzyme.mit.edu/features">About</a>
+            </li>
+
+            <li>
+              <a href="">Models (Beta)</a>
+            </li>
+
+            <li>
+              <a href="">Community</a>
+            </li>
+
+            <li>
+              <a href="">Forums</a>
+            </li>
+          </ul>
+
+          <li>
+            <a href="https://github.com/EnzymeAD/enzyme">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="../_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      enzymeAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+      filterTags.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.enzyme-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>

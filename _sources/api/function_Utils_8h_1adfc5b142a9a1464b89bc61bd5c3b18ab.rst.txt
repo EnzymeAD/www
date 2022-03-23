@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1adfc5b142a9a1464b89bc61bd5c3b18ab:
+
+Function allInstructionsBetween
+===============================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: allInstructionsBetween(llvm::LoopInfo&, llvm::Instruction *, llvm::Instruction *, std::function<bool(llvm::Instruction *)>)
+   :project: Enzyme

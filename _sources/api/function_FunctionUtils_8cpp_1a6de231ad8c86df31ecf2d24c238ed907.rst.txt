@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a6de231ad8c86df31ecf2d24c238ed907:
+
+Function CoaleseTrivialMallocs
+==============================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: CoaleseTrivialMallocs(Function&, DominatorTree&)
+   :project: Enzyme

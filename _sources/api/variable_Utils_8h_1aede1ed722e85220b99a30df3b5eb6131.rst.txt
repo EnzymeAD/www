@@ -1,0 +1,14 @@
+.. _exhale_variable_Utils_8h_1aede1ed722e85220b99a30df3b5eb6131:
+
+Variable shadowHandlers
+=======================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: shadowHandlers
+   :project: Enzyme

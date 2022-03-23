@@ -1,0 +1,17 @@
+.. _exhale_class_classActivityAnalyzer:
+
+Class ActivityAnalyzer
+======================
+
+- Defined in :ref:`file_ActivityAnalysis.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ActivityAnalyzer
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

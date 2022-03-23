@@ -1,0 +1,26 @@
+.. _exhale_class_classAssertingReplacingVH:
+
+Class AssertingReplacingVH
+==========================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public CallbackVH``
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: AssertingReplacingVH
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

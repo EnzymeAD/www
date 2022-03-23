@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a32a16494a477d7e5ed56d54b3f8782a4:
+
+Function allPredecessorsOf
+==========================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: allPredecessorsOf(llvm::Instruction *, std::function<bool(llvm::Instruction *)>)
+   :project: Enzyme

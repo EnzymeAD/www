@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1ae901804c691760a21395130d6451c8d7:
+
+Function writesToMemoryReadBy(llvm::AAResults&, llvm::Instruction \*, llvm::Instruction \*)
+===========================================================================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: writesToMemoryReadBy(llvm::AAResults&, llvm::Instruction *, llvm::Instruction *)
+   :project: Enzyme

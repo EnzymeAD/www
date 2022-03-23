@@ -1,0 +1,14 @@
+.. _exhale_function_RustDebugInfo_8cpp_1a916b8d4b6ba75aa6c75e1d40a513e0b2:
+
+Function parseDIType(DbgDeclareInst&, DataLayout&)
+==================================================
+
+- Defined in :ref:`file_TypeAnalysis_RustDebugInfo.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: parseDIType(DbgDeclareInst&, DataLayout&)
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8cpp_1ae2a43ccc0d14fff8a57b45be87d3e1b3:
+
+Function tofltstr
+=================
+
+- Defined in :ref:`file_Utils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: tofltstr(Type *)
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a171dedae5a7ffa27c0918ded07a82508:
+
+Template Function getFunctionFromCall
+=====================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getFunctionFromCall(T *)
+   :project: Enzyme

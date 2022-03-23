@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a4133ecb31b545c58ca0b13f16aa3ee97:
+
+Function OldAllocationSize
+==========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: OldAllocationSize(Value *, CallInst *, Function *, IntegerType *, const std::map<CallInst *, Value *>&)
+   :project: Enzyme

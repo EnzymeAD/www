@@ -1,0 +1,85 @@
+
+.. _file_ActivityAnalysis.h:
+
+File ActivityAnalysis.h
+=======================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``ActivityAnalysis.h``)
+-----------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_ActivityAnalysis.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``TypeAnalysis/TypeAnalysis.h`` (:ref:`file_TypeAnalysis_TypeAnalysis.h`)
+
+- ``Utils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``cstdint``
+
+- ``deque``
+
+- ``llvm/Analysis/AliasAnalysis.h``
+
+- ``llvm/Config/llvm-config.h``
+
+- ``llvm/IR/Constants.h``
+
+- ``llvm/IR/InstVisitor.h``
+
+- ``llvm/IR/Type.h``
+
+- ``llvm/IR/Value.h``
+
+- ``llvm/Support/CommandLine.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_ActivityAnalysis.cpp`
+
+- :ref:`file_ActivityAnalysisPrinter.cpp`
+
+- :ref:`file_GradientUtils.h`
+
+- :ref:`file_EnzymeLogic.h`
+
+- :ref:`file_Enzyme.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classActivityAnalyzer`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_ActivityAnalysis_8h_1ab2e9bb9ce82e97c01f2010478b188e57`
+
+- :ref:`exhale_variable_ActivityAnalysis_8h_1a68fcdd75c85e4df8f843e169a653fc9c`
+
+- :ref:`exhale_variable_ActivityAnalysis_8h_1a1022355ac86801e46a86a741c4709bad`
+

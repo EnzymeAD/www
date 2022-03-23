@@ -1,0 +1,14 @@
+.. _exhale_function_Enzyme_8cpp_1a11f9571d24cc2241683717daa3692d6d:
+
+Function EnzymeAttributor
+=========================
+
+- Defined in :ref:`file_Enzyme.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeAttributor("enzyme-attributor", cl::init(false), cl::Hidden, cl::desc("Run attributor post Enzyme"))
+   :project: Enzyme

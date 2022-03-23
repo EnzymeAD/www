@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a1fbfef86d0c4be7f71015149291443b1:
+
+Function EnzymeCoalese
+======================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeCoalese("enzyme-coalese", cl::init(false), cl::Hidden, cl::desc("Whether to coalese memory allocations"))
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_enum_Utils_8h_1af56f7e5b2d541b03c77f85a93ec637cd:
+
+Enum DerivativeMode
+===================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: DerivativeMode
+   :project: Enzyme

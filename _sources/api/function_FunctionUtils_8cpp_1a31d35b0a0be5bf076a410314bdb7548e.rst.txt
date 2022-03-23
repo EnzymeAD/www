@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a31d35b0a0be5bf076a410314bdb7548e:
+
+Function setFullWillReturn
+==========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: setFullWillReturn(Function *)
+   :project: Enzyme

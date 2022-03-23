@@ -1,0 +1,14 @@
+.. _exhale_enum_FunctionUtils_8cpp_1a23712d4c986262d6c2a3275a996e9c30:
+
+Enum RecurType
+==============
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: RecurType
+   :project: Enzyme

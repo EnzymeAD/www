@@ -1,0 +1,14 @@
+.. _exhale_define_PreserveNVVM_8cpp_1ad78e062f62e0d6e453941fb4ca843e4d:
+
+Define DEBUG_TYPE
+=================
+
+- Defined in :ref:`file_PreserveNVVM.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: DEBUG_TYPE
+   :project: Enzyme

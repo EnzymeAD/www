@@ -1,0 +1,101 @@
+
+.. _file_CacheUtility.h:
+
+File CacheUtility.h
+===================
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``CacheUtility.h``)
+-------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_CacheUtility.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FunctionUtils.h`` (:ref:`file_FunctionUtils.h`)
+
+- ``MustExitScalarEvolution.h`` (:ref:`file_MustExitScalarEvolution.h`)
+
+- ``llvm/ADT/SmallPtrSet.h``
+
+- ``llvm/Analysis/AssumptionCache.h``
+
+- ``llvm/Analysis/LoopInfo.h``
+
+- ``llvm/Analysis/TargetLibraryInfo.h``
+
+- ``llvm/IR/Dominators.h``
+
+- ``llvm/IR/Instructions.h``
+
+- ``llvm/Support/CommandLine.h``
+
+- ``llvm/Transforms/Utils/ValueMapper.h``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_GradientUtils.h`
+
+- :ref:`file_CacheUtility.cpp`
+
+- :ref:`file_FunctionUtils.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structCacheUtility_1_1LimitContext`
+
+- :ref:`exhale_struct_structLoopContext`
+
+- :ref:`exhale_class_classCacheUtility`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_CacheUtility_8h_1a32fc9d09923e2a636f39b1576f665da6`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_CacheUtility_8h_1ad24bc14d5bd3fc3d56332ff3955f462d`
+
+- :ref:`exhale_function_CacheUtility_8h_1ab9eb48878178ac7354d39e1cfb07d056`
+
+- :ref:`exhale_function_CacheUtility_8h_1a8c8f0fd1ee01ee7614880d3f78cfb7ec`
+
+- :ref:`exhale_function_CacheUtility_8h_1a5d5f6fa9275023adeca353d6639fa30e`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_CacheUtility_8h_1a2c4984382b8c297cb5527ef5a4d1b8ae`
+
+- :ref:`exhale_variable_CacheUtility_8h_1a1934148e6b153503e15a88cad60468fc`
+

@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8cpp_1a394ce49e4a0c6e02d5bfb8aef6ebc105:
+
+Function getOrInsertDifferentialFloatMemmove(Module&, Type \*, unsigned, unsigned, unsigned, unsigned)
+======================================================================================================
+
+- Defined in :ref:`file_Utils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getOrInsertDifferentialFloatMemmove(Module&, Type *, unsigned, unsigned, unsigned, unsigned)
+   :project: Enzyme

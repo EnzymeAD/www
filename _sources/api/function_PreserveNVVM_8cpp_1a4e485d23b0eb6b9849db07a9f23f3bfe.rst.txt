@@ -1,0 +1,14 @@
+.. _exhale_function_PreserveNVVM_8cpp_1a4e485d23b0eb6b9849db07a9f23f3bfe:
+
+Function createPreserveNVVMPass(bool)
+=====================================
+
+- Defined in :ref:`file_PreserveNVVM.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: createPreserveNVVMPass(bool)
+   :project: Enzyme

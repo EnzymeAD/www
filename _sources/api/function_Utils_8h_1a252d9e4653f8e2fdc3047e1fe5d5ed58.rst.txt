@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a252d9e4653f8e2fdc3047e1fe5d5ed58:
+
+Template Function max
+=====================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: max(T, T)
+   :project: Enzyme

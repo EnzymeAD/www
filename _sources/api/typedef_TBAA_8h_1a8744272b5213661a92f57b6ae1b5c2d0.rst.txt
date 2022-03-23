@@ -1,0 +1,14 @@
+.. _exhale_typedef_TBAA_8h_1a8744272b5213661a92f57b6ae1b5c2d0:
+
+Typedef TBAANode
+================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: TBAANode
+   :project: Enzyme

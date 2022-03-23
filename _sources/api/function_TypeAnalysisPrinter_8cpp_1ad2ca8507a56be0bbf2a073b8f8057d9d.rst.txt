@@ -1,0 +1,14 @@
+.. _exhale_function_TypeAnalysisPrinter_8cpp_1ad2ca8507a56be0bbf2a073b8f8057d9d:
+
+Function X("print-type-analysis", "Print Type Analysis Results")
+================================================================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysisPrinter.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: X("print-type-analysis", "Print Type Analysis Results")
+   :project: Enzyme

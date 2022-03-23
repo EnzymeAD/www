@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8cpp_1aca7c8bf29c803a2e068abfa3edf81c1c:
+
+Function getOrInsertCheckedFree(Module&, CallInst \*, Type \*, unsigned)
+========================================================================
+
+- Defined in :ref:`file_Utils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getOrInsertCheckedFree(Module&, CallInst *, Type *, unsigned)
+   :project: Enzyme

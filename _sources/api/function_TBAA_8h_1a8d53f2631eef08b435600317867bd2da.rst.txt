@@ -1,0 +1,14 @@
+.. _exhale_function_TBAA_8h_1a8d53f2631eef08b435600317867bd2da:
+
+Function createAccessTag
+========================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: createAccessTag(const MDNode *)
+   :project: Enzyme

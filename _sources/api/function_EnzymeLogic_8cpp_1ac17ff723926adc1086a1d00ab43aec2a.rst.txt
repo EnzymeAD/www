@@ -1,0 +1,14 @@
+.. _exhale_function_EnzymeLogic_8cpp_1ac17ff723926adc1086a1d00ab43aec2a:
+
+Function EnzymeJuliaAddrLoad
+============================
+
+- Defined in :ref:`file_EnzymeLogic.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeJuliaAddrLoad("enzyme-julia-addr-load", cl::init(false), cl::Hidden, cl::desc("Mark all loads resulting in an addr(13)* to be legal to redo"))
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_variable_GradientUtils_8h_1a4f97d04e0de6715fb9c94337d0965a64:
+
+Variable shadowHandlers
+=======================
+
+- Defined in :ref:`file_GradientUtils.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: shadowHandlers
+   :project: Enzyme

@@ -1,0 +1,14 @@
+.. _exhale_function_TBAA_8h_1a5e19d69f8c65d343b518e66bef56db58:
+
+Function isStructPathTBAA
+=========================
+
+- Defined in :ref:`file_TypeAnalysis_TBAA.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: isStructPathTBAA(const MDNode *)
+   :project: Enzyme

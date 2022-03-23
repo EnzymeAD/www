@@ -1,0 +1,14 @@
+.. _exhale_function_GradientUtils_8cpp_1a23b8d8f5db599cc97e8057be89eff973:
+
+Function EnzymeFreeInternalAllocations
+======================================
+
+- Defined in :ref:`file_GradientUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeFreeInternalAllocations("enzyme-free-internal-allocations", cl::init(true), cl::Hidden, cl::desc("Always free internal allocations (disable if allocation needs " "access outside)"))
+   :project: Enzyme

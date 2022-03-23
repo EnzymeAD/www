@@ -1,0 +1,14 @@
+.. _exhale_function_FunctionUtils_8cpp_1a81c765d27c70700162992416354f44c0:
+
+Function EnzymeAggressiveAA
+===========================
+
+- Defined in :ref:`file_FunctionUtils.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: EnzymeAggressiveAA("enzyme-aggressive-aa", cl::init(false), cl::Hidden, cl::desc("Use more unstable but aggressive LLVM AA"))
+   :project: Enzyme

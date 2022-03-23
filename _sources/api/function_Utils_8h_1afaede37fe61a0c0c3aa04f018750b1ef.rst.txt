@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1afaede37fe61a0c0c3aa04f018750b1ef:
+
+Template Function insert_or_assign
+==================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: insert_or_assign(std::map<K, V>&, K&, V&&)
+   :project: Enzyme

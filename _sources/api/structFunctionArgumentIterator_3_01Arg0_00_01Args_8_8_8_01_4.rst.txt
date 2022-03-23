@@ -1,0 +1,17 @@
+.. _exhale_struct_structFunctionArgumentIterator_3_01Arg0_00_01Args_8_8_8_01_4:
+
+Template Struct FunctionArgumentIterator< Arg0, Args... >
+=========================================================
+
+- Defined in :ref:`file_TypeAnalysis_TypeAnalysis.cpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: FunctionArgumentIterator< Arg0, Args... >
+   :project: Enzyme
+   :members:
+   :protected-members:
+   :undoc-members:

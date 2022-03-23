@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1ae5673fb44b9f320840220a6b33d9bc79:
+
+Function getNextNonDebugInstruction
+===================================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getNextNonDebugInstruction(llvm::Instruction *)
+   :project: Enzyme

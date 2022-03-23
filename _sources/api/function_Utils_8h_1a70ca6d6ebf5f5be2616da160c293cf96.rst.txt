@@ -1,0 +1,14 @@
+.. _exhale_function_Utils_8h_1a70ca6d6ebf5f5be2616da160c293cf96:
+
+Function isReturned
+===================
+
+- Defined in :ref:`file_Utils.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: isReturned(llvm::Instruction *)
+   :project: Enzyme
