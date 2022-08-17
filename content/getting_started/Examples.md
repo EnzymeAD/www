@@ -1,3 +1,10 @@
+---
+title: "Examples"
+date: "2022-08-17"
+draft: false
+weight: 40
+---
+
 # Automatic Differentiation in Scientific Computing
 
 It goes without saying that `derivatives` are essential in formulating, hence simulating, physical phenomena. However, in real world problems, they can be complicated or error-prone to be derived analytically, and numerical differentiation can introduce round-off errors in the discretization process and cancellation. These problems become more serious with higher derivatives beside being slow. Automatic differentiation, on the other hand, doesn't have any of these problems. 
