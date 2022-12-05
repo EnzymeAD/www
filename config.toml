@@ -19,7 +19,7 @@ disablePathToLower = true
 
     # Souce Code repository section
     description = "Enzyme Automatic Differentiation Framework"
-    github_repository = "https://github.com/wsmoses/Enzyme"
+    github_repository = "https://github.com/EnzymeAD/Enzyme"
     version = ""
 
     # Documentation repository section
@@ -68,12 +68,12 @@ disablePathToLower = true
 [[menu.main]]
     name = "Source"
     weight = 10
-    url = "https://github.com/wsmoses/Enzyme"
+    url = "https://github.com/EnzymeAD/Enzyme"
 
 [[menu.main]]
     name = "Bugs"
     weight = 20
-    url = "https://github.com/wsmoses/Enzyme/issues"
+    url = "https://github.com/EnzymeAD/Enzyme/issues"
 
 [[menu.main]]
     name = "Try Online"
