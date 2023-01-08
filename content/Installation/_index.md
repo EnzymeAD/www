@@ -16,10 +16,10 @@ Currently, Homebrew has a pre-built binary (bottle) on macOS, but will build fro
 The rest of these instructions explain how to build Enzyme from source.
 
 ## Downloading Enzyme
-To start you should download Enzyme's code [Github](https://github.com/wsmoses/Enzyme).
+To start you should download Enzyme's code [Github](https://github.com/EnzymeAD/Enzyme).
 
 ```sh
-git clone https://github.com/wsmoses/Enzyme
+git clone https://github.com/EnzymeAD/Enzyme
 cd Enzyme
 ```
 
