@@ -5,8 +5,8 @@ Enzyme AD</a></div></h1><p class=description>Enzyme Automatic Differentiation Fr
 </code></pre><p>Currently, Homebrew has a pre-built binary (bottle) on macOS, but will build from source on Linux. To request a bottle for Linux,
 <a href=https://github.com/Homebrew/linuxbrew-core/issues>file an issue</a>
 at Homebrew.</p><p>The rest of these instructions explain how to build Enzyme from source.</p><h2 id=downloading-enzyme>Downloading Enzyme</h2><p>To start you should download Enzyme&rsquo;s code
-<a href=https://github.com/wsmoses/Enzyme>Github</a>
-.</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>git clone https://github.com/wsmoses/Enzyme
+<a href=https://github.com/EnzymeAD/Enzyme>Github</a>
+.</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>git clone https://github.com/EnzymeAD/Enzyme
 <span class=nb>cd</span> Enzyme
 </code></pre></div><h2 id=building-llvm>Building LLVM</h2><p>Enzyme is a plugin for LLVM and consequently needs an existing build of LLVM to function.</p><p>Enzyme is designed to work with a wide range of LLVM versions and is currently tested against LLVM 7, 8, 9, 10, 11, 12, and mainline. LLVM&rsquo;s plugin infrastructure can sometimes be flakey or not built by default. If loading Enzyme into an existing LLVM installation results in segfaults, we recommend building LLVM from source.</p><p>Details on building LLVM can be found in for building LLVM can be found in the
 <a href=https://llvm.org/docs/GettingStarted.html>LLVM Getting Started</a>
@@ -25,7 +25,7 @@ ninja
 and other interesting cases. Running these tests will potentially take a long time (about an hour on a recent multicore).</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>ninja bench-enzyme
 </code></pre></div><p>If you run Enzyme tests and get an error like <code>/bin/sh: 1: ../../: Permission denied</code> or <code>../../ not found</code>, it&rsquo;s likely that cmake wasn&rsquo;t able to find your version of llvm-lit, LLVM&rsquo;s unit tester. This often happens if you use the default Ubuntu install of LLVM as they stopped including it in their packaging. To remedy, find lit.py or lit or llvm-lit on your system and add the following flag to cmake:</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>cmake .. -DLLVM_EXTERNAL_LIT<span class=o>=</span>/path/to/lit/lit.py
 </code></pre></div><h2 id=developing-inside-a-container>Developing inside a Container</h2><p>For debugging and testing purposes we have created
-<a href=https://github.com/tgymnich/enzyme-dev-docker>Docker images</a>
+<a href=https://github.com/EnzymeAD/enzyme-dev-docker>Docker images</a>
 , which closely resemble all of our CI environments. If you are using Visual Studio Code you can build and test Enzyme inside of a
 <a href=https://code.visualstudio.com/docs/remote/containers>Dev Container</a>
 . To change either the Ubuntu or the LLVM version in Visual Studio Code just edit the file at <code>.devcontainer/devcontainer.json</code> accordingly.</p><div class=edit-meta><br></div><nav class=pagination><a class="nav nav-prev" href=/><i class="fas fa-arrow-left" aria-hidden=true></i>Prev -</a>
