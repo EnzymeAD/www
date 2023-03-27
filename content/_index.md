@@ -80,7 +80,6 @@ keywords = {CUDA, LLVM, ROCm, HPC, AD, GPU, automatic differentiation},
 location = {St. Louis, Missouri},
 series = {SC '21}
 }
-
 ```
 
 The original Enzyme is also avaiable as a preprint on [arXiv](https://arxiv.org/pdf/2010.01709.pdf).
