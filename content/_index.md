@@ -44,7 +44,7 @@ Enzyme is composed of four pieces:
 For more information on Enzyme, please see:
 
 *   The Enzyme [getting started guide](/getting_started/)
-*   The Enzyme [mailing list](https://groups.google.com/d/forum/enzyme-dev) for any questions.
+*   The Enzyme [getting involved guidance](/getting_involved/)
 *   Previous [talks](/talks/).
 *   You can try out Enzyme on our [Compiler Explorer instance](/explorer).
 
