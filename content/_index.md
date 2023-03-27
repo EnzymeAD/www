@@ -52,7 +52,7 @@ For more information on Enzyme, please see:
 
 To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, then for GPU+optimizations):
 
-```bash
+```latex
 @inproceedings{NEURIPS2020_9332c513,
  author = {Moses, William and Churavy, Valentin},
  booktitle = {Advances in Neural Information Processing Systems},
