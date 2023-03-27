@@ -50,7 +50,7 @@ For more information on Enzyme, please see:
 
 ## Citing Enzyme
 
-To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, then for GPU+optimizations):
+To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, second for GPU+optimizations, and third for AD of all other parallel programs (OpenMP, MPI, Julia Tasks, etc.)):
 
 ```latex
 @inproceedings{NEURIPS2020_9332c513,
@@ -79,6 +79,19 @@ numpages = {16},
 keywords = {CUDA, LLVM, ROCm, HPC, AD, GPU, automatic differentiation},
 location = {St. Louis, Missouri},
 series = {SC '21}
+}
+@inproceedings{10.5555/3571885.3571964,
+author = {Moses, William S. and Narayanan, Sri Hari Krishna and Paehler, Ludger and Churavy, Valentin and Schanen, Michel and H\"{u}ckelheim, Jan and Doerfert, Johannes and Hovland, Paul},
+title = {Scalable Automatic Differentiation of Multiple Parallel Paradigms through Compiler Augmentation},
+year = {2022},
+isbn = {9784665454445},
+publisher = {IEEE Press},
+booktitle = {Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis},
+articleno = {60},
+numpages = {18},
+keywords = {automatic differentiation, tasks, OpenMP, compiler, Julia, parallel, Enzyme, C++, RAJA, hybrid parallelization, MPI, distributed, LLVM},
+location = {Dallas, Texas},
+series = {SC '22}
 }
 ```
 
