@@ -27,31 +27,32 @@ int main() {
 By differentiating code after optimization, Enzyme is able to create substantially faster derivatives than existing tools that differentiate programs before optimization.
 
 <div style="padding:2em">
-<img src="/all_top.png" width="500" align=center>
+    <img src="/all_top.png" width="500" align=center>
 </div>
 
 ## Components
 
 Enzyme is composed of four pieces:
 
-*   An optional preprocessing phase which performs minor transformations that tend to be helpful for AD.
-*   A new interprocedural type analysis that deduces the underlying types of memory locations
-*   An activity analaysis that determines what instructions or values can impact the derivative computation (common in existing AD systems).
-*   An optimization pass which creates any required derivative functions, replacing calls to `__enzyme_autodiff` with the generated functions.
+* An optional preprocessing phase which performs minor transformations that tend to be helpful for AD.
+* A new interprocedural type analysis that deduces the underlying types of memory locations
+* An activity analaysis that determines what instructions or values can impact the derivative computation (common in existing AD systems).
+* An optimization pass which creates any required derivative functions, replacing calls to `__enzyme_autodiff` with the generated functions.
 
 ## More resources
 
 For more information on Enzyme, please see:
 
-*   The Enzyme [getting started guide](/getting_started/)
-*   The Enzyme [getting involved guidance](/getting_involved/)
-*   Previous [talks](/talks/).
-*   You can try out Enzyme on our [Compiler Explorer instance](/explorer).
+* The Enzyme [getting started guide](/getting_started/)
+* The Enzyme [getting involved guidance](/getting_involved/)
+* Previous [talks](/talks/).
+* You can try out Enzyme on our [Compiler Explorer instance](/explorer).
 
 ## Citing Enzyme
 
 To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, then for GPU+optimizations):
-```
+
+```bash
 @inproceedings{NEURIPS2020_9332c513,
  author = {Moses, William and Churavy, Valentin},
  booktitle = {Advances in Neural Information Processing Systems},
