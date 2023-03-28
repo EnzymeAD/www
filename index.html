@@ -12,41 +12,52 @@ Enzyme AD</a></div></h1><p class=description>Enzyme Automatic Differentiation Fr
 </span><span class=c1></span>    <span class=kt>double</span> <span class=n>grad_x</span> <span class=o>=</span> <span class=n>__enzyme_autodiff</span><span class=p>((</span><span class=kt>void</span><span class=o>*</span><span class=p>)</span><span class=n>square</span><span class=p>,</span> <span class=n>x</span><span class=p>);</span>
     <span class=n>printf</span><span class=p>(</span><span class=s>&#34;square&#39;(%f) = %f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>x</span><span class=p>,</span>  <span class=n>grad_x</span><span class=p>);</span>
 <span class=p>}</span>
-</code></pre></div><p>By differentiating code after optimization, Enzyme is able to create substantially faster derivatives than existing tools that differentiate programs before optimization.</p><div style=padding:2em><img src=/all_top.png width=500 align=center></div><h2 id=components>Components</h2><p>Enzyme is composed of four pieces:</p><ul><li>An optional preprocessing phase which performs minor transformations that tend to be helpful for AD.</li><li>A new interprocedural type analysis that deduces the underlying types of memory locations</li><li>An activity analaysis that determines what instructions or values can impact the derivative computation (common in existing AD systems).</li><li>An optimization pass which creates any required derivative functions, replacing calls to <code>__enzyme_autodiff</code> with the generated functions.</li></ul><h2 id=more-resources>More resources</h2><p>For more information on Enzyme, please see:</p><ul><li>The Enzyme
+</code></pre></div><p>By differentiating code after optimization, Enzyme is able to create substantially faster derivatives than existing tools that differentiate programs before optimization.</p><div style=padding:2em><img src=/all_top.png width=500 align=center></div><h2 id=components>Components</h2><p>Enzyme is composed of four pieces:</p><ul><li>An optional preprocessing phase which performs minor transformations that tend to be helpful for AD.</li><li>A new interprocedural type analysis that deduces the underlying types of memory locations</li><li>An activity analaysis that determines what instructions or values can impact the derivative computation (common in existing AD systems).</li><li>AD-specific and other novel optimizations which create any required derivative functions, replacing calls to <code>__enzyme_autodiff</code> with the generated functions.</li></ul><h2 id=more-resources>More resources</h2><p>For more information on Enzyme, please see:</p><ul><li>The Enzyme
 <a href=/getting_started/>getting started guide</a></li><li>The Enzyme
-<a href=https://groups.google.com/d/forum/enzyme-dev>mailing list</a>
-for any questions.</li><li>Previous
+<a href=/getting_involved/>getting involved guide</a></li><li>Previous
 <a href=/talks/>talks</a>
 .</li><li>You can try out Enzyme on our
 <a href=/explorer>Compiler Explorer instance</a>
-.</li></ul><h2 id=citing-enzyme>Citing Enzyme</h2><p>To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, then for GPU+optimizations):</p><pre><code>@inproceedings{NEURIPS2020_9332c513,
- author = {Moses, William and Churavy, Valentin},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
- pages = {12472--12485},
- publisher = {Curran Associates, Inc.},
- title = {Instead of Rewriting Foreign Code for Machine Learning, Automatically Synthesize Fast Gradients},
- url = {https://proceedings.neurips.cc/paper/2020/file/9332c513ef44b682e9347822c2e457ac-Paper.pdf},
- volume = {33},
- year = {2020}
-}
-@inproceedings{10.1145/3458817.3476165,
-author = {Moses, William S. and Churavy, Valentin and Paehler, Ludger and H\&quot;{u}ckelheim, Jan and Narayanan, Sri Hari Krishna and Schanen, Michel and Doerfert, Johannes},
-title = {Reverse-Mode Automatic Differentiation and Optimization of GPU Kernels via Enzyme},
-year = {2021},
-isbn = {9781450384421},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3458817.3476165},
-doi = {10.1145/3458817.3476165},
-booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
-articleno = {61},
-numpages = {16},
-keywords = {CUDA, LLVM, ROCm, HPC, AD, GPU, automatic differentiation},
-location = {St. Louis, Missouri},
-series = {SC '21}
-}
-
-</code></pre><p>The original Enzyme is also avaiable as a preprint on
+.</li></ul><h2 id=citing-enzyme>Citing Enzyme</h2><p>To cite Enzyme, please cite the following three papers (first for Enzyme as a whole, second for GPU+optimizations, and third for AD of arbitrary parallel programs):</p><div class=highlight><pre class=chroma><code class=language-latex data-lang=latex>@inproceedings<span class=nb>{</span>NEURIPS2020<span class=nb>_</span>9332c513,
+ author = <span class=nb>{</span>Moses, William and Churavy, Valentin<span class=nb>}</span>,
+ booktitle = <span class=nb>{</span>Advances in Neural Information Processing Systems<span class=nb>}</span>,
+ editor = <span class=nb>{</span>H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin<span class=nb>}</span>,
+ pages = <span class=nb>{</span>12472--12485<span class=nb>}</span>,
+ publisher = <span class=nb>{</span>Curran Associates, Inc.<span class=nb>}</span>,
+ title = <span class=nb>{</span>Instead of Rewriting Foreign Code for Machine Learning, Automatically Synthesize Fast Gradients<span class=nb>}</span>,
+ url = <span class=nb>{</span>https://proceedings.neurips.cc/paper/2020/file/9332c513ef44b682e9347822c2e457ac-Paper.pdf<span class=nb>}</span>,
+ volume = <span class=nb>{</span>33<span class=nb>}</span>,
+ year = <span class=nb>{</span>2020<span class=nb>}</span>
+<span class=nb>}</span>
+@inproceedings<span class=nb>{</span>10.1145/3458817.3476165,
+author = <span class=nb>{</span>Moses, William S. and Churavy, Valentin and Paehler, Ludger and H<span class=k>\&#34;</span><span class=nb>{</span>u<span class=nb>}</span>ckelheim, Jan and Narayanan, Sri Hari Krishna and Schanen, Michel and Doerfert, Johannes<span class=nb>}</span>,
+title = <span class=nb>{</span>Reverse-Mode Automatic Differentiation and Optimization of GPU Kernels via Enzyme<span class=nb>}</span>,
+year = <span class=nb>{</span>2021<span class=nb>}</span>,
+isbn = <span class=nb>{</span>9781450384421<span class=nb>}</span>,
+publisher = <span class=nb>{</span>Association for Computing Machinery<span class=nb>}</span>,
+address = <span class=nb>{</span>New York, NY, USA<span class=nb>}</span>,
+url = <span class=nb>{</span>https://doi.org/10.1145/3458817.3476165<span class=nb>}</span>,
+doi = <span class=nb>{</span>10.1145/3458817.3476165<span class=nb>}</span>,
+booktitle = <span class=nb>{</span>Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis<span class=nb>}</span>,
+articleno = <span class=nb>{</span>61<span class=nb>}</span>,
+numpages = <span class=nb>{</span>16<span class=nb>}</span>,
+keywords = <span class=nb>{</span>CUDA, LLVM, ROCm, HPC, AD, GPU, automatic differentiation<span class=nb>}</span>,
+location = <span class=nb>{</span>St. Louis, Missouri<span class=nb>}</span>,
+series = <span class=nb>{</span>SC &#39;21<span class=nb>}</span>
+<span class=nb>}</span>
+@inproceedings<span class=nb>{</span>10.5555/3571885.3571964,
+author = <span class=nb>{</span>Moses, William S. and Narayanan, Sri Hari Krishna and Paehler, Ludger and Churavy, Valentin and Schanen, Michel and H<span class=k>\&#34;</span><span class=nb>{</span>u<span class=nb>}</span>ckelheim, Jan and Doerfert, Johannes and Hovland, Paul<span class=nb>}</span>,
+title = <span class=nb>{</span>Scalable Automatic Differentiation of Multiple Parallel Paradigms through Compiler Augmentation<span class=nb>}</span>,
+year = <span class=nb>{</span>2022<span class=nb>}</span>,
+isbn = <span class=nb>{</span>9784665454445<span class=nb>}</span>,
+publisher = <span class=nb>{</span>IEEE Press<span class=nb>}</span>,
+booktitle = <span class=nb>{</span>Proceedings of the International Conference on High Performance Computing, Networking, Storage and Analysis<span class=nb>}</span>,
+articleno = <span class=nb>{</span>60<span class=nb>}</span>,
+numpages = <span class=nb>{</span>18<span class=nb>}</span>,
+keywords = <span class=nb>{</span>automatic differentiation, tasks, OpenMP, compiler, Julia, parallel, Enzyme, C++, RAJA, hybrid parallelization, MPI, distributed, LLVM<span class=nb>}</span>,
+location = <span class=nb>{</span>Dallas, Texas<span class=nb>}</span>,
+series = <span class=nb>{</span>SC &#39;22<span class=nb>}</span>
+<span class=nb>}</span>
+</code></pre></div><p>The original Enzyme is also avaiable as a preprint on
 <a href=https://arxiv.org/pdf/2010.01709.pdf>arXiv</a>
-.</p><nav class=pagination><a class="nav nav-next" href=/Installation/ title=Installation>Next - Installation <i class="fas fa-arrow-right" aria-hidden=true></i></a></nav><div class=edit-meta><br></div><footer><p class=powered>Powered by <a href=https://gohugo.io>Hugo</a>. Theme by <a href=https://themes.gohugo.io/hugo-theme-techdoc/>TechDoc</a>. Designed by <a href=https://github.com/thingsym/hugo-theme-techdoc>Thingsym</a>.</p></footer></main><div class=sidebar><nav class=slide-menu><ul><li class=active><a href=https://enzyme.mit.edu/>Home</a></li><li><a href=/Installation/>Installation</a></li><li><a href=/charter/>Charter</a></li><li class=has-sub-menu><a href=/getting_started/>Getting Started<span class="mark closed">+</span></a><ul class=sub-menu><li><a href=/getting_started/UsingEnzyme/>Using Enzyme</a></li><li><a href=/getting_started/CallingConvention/>Calling Convention</a></li><li><a href=/getting_started/CUDAGuide/>CUDA Guide</a></li><li><a href=/getting_started/Faq/>FAQ</a></li></ul></li><li><a href=/talks/>Talks and Related Publications</a></li></ul></nav><div class=sidebar-footer></div></div></div><a href=# id=backtothetop-fixed class=backtothetop data-backtothetop-duration=600 data-backtothetop-easing=easeOutQuart data-backtothetop-fixed-fadein=1000 data-backtothetop-fixed-fadeout=1000 data-backtothetop-fixed-bottom=10 data-backtothetop-fixed-right=20><span class="fa-layers fa-fw"><i class="fas fa-circle"></i><i class="fas fa-arrow-circle-up"></i></span></a></div></body></html>
+.</p><nav class=pagination><a class="nav nav-next" href=/Installation/ title=Installation>Next - Installation <i class="fas fa-arrow-right" aria-hidden=true></i></a></nav><div class=edit-meta><br></div><footer><p class=powered>Powered by <a href=https://gohugo.io>Hugo</a>. Theme by <a href=https://themes.gohugo.io/hugo-theme-techdoc/>TechDoc</a>. Designed by <a href=https://github.com/thingsym/hugo-theme-techdoc>Thingsym</a>.</p></footer></main><div class=sidebar><nav class=slide-menu><ul><li class=active><a href=https://enzyme.mit.edu/>Home</a></li><li><a href=/Installation/>Installation</a></li><li class=has-sub-menu><a href=/getting_started/>Getting Started<span class="mark closed">+</span></a><ul class=sub-menu><li><a href=/getting_started/UsingEnzyme/>Using Enzyme</a></li><li><a href=/getting_started/CallingConvention/>Calling Convention</a></li><li><a href=/getting_started/CUDAGuide/>CUDA Guide</a></li><li><a href=/getting_started/Faq/>FAQ</a></li></ul></li><li><a href=/getting_involved/>Getting Involved</a></li><li><a href=/talks/>Talks and Related Publications</a></li></ul></nav><div class=sidebar-footer></div></div></div><a href=# id=backtothetop-fixed class=backtothetop data-backtothetop-duration=600 data-backtothetop-easing=easeOutQuart data-backtothetop-fixed-fadein=1000 data-backtothetop-fixed-fadeout=1000 data-backtothetop-fixed-bottom=10 data-backtothetop-fixed-right=20><span class="fa-layers fa-fw"><i class="fas fa-circle"></i><i class="fas fa-arrow-circle-up"></i></span></a></div></body></html>
