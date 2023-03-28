@@ -13,31 +13,31 @@ The first [Enzyme workshop](https://enzyme.mit.edu/conference) took place from F
 
 ### Session 1: Enzyme Applications
 
-* PDSR-Enzyme: Physics-Based Differentiable Rendering Using Enzyme
-* Automatic Differentiation in Solid Mechanics: Interpretation and Composition
-* Differentiating Large-Scale Finite Element Applications with MFEM
-* A Cross-Language Probabilistic Programming Protocol for Physics and Beyond
-* Numba-Enzyme: A Differentiable JIT-ed Python
+* _PDSR-Enzyme: Physics-Based Differentiable Rendering Using Enzyme_; Shuang Zhao, Zihan Yu, Cheng Zhang
+* _Automatic Differentiation in Solid Mechanics: Interpretation and Composition_; Jed Brown, Leila Ghaffari
+* _Differentiating Large-Scale Finite Element Applications with MFEM_; Julian Andrej
+* _A Cross-Language Probabilistic Programming Protocol for Physics and Beyond_; Tim Gymnich, Ludger Paehler
+* _Numba-Enzyme: A Differentiable JIT-ed Python_; Ludger Paehler, Jan Hueckelheim, Nikolaus A. Adams, Lukas Heinrich
 
 ### Session 2: Lessons from AD Tools
 
-* A survey of Tapenade in contrast with Enzyme
-* NIFTy: The Why and How of Building AD from Scratch
-* AD with Integrals
+* _A survey of Tapenade in contrast with Enzyme_; Laurent Hascoet
+* _NIFTy: The Why and How of Building AD from Scratch_; Gordian Edenhofer
+* _AD with Integrals_; Jesse Michel
 
 ### Session 3: Enzyme in Modern Programming Languages
 
-* Compilation Augmentation Enables High-Performance Batch Differentiation
-* Differentiable molecular simulation with Molly.jl
-* Adjoint Checkpointing using Custom Differentiation Rules
-* Oxide-Enzyme - Integrating Enzyme into the Rust Compiler
+* _Compilation Augmentation Enables High-Performance Batch Differentiation_; Tim Gymnich
+* _Differentiable molecular simulation with Molly.jl_; Joe Greener
+* _Adjoint Checkpointing using Custom Differentiation Rules_; Michel Schanen
+* _Oxide-Enzyme - Integrating Enzyme into the Rust Compiler_; Manuel Drehwald, Lorenz Schmidt
 
 ### Session 4: Enzyme Extensions
 
-* Hackable Autodiff: Extending Enzyme to MLIR for Reverse Mode Gradients
-* Autodiff semantics and the level of abstraction
-* Accelerating Black Hole Imaging with Enzyme
+* _Hackable Autodiff: Extending Enzyme to MLIR for Reverse Mode Gradients_; Martin Eppert, Jacob Mai Peng
+* _Autodiff semantics and the level of abstraction_; Jan Hueckelheim
+* _Accelerating Black Hole Imaging with Enzyme_; Paul Tiede
 
 ## Roundtables
 
-* DJ4Earth: Oceans, Ice Sheets, Adjoints, and AD
+* _DJ4Earth: Oceans, Ice Sheets, Adjoints, and AD_; Sarah Williamson, Patrick Heimbach
