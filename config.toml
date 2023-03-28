@@ -81,7 +81,7 @@ disablePathToLower = true
     url = "/explorer"
 
 [[menu.main]]
-    name "Conferece"
+    name = "Conferece"
     weight = 40
     url = "/conference"
 
