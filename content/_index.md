@@ -50,7 +50,7 @@ For more information on Enzyme, please see:
 
 ## Citing Enzyme
 
-To cite Enzyme, please cite the following two papers (first for Enzyme as a whole, second for GPU+optimizations, and third for AD of all other parallel programs (OpenMP, MPI, Julia Tasks, etc.)):
+To cite Enzyme, please cite the following three papers (first for Enzyme as a whole, second for GPU+optimizations, and third for AD of arbitrary parallel programs):
 
 ```latex
 @inproceedings{NEURIPS2020_9332c513,
