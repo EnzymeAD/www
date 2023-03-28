@@ -27,7 +27,7 @@ int main() {
 By differentiating code after optimization, Enzyme is able to create substantially faster derivatives than existing tools that differentiate programs before optimization.
 
 <div style="padding:2em">
-    <img src="/all_top.png" width="500" align=center>
+<img src="/all_top.png" width="500" align=center>
 </div>
 
 ## Components
