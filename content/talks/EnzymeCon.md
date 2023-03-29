@@ -6,7 +6,7 @@ weight: 25
 ---
 
 <center>
-<img src="/enzymecon_2023_group.jpg">
+<img style="padding-top: 32px" src="/enzymecon_2023_group.jpg">
 </center>
 
 ## About
