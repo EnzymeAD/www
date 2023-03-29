@@ -1,9 +1,13 @@
 ---
 title: "Enzyme Conference 2023"
-date: 2019-11-29T15:26:15Z
+date: 2023-03-29T15:26:15Z
 draft: false
 weight: 25
 ---
+
+<center>
+<img src="/enzymecon_2023_group.jpg">
+</center>
 
 ## About
 
