@@ -39,7 +39,7 @@ clang -Xclang -load -Xclang /path/to/ClangEnzyme-VERSION.so code.c
 `
 
 On LLVM 13 and above, the new pass manager is the default. If you would like to continue to use the old pass manager, you will also need to provide
-either `-fno-experimental-new-pass-manager` on versions <= 14, or `-flegacy-pass-manager` on LLVM 15. LLVM 16 and above dropped support for the legacy pass
+either `-fno-experimental-new-pass-manager` on versions below 14, or `-flegacy-pass-manager` on LLVM 14 or 15. LLVM 16 and above dropped support for the legacy pass
 manager entirely.
 
 To use the new pass manager, the following command line args are required for Clang:
