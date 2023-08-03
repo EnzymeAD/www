@@ -41,7 +41,8 @@ printf("f(x) = %f, f'(x) = %f", f(x), df_dx);
 // prints f(x) = 25.000000, f'(x) = 10.000000
 ```
 
-So, we first tell enzyme which function we want to differentiate and then pass arguments the arguments following `enzyme_dup` are telling enzyme where to evaluate the derivative and how much to scale the derivative (we pick `dx = 1.0` to have unit scale). 
+The first argument tells enzyme which function we want to differentiate, and the subsequent 
+arguments describe where to evaluate the derivatve and in what "direction".
 
 Link to example: https://fwd.gymni.ch/yeLDzF
 
@@ -196,4 +197,81 @@ printf("z = %f, mu.x = %f, mu.y = %f\n", z, mu.x, mu.y);
 Link to example: https://fwd.gymni.ch/sfY5uu
 
 
+### Function Templates
 
+Function templates are treated much the same way as regular functions, except
+we need to explicitly include the template arguments when passing the function to
+enzyme. For example, if we had the following definition:
+
+```cpp
+template < typename T >
+void f(T x, T y, T & output) { output = x * y + 1.0 / y; }
+```
+
+Then the first argument looks like
+
+```cpp
+__enzyme_fwddiff<void>((void*)f<double>, enzyme_dup, x, dx, 
+                                         enzyme_dup, y, dy, 
+                                         enzyme_dupnoneed, &z, &dz);
+```
+
+Link to example: https://fwd.gymni.ch/BOjhY4
+
+
+## Member Functions
+
+Differentiating member functions with Enzyme is a little bit trickier, since a member
+function in C++ is effectively a function with an implicitly passed argument (the `this` pointer).
+This means that if we have an object with a member function
+
+```cpp
+struct MyObject {
+    double f(double y) { return x * y + 1.0 / y; }
+    double x;
+};
+```
+
+we can't pass `&MyObject::f` directly to `__enzyme_fwddiff(...)`. Instead, what
+we can do is write a free function that calls the desired member function:
+
+```cpp
+double wrapper(MyObject obj, double y) {
+    return obj.f(y);
+}
+```
+
+and pass _that_ to enzyme:
+
+```cpp
+double dfdy = __enzyme_fwddiff<double>((void*)wrapper, enzyme_const, obj, 
+                                                       enzyme_dup, y, dy);
+printf("dfdy = %f\n", dfdy);
+// prints dfdy = 5.500000
+```
+
+A more general implementation of the wrapper function (that works with
+different objects and argument types) is given below:
+
+```cpp
+template < typename T, typename ... arg_types >
+auto wrapper(T obj, arg_types && ... args) {
+    return obj.f(args ... );
+}
+
+...
+
+double dfdy = __enzyme_fwddiff<double>((void*)wrapper<MyObject, double>, 
+        enzyme_const, obj, 
+        enzyme_dup, &y, &dy);
+printf("dfdy = %f\n", dfdy);
+// prints dfdy = 5.500000
+```
+
+> Question: why do `y` and `dy` now have `&` in front when being passed to `__enzyme_fwddiff`?
+
+When passing information to `__enzyme_autodiff`, `__enzyme_fwddiff`:
+- if the differentiated function takes an argument by value, then we pass it to enzyme by value
+- if the differentiated function takes an argument by pointer, reference or rvalue-ref, then we pass it to enzyme by pointer
+
+Link to example: https://fwd.gymni.ch/qNOtQN
