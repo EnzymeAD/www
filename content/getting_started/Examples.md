@@ -275,3 +275,159 @@ When passing information to `__enzyme_autodiff`, `__enzyme_fwddiff`:
 - if the differentiated function takes an argument by pointer, reference or rvalue-ref, then we pass it to enzyme by pointer
 
 Link to example: https://fwd.gymni.ch/qNOtQN
+
+
+
+If we want to differentiate with respect to the data members of the object (`x` in this case), we can annotate the object argument as `enzyme_dup`:
+
+```cpp
+MyObject dobj{2.0};
+double dfdx = __enzyme_fwddiff<double>((void*)wrapper<MyObject, double>, 
+        enzyme_dup, obj, dobj 
+        enzyme_const, &y);
+printf("dfdx = %f\n", dfdx);
+```
+
+Link to example: https://fwd.gymni.ch/RgVcj5
+
+
+
+## Functors and Lambda Functions
+
+Functors are C++ objects that implement an `operator()` member, so they can be invoked like functions. Our previous example could have been implemented in the following way instead
+
+```cpp
+struct MyObject {
+    double operator()(double y) const { return x * y + 1.0 / y; }
+    double x;
+};
+
+double wrapper(const MyObject & f, double y) {  return f(y); }
+
+...
+    
+double dfdy = __enzyme_fwddiff<double>((void*)(wrapper<MyObject, double>), 
+    enzyme_const, (void*)&obj,
+    enzyme_dup, &y, &dy);
+printf("dfdy = %f\n", dfdy);
+// prints dfdy = 0.750000
+```
+
+We can see that it is handled in the same way as regular member functions (passed to enzyme through a wrapper class).
+
+--------
+
+Lambda functions are another common C++ idiom for expressing function definitions in-line:
+
+```cpp
+auto f = [](double x, double y) { return x * y + 1.0 / y; };
+```
+
+Behind the scenes, the compiler expands the definitions of the lambdas above into functor objects
+
+```cpp
+// what the compiler "sees" when we type 
+// auto f = [](double x, double y) { return x * y + 1.0 / y; };
+
+class __lambda_f {
+  public: 
+    inline /*constexpr */ double operator()(double x, double y) const {
+      return (x * y) + (1.0 / y);
+    }
+    
+    using retType_f = double (*)(double, double);
+    inline constexpr operator retType_f () const noexcept {
+      return __invoke;
+    };
+    
+    private: 
+    static inline /*constexpr */ double __invoke(double x, double y) {
+      return __lambda_f{}.operator()(x, y);
+    }    
+};
+
+__lambda_f f = __lambda_f{};
+```
+
+This means there are a few ways to differentiate this kind of lambda function:
+
+1. Passing directly to Enzyme
+
+   ```cpp
+   double dfdx = __enzyme_fwddiff<double>((void*)+f, 
+     enzyme_dup, x, dx,
+     enzyme_const, y);
+   printf("dfdx = %f\n", dfdx);
+   // dfdx = 6.200000
+   ```
+
+   Note: since `f` doesn't capture anything, it can implicitly convert to a function pointer, which Enzyme can handle directly. The weird `+f` in the first argument is a rarely-used unary operator that makes `f` convert to a function pointer.
+
+2. Using the member function wrapper from above
+   ```cpp
+   double dfdy = __enzyme_fwddiff<double>((void*)(wrapper<decltype(f), double, double>), 
+           enzyme_const, (void*)&f,
+           enzyme_const, &x,
+           enzyme_dup, &y, &dy);
+   printf("dfdy = %f\n", dfdy);
+   // dfdy = 0.750000
+   ```
+
+   Note: the lambda is explicitly cast to `(void*)` to suppress a compilation error. This error arises because, regularly, C++ has no way to specialize an `extern` template like `__enzyme_fwddiff(...)` using a type in a local scope (i.e. the lambda function), but Enzyme does not have this limitation.
+
+3. Using a similar wrapper with non-type template parameter (requires C++20)
+
+   ```cpp
+   // C++20 or later
+   template < auto obj, typename ... arg_types >
+   auto wrapper(arg_types && ... args) {
+       return obj(args ... );
+   }
+   
+   ...
+   
+   double dfdy = __enzyme_fwddiff<double>((void*)(wrapper<f, double, double>), 
+       enzyme_const, &x,
+       enzyme_dup, &y, &dy);
+   printf("dfdy = %f\n", dfdy);
+   // dfdy = 0.750000
+   ```
+
+
+
+Link to examples: https://fwd.gymni.ch/tSRmyq
+
+------
+
+Instead, if a lambda function captures variables from its surrounding scope
+
+```cpp
+double x = 2.0;
+auto f = [x](double y) { return x * y + 1.0 / y; };
+```
+
+then the compiler-generated functor object for the lambda expression is slightly different:
+
+```cpp
+// what the compiler "sees" when we type 
+// double x = 2.0;
+// auto f = [x](double y) { return x * y + 1.0 / y; };
+
+class __lambda_f  {
+ public: 
+  inline /*constexpr */ double operator()(double y) const {
+    return (x * y) + (1.0 / y);
+  }
+    
+  __lambda_f(double & _x) : x{_x}{}
+    
+ private: 
+  double x;
+};
+
+double x = 2.0;
+__lambda_f f = __lambda_f{x};
+```
+
+An important difference is that by capturing, the lambda no longer generates the `static __invoke()` method or the implicit conversion to a function pointer, which means option #1 above (passing directly to Enzyme) will not work.
+
