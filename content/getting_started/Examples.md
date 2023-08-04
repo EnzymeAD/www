@@ -15,10 +15,10 @@ int enzyme_out;
 int enzyme_const;
 
 template < typename return_type, typename ... T >
-extern return_type __enzyme_fwddiff(void*, T ... );
+return_type __enzyme_fwddiff(void*, T ... );
 
 template < typename return_type, typename ... T >
-extern return_type __enzyme_autodiff(void*, T ... );
+return_type __enzyme_autodiff(void*, T ... );
 ```
 
 
@@ -44,7 +44,7 @@ printf("f(x) = %f, f'(x) = %f", f(x), df_dx);
 The first argument tells enzyme which function we want to differentiate, and the subsequent 
 arguments describe where to evaluate the derivatve and in what "direction".
 
-Link to example: https://fwd.gymni.ch/yeLDzF
+Link to example: https://fwd.gymni.ch/Hx6hwt
 
 --------
 
@@ -111,7 +111,7 @@ There are two approaches:
 
 Option 1 has the benefit of flexibility-- we can choose to turn differentiation with respect to certain variables on or off at runtime. Option 2 hard codes which derivatives can be computed, which narrows scope and potentially improves performance. The appropriate choice will depend on the specific needs of your project.
 
-Link to example: https://fwd.gymni.ch/xoTj9R
+Link to example: https://fwd.gymni.ch/OJMdAx
 
 #### Reverse Mode
 
@@ -133,7 +133,7 @@ The value returned by `__enzyme_autodiff` is the concatenation of the different 
 
 > Note: it may be tempting to store the outputs in a `std::tuple< double, double >`, but the memory layout of `std::tuple` is implementation defined (e.g. some compilers implement `std::tuple<T, U, V>` with `V` first, `U` second, and `T` last). So, please don't store the outputs of `__enzyme_autodiff` in a `std::tuple`!
 
-Link to example: https://fwd.gymni.ch/gPPXUg
+Link to example: https://fwd.gymni.ch/HMFTsY
 
 ## Free Functions: Return-By-Reference
 
@@ -170,7 +170,7 @@ printf("f(x,y) = %f, df = %f\n", z, dz);
 
 Note: the by-reference arguments of the function are passed to `__enzyme_fwddiff` by address. 
 
-Link to example: https://fwd.gymni.ch/Uxo2JG
+Link to example: https://fwd.gymni.ch/BtpzAA
 
 #### Reverse Mode
 
@@ -194,7 +194,7 @@ printf("z = %f, mu.x = %f, mu.y = %f\n", z, mu.x, mu.y);
 #endif
 ```
 
-Link to example: https://fwd.gymni.ch/sfY5uu
+Link to example: https://fwd.gymni.ch/eYmIzw
 
 
 ### Function Templates
@@ -216,7 +216,7 @@ __enzyme_fwddiff<void>((void*)f<double>, enzyme_dup, x, dx,
                                          enzyme_dupnoneed, &z, &dz);
 ```
 
-Link to example: https://fwd.gymni.ch/BOjhY4
+Link to example: https://fwd.gymni.ch/WJVVRt
 
 
 ## Member Functions
@@ -274,7 +274,7 @@ When passing information to `__enzyme_autodiff`, `__enzyme_fwddiff`:
 - if the differentiated function takes an argument by value, then we pass it to enzyme by value
 - if the differentiated function takes an argument by pointer, reference or rvalue-ref, then we pass it to enzyme by pointer
 
-Link to example: https://fwd.gymni.ch/qNOtQN
+Link to example: https://fwd.gymni.ch/y0scib
 
 
 
@@ -288,7 +288,7 @@ double dfdx = __enzyme_fwddiff<double>((void*)wrapper<MyObject, double>,
 printf("dfdx = %f\n", dfdx);
 ```
 
-Link to example: https://fwd.gymni.ch/RgVcj5
+Link to example: https://fwd.gymni.ch/wlC87F
 
 
 
@@ -395,7 +395,7 @@ This means there are a few ways to differentiate this kind of lambda function:
 
 
 
-Link to examples: https://fwd.gymni.ch/tSRmyq
+Link to examples: https://fwd.gymni.ch/wkgeoL
 
 ------
 
