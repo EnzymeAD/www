@@ -250,6 +250,11 @@ printf("dfdy = %f\n", dfdy);
 // prints dfdy = 5.500000
 ```
 
+> Note: if the member function belongs to a class or struct with no member variables,
+it may be optimized away at the call site, which disrupts the argument ordering and
+leads to an error. In this case (objects without member variables), 
+the arguments `enzyme_const, obj` can be omitted from the enzyme call.
+
 A more general implementation of the wrapper function (that works with
 different objects and argument types) is given below:
 
