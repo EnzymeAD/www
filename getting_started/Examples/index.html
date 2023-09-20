@@ -112,7 +112,9 @@ we can do is write a free function that calls the desired member function:</p><d
                                                        <span class=n>enzyme_dup</span><span class=p>,</span> <span class=n>y</span><span class=p>,</span> <span class=n>dy</span><span class=p>);</span>
 <span class=n>printf</span><span class=p>(</span><span class=s>&#34;dfdy = %f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>dfdy</span><span class=p>);</span>
 <span class=c1>// prints dfdy = 5.500000
-</span></code></pre></div><p>A more general implementation of the wrapper function (that works with
+</span></code></pre></div><blockquote><p>Note: if the member function belongs to a class or struct with no member variables,
+it may be optimized away at the call site, which disrupts the argument ordering and
+leads to an error. See: <a href=https://github.com/EnzymeAD/Enzyme/issues/1388#issuecomment-1728114457>https://github.com/EnzymeAD/Enzyme/issues/1388#issuecomment-1728114457</a> for more information on a workaround.</p></blockquote><p>A more general implementation of the wrapper function (that works with
 different objects and argument types) is given below:</p><div class=highlight><pre class=chroma><code class=language-cpp data-lang=cpp><span class=k>template</span> <span class=o>&lt;</span> <span class=k>typename</span> <span class=n>T</span><span class=p>,</span> <span class=k>typename</span> <span class=p>...</span> <span class=n>arg_types</span> <span class=o>&gt;</span>
 <span class=k>auto</span> <span class=n>wrapper</span><span class=p>(</span><span class=n>T</span> <span class=n>obj</span><span class=p>,</span> <span class=n>arg_types</span> <span class=o>&amp;&amp;</span> <span class=p>...</span> <span class=n>args</span><span class=p>)</span> <span class=p>{</span>
     <span class=k>return</span> <span class=n>obj</span><span class=p>.</span><span class=n>f</span><span class=p>(</span><span class=n>args</span> <span class=p>...</span> <span class=p>);</span>
