@@ -13,7 +13,7 @@ However, ClangEnzyme can only differentiate one compilation unit at a time and w
 in other compilation units (generally other .c or .cpp files). In these cases we recommend the use of LLDEnzyme in combination with LTO.
 Finally, for full control you can also compile your c/c++ project down to LLVM-IR and pass it directly to LLVMEnzyme, see the example below.
 
-An example for using LLDEnzyme as part of CMake is available [here](https://github.com/EnzymeAD/CMake-Template/blob/main/CMakeLists.txt).
+An example for using LLDEnzyme as part of CMake is available [here](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/test_find_package/CMakeLists.txt).
 Examples for using ClangEnzyme or LLVMEnzyme without CMake are given below, but please keep in mind that the plugin infrastructure and syntax changed a few times 
 and will generally depend on your LLVM Version. Please open an issue if you encounter issues (and please extend this section [here](https://github.com/EnzymeAD/www) if you have time!)
 
