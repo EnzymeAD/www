@@ -48,7 +48,9 @@ if you have time!)</p><h2 id=generating-llvm>Generating LLVM&nbsp;<a class=headl
 <span class=p>...</span>
 </code></pre></div><h2 id=performing-ad-enzyme>Performing AD Enzyme&nbsp;<a class=headline-hash href=#performing-ad-enzyme>¶</a></h2><p>We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that <code>opt</code> should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM&rsquo;s plugin infrasture. Please see
 <a href=/getting_started/Installation>the installation guide</a>
-for more information on how to resolve this.</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>opt input.ll -load<span class=o>=</span>/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-&lt;VERSION&gt;.so -enzyme -o output.ll -S
+for more information on how to resolve this. For LLVM 13 or a higher version, please see
+<a href=/getting_started/Faq/>FAQ</a>
+.</p><div class=highlight><pre class=chroma><code class=language-sh data-lang=sh>opt input.ll -load<span class=o>=</span>/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-&lt;VERSION&gt;.so -enzyme -o output.ll -S
 </code></pre></div><p>Taking a look at <code>output.ll</code>, we find the following:</p><div class=highlight><pre class=chroma><code class=language-llvm data-lang=llvm><span class=c>; output.ll
 </span><span class=c></span><span class=k>define</span> <span class=k>internal</span> <span class=p>{</span> <span class=kt>double</span> <span class=p>}</span> <span class=vg>@diffesquare</span><span class=p>(</span><span class=kt>double</span> <span class=nv>%x</span><span class=p>,</span> <span class=kt>double</span> <span class=nv>%differeturn</span><span class=p>)</span> <span class=vg>#0</span> <span class=p>{</span>
 <span class=nl>entry:</span>
