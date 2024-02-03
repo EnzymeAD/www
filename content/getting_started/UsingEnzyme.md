@@ -137,13 +137,13 @@ We can then compile this to a final binary as follows:
 ```sh
 clang output_opt.ll -o a.exe
 ```
-## Performing AD Enzyme (the easy way)
 
 For ease, we could combine the final optimization and bianry execution into one command as follows.
 ```sh
 clang output.ll -O3 -o a.exe
 ```
 
+## Performing AD Enzyme (the easy way)
 Moreover, using Enzyme's clang plugin, we could automate the entire AD and compilation in a single command. Using the clang plugin should be done by default as it improves the user experience as well as various default performance options. However, the example above is still useful to understand how Enzyme works on LLVM.
 
 ```sh
