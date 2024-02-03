@@ -154,7 +154,7 @@ When compiling multiple files together, as it is typically done in larger projec
 ```sh
 clang -c -flto file1.c -O2 -o file1.o
 clang -c -flto file2.c -O2 -o file2.o
-clang  -fuse-ld=lld -flto file1.o file2.o -O2 -o a.exe -Wl,--load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLDEnzyme-<VERSION>.so
+clang -fuse-ld=lld -flto file1.o file2.o -O2 -o a.exe -Wl,--load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLDEnzyme-<VERSION>.so
 ```
 
 Note that if using the LLVM plugin, each version of LLVM will have slightly different command line flags to specifying plugins. See [the FAQ](/getting_started/Faq) for more information. If using the clang plugin, the same command should work independently of version.
@@ -181,7 +181,7 @@ The `enzyme-inline` option forcibly inlines all subfunction calls. The `enzyme-i
 
 For LLVM versions before v16 run:
 ```sh
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so  -enzyme -enzyme-inline=1
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1 -enzyme-inline-count=100
 ```
 
