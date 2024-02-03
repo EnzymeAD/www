@@ -186,9 +186,8 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-preopt=1
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-preopt=0
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-preopt=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-preopt=0
 ```
 
 #### Forced Inlining
@@ -203,11 +202,9 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1 -enzyme-inline-count=100
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-inline=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-inline=1 -enzyme-inline-count=100
 ```
-
 
 #### Compressed Bool Cache
 
@@ -220,8 +217,7 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-smallbool=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-smallbool=1
 ```
 
 
@@ -238,8 +234,7 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-loose-types=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-loose-types=1
 ```
 
 
@@ -254,8 +249,7 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-emptyfn-inactive=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-emptyfn-inactive=1
 ```
 
 
@@ -270,8 +264,7 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-globals-default-inactive=1
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-globals-default-inactive=1
 ```
 
 
@@ -304,10 +297,10 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-print
 ```
 
+For either version you will see and output like the following:
 ```
 prefn:
 
@@ -330,10 +323,10 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-activity
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-print-activity
 ```
 
+For either version you will see and output like the following:
 ```
 in new function diffesquare nonconstant arg double %0
  VALUE nonconst from arg nonconst double %x
@@ -357,10 +350,10 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 
 For LLVM versions at v16 and newer:
 ```sh
-TODO
-$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-type
+$ opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so --passes=enzyme -enzyme-print-type
 ```
 
+For either version you will see and output like the following:
 ```
 analyzing function square
  + knowndata: double %x : {[-1]:Float@double} - {}
