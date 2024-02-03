@@ -149,6 +149,14 @@ Moreover, using Enzyme's clang plugin, we could automate the entire AD and compi
 clang test.c -fplugin=/path/to/Enzyme/enzyme/build/Enzyme/ClangEnzyme-<VERSION>.so -o a.exe
 ```
 
+When compiling multiple files together, as it is typically done in larger projects, e.g. with a Makefile, one would do something like
+
+```sh
+clang -c -flto file1.c -O2 -o file1.o
+clang -c -flto file2.c -O2 -o file2.o
+clang  -fuse-ld=lld -flto file1.o file2.o -O2 -o a.exe -Wl,--load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLDEnzyme-<VERSION>.so
+```
+
 Note that if using the LLVM plugin, each version of LLVM will have slightly different command line flags to specifying plugins. See [the FAQ](/getting_started/Faq) for more information. If using the clang plugin, the same command should work independently of version.
 
 ## Advanced options
