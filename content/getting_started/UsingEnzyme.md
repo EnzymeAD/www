@@ -64,7 +64,7 @@ entry:
 ...
 ```
 
-## Performing AD Enzyme
+## Performing AD Enzyme (the gory details)
 We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that `opt` should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM's plugin infrasture. Please see [the installation guide](/getting_started/Installation) for more information on how to resolve this.
 
 At version v16, LLVM changed the CLI syntax for invoking the optimization passes. Hence the following boxes contain two options. For LLVM versions before v16 run:
@@ -137,6 +137,7 @@ We can then compile this to a final binary as follows:
 ```sh
 clang output_opt.ll -o a.exe
 ```
+## Performing AD Enzyme (the easy way)
 
 For ease, we could combine the final optimization and bianry execution into one command as follows.
 ```sh
