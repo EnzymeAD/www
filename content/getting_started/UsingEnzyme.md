@@ -150,8 +150,16 @@ Moreover, using Enzyme's clang plugin, we could automate the entire AD and compi
 clang test.c -fplugin=/path/to/Enzyme/enzyme/build/Enzyme/ClangEnzyme-<VERSION>.so -o a.exe
 ```
 
-When compiling multiple files together, as it is typically done in larger projects, e.g. with a Makefile, one would do something like
+When compiling multiple files together, as it is typically done in larger projects, e.g. with a Makefile, one would do something like the following.
 
+For LLVM versions before v16:
+```sh
+clang -c -flto file1.c -O2 -o file1.o
+clang -c -flto file2.c -O2 -o file2.o
+clang -fuse-ld=lld -flto file1.o file2.o -O2 -o a.exe -Wl,-mllvm=-load=/path/to/Enzyme/enzyme/build/Enzyme/LLDEnzyme-<VERSION>.so
+```
+
+For LLVM versions at v16 and newer:
 ```sh
 clang -c -flto file1.c -O2 -o file1.o
 clang -c -flto file2.c -O2 -o file2.o
@@ -176,6 +184,13 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-preopt=0
 ```
 
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-preopt=1
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-preopt=0
+```
+
 #### Forced Inlining
 
 The `enzyme-inline` option forcibly inlines all subfunction calls. The `enzyme-inline-count` option limits the number of calls inlined by this utility.
@@ -186,6 +201,14 @@ $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1 -enzyme-inline-count=100
 ```
 
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-inline=1 -enzyme-inline-count=100
+```
+
+
 #### Compressed Bool Cache
 
 The `enzyme-smallbool` option allows Enzyme's cache to store 8 boolean (i1) values inside a single byte rather than one value per byte.
@@ -195,6 +218,13 @@ For LLVM versions before v16 run:
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-smallbool=1
 ```
 
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-smallbool=1
+```
+
+
 ### Semantic options
 
 #### Loose type analysis
@@ -203,6 +233,12 @@ The `enzyme-loose-types` option tells Enzyme to make an educated guess about the
 
 For LLVM versions before v16 run:
 ```sh
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-loose-types=1
+```
+
+For LLVM versions at v16 and newer:
+```sh
+TODO
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-loose-types=1
 ```
 
@@ -216,6 +252,13 @@ For LLVM versions before v16 run:
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-emptyfn-inactive=1
 ```
 
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-emptyfn-inactive=1
+```
+
+
 #### Assume inactivity of unmarked globals
 
 The `enzyme-globals-default-inactive` option tells activity analysis to assume that global variables without an explicitly defined shadow global are assumed to be inactive. Like `enzyme_emptyfnconst`, this option should be used carefully as it may result in incorrect behavior if it is used to incorrectly assume that a global variable doesn't contain data used in a derivative computation.
@@ -225,7 +268,14 @@ For LLVM versions before v16 run:
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-globals-default-inactive=1
 ```
 
-#### Cache behavior
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-globals-default-inactive=1
+```
+
+
+#### Cache behavior (this does not appear to be available in more recent versions of Enzyme)
 
 The `enzyme-cache-never` option tells the cache to recompute all load values, even if alias analysis isn't able to prove the legality of such a recomputation. This may improve performance but is likely to result in incorrect derivatives being produced as this is not generally true.
 
@@ -250,6 +300,15 @@ This option prints out functions being differentiated before preprocessing optim
 For LLVM versions before v16 run:
 ```sh
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print
+```
+
+For LLVM versions at v16 and newer:
+```sh
+TODO
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print
+```
+
+```
 prefn:
 
 ; Function Attrs: norecurse nounwind readnone uwtable
@@ -266,6 +325,12 @@ This option prints out the results of activity analysis as they are being derive
 
 For LLVM versions before v16 run:
 ```sh
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-activity
+```
+
+For LLVM versions at v16 and newer:
+```sh
+TODO
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-activity
 ```
 
@@ -287,6 +352,12 @@ This option prints out the results of type analysis as they are being derived. T
 
 For LLVM versions before v16 run:
 ```sh
+$ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-type
+```
+
+For LLVM versions at v16 and newer:
+```sh
+TODO
 $ opt input.ll -load=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -enzyme -enzyme-print-type
 ```
 
