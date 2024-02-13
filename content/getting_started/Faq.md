@@ -40,6 +40,13 @@ This is typically due to forgetting to include either or both `-fuse-ld=lld` and
 The problem can easily slip in on a project in which multisource is being used and the building system is somewhat complicated. It can be solved simply by making sure that **all** object file rules include the `-flto` argument and that the final linking step includes **both** `-fuse-ld=lld` and `-flto`. 
 Obviously, such final linking step must also include the Enzyme plugin with something like `-Wl,--load-pass-plugin=/path/to/LLDEnzyme-<VERSION>.so`
 
+## Many errors occur, starting with `Failed to load passes from '/path/to/LLDEnzyme-<VERSION>.so'. Request ignored.`
+This means that the Enzyme plugin has not been loaded. There may be various reasons for this to happen, some common ones are
+* typo in the `/path/to/` part
+* plugin (e.g. using `LLDEnzyme` plugin for `Clang` or `LLVM` or some other incorrect combination)
+* shared object not present because its compilation failed or had been deleted
+* the `/path/to` contains shells expansions not honored by the build system, for example `Makefile` may fail to expand `~` but does correctly expland `$(HOME)`
+
 ## Other
 
 If you have an issue not resolved here, please make an issue on [Github](https://github.com/EnzymeAD/Enzyme) and consider making a pull request to this FAQ!
