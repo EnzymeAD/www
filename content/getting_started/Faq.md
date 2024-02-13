@@ -35,6 +35,11 @@ opt input.ll -load-pass-plugin=/path/to/LLVMEnzyme-VERSION.so -passes=enzyme -o 
 
 If you are using CMake, Enzyme exports a special `ClangEnzymeFlags` target which will automatically add the correct flags. See [here](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/test_find_package/CMakeLists.txt#L14) for an example.
 
+## I receive an `__enzime_autodiff` undefined symbol either at runtime or at compile time
+This is typically due to forgetting to include either or both `-fuse-ld=lld` and `-flto` in all the files involved in the creation of the binary.
+The problem can easily slip in on a project in which multisource is being used and the building system is somewhat complicated. It can be solved simply by making sure that **all** object file rules include the `-flto` argument and that the final linking step includes **both** `-fuse-ld=lld` and `-flto`. 
+Obviously, such final linking step must also include the Enzyme plugin with something like `-Wl,--load-pass-plugin=/path/to/LLDEnzyme-<VERSION>.so`
+
 ## Other
 
 If you have an issue not resolved here, please make an issue on [Github](https://github.com/EnzymeAD/Enzyme) and consider making a pull request to this FAQ!
