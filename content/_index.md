@@ -21,6 +21,7 @@ int main() {
     // Evaluates to 2 * x = 6.28
     double grad_x = __enzyme_autodiff((void*)square, x);
     printf("square'(%f) = %f\n", x,  grad_x);
+    return 1;
 }
 ```
 
