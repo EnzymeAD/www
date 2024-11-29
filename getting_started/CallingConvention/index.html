@@ -16,6 +16,7 @@ Enzyme AD</a></div></h1><p class=description>Enzyme Automatic Differentiation Fr
 <span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;float  d/dx %f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>__enzyme_autodiffFloat</span><span class=p>(</span><span class=n>square</span><span class=o>&lt;</span><span class=kt>float</span><span class=o>&gt;</span><span class=p>,</span> <span class=mf>1.0f</span><span class=p>));</span>
   <span class=n>printf</span><span class=p>(</span><span class=s>&#34;double d/dx %f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>__enzyme_autodiffDouble</span><span class=p>(</span><span class=n>square</span><span class=o>&lt;</span><span class=kt>double</span><span class=o>&gt;</span><span class=p>,</span> <span class=mf>1.0</span><span class=p>));</span>
+  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 <span class=p>}</span>
 </code></pre></div><p>This allows end-library makers to nicely incorporate Enzyme into their workflow through the use of variadic arguments or templates.</p><div class=highlight><pre class=chroma><code class=language-cpp data-lang=cpp><span class=kt>void</span> <span class=nf>__enzyme_autodiff</span><span class=p>(...);</span>
 
@@ -47,6 +48,7 @@ Enzyme AD</a></div></h1><p class=description>Enzyme Automatic Differentiation Fr
                        <span class=n>enzyme_dup</span>  <span class=p>,</span> <span class=n>array</span><span class=p>,</span> <span class=n>d_array</span><span class=p>,</span>
                        <span class=n>enzyme_const</span><span class=p>,</span> <span class=n>size</span><span class=p>,</span>
                        <span class=n>enzyme_out</span>  <span class=p>,</span> <span class=n>mul</span><span class=p>);</span>
+  <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
 <span class=p>}</span>
 </code></pre></div><h3 id=shadow-argument-initialization>Shadow argument initialization&nbsp;<a class=headline-hash href=#shadow-argument-initialization>¶</a></h3><p>Enzyme assumes that shadow arguments passed in are already initialized and have the same structure as the primal values. Running Enzyme&rsquo;s generated gradient will increment the shadow value by the amount of the resultant gradient. As a result, this usually means that you want to zero-initialize the shadow prior to calling the gradient.</p><div class=highlight><pre class=chroma><code class=language-c data-lang=c><span class=kt>double</span>   <span class=n>array</span><span class=p>[</span><span class=mi>10</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span> <span class=p>...</span> <span class=p>};</span>
 <span class=kt>double</span> <span class=n>d_array</span><span class=p>[</span><span class=mi>10</span><span class=p>]</span> <span class=o>=</span> <span class=p>{</span> <span class=mf>0.0</span> <span class=p>};</span>
