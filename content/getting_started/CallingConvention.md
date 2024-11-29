@@ -22,7 +22,7 @@ double __enzyme_autodiffDouble(double (*)(double), double);
 int main() {
   printf("float  d/dx %f\n", __enzyme_autodiffFloat(square<float>, 1.0f));
   printf("double d/dx %f\n", __enzyme_autodiffDouble(square<double>, 1.0));
-  return 1;
+  return 0;
 }
 ```
 
@@ -85,7 +85,7 @@ int main() {
                        enzyme_dup  , array, d_array,
                        enzyme_const, size,
                        enzyme_out  , mul);
-  return 1;
+  return 0;
 }
 ```
 
