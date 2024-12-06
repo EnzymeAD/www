@@ -206,20 +206,6 @@ The `enzyme-globals-default-inactive` option tells activity analysis to assume t
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-globals-default-inactive=1
 ```
 
-#### Cache behavior
-
-The `enzyme-cache-never` option tells the cache to recompute all load values, even if alias analysis isn't able to prove the legality of such a recomputation. This may improve performance but is likely to result in incorrect derivatives being produced as this is not generally true.
-
-```sh
-$ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-cache-never=1
-```
-
-In contrast, the `enzyme-cache-always` option tells the cache to still cache values that alias analysis and differential use analysis say are not needed to be cached (perhaps being legal to recompute instead). This will usually decrease performance and is intended for developers in order to catch caching bugs.
-
-```sh
-$ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-cache-always=1
-```
-
 ### Debugging options for developers
 
 #### enzyme-print
