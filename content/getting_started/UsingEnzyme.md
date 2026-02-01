@@ -11,7 +11,7 @@ Enzyme supports differentiating C/C++ code through ClangEnzyme and LLDEnzyme as 
 Clang gives our plugin more flexibility in adding and ordering optimization passes than LLD and therefore using ClangEnzyme could result in better performance than LLDEnzyme.
 However, ClangEnzyme can only differentiate one compilation unit at a time and will therefore fail if the function which you try to differentiate calls functions
 in other compilation units (generally other .c or .cpp files). In these cases we recommend the use of LLDEnzyme in combination with LTO.
-Finally, for full control you can also compile your c/c++ project down to LLVM-IR and pass it directly to LLVMEnzyme, see the example below.
+Finally, for full control you can also compile your C/C++ project down to LLVM-IR and pass it directly to LLVMEnzyme, see the example below.
 
 An example for using LLDEnzyme as part of CMake is available [here](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/test_find_package/CMakeLists.txt).
 Examples for using ClangEnzyme or LLVMEnzyme without CMake are given below, but please keep in mind that the plugin infrastructure and syntax changed a few times 
@@ -20,7 +20,7 @@ and will generally depend on your LLVM Version. Please open an issue if you enco
 
 ## Generating LLVM
 
-To begin, let's create a simple code `test.c` we want to differentiate. Enzyme will replace any calls to functions whose names contain "\_\_enzyme\_autodiff" with calls to the corresponding For now, let's ignore the details of Enzyme's calling convention/ABI which are described in detail [here](/getting_started/CallingConvention)
+To begin, let's create a simple code `test.c` we want to differentiate. Enzyme will replace any calls to functions whose names contain `__enzyme_autodiff` with calls to the corresponding For now, let's ignore the details of Enzyme's calling convention/ABI which are described in detail [here](/getting_started/CallingConvention)
 
 ```c
 // test.c
@@ -66,7 +66,7 @@ entry:
 ```
 
 ## Performing AD Enzyme
-We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that `opt` should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM's plugin infrasture. Please see [the installation guide](/Installation) for more information on how to resolve this.
+We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that `opt` should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM's plugin infrastructure. Please see [the installation guide](/Installation) for more information on how to resolve this.
 
 ```sh
 opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -passes=enzyme -o output.ll -S
@@ -134,7 +134,7 @@ We can then compile this to a final binary as follows:
 clang output_opt.ll -o a.exe
 ```
 
-For ease, we could combine the final optimization and bianry execution into one command as follows.
+For ease, we could combine the final optimization and binary execution into one command as follows.
 ```sh
 clang output.ll -O3 -o a.exe
 ```
@@ -155,7 +155,7 @@ Enzyme has several advanced options that may be of interest.
 
 #### Disabling Preprocessing
 
-The `enzyme-preopt` option disables the preprocessing optimizations run by the Enzyme pass, except for the absolute minimum neccessary.
+The `enzyme-preopt` option disables the preprocessing optimizations run by the Enzyme pass, except for the absolute minimum necessary.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so -passes=enzyme -enzyme-preopt=1
@@ -164,7 +164,7 @@ $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so -passes=enzyme -enzym
 
 #### Forced Inlining
 
-The `enzyme-inline` option forcibly inlines all subfunction calls. The `enzyme-inline-count` option limits the number of calls inlined by this utility.
+The `enzyme-inline` option forcibly inlines all sub-function calls. The `enzyme-inline-count` option limits the number of calls inlined by this utility.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so -passes=enzyme -enzyme-inline=1
@@ -226,7 +226,7 @@ entry:
 
 #### enzyme-print-activity
 
-This option prints out the results of activity analysis as they are being derived. The output is somewaht specific to the analysis pass and is only intended for developers.
+This option prints out the results of activity analysis as they are being derived. The output is somewhat specific to the analysis pass and is only intended for developers.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-print-activity
@@ -243,7 +243,7 @@ couldnt decide nonconstants(3):  %mul = fmul double %x, %x
 
 #### enzyme-print-type
 
-This option prints out the results of type analysis as they are being derived. The output is somewaht specific to the analysis pass and is only intended for developers.
+This option prints out the results of type analysis as they are being derived. The output is somewhat specific to the analysis pass and is only intended for developers.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-print-type
