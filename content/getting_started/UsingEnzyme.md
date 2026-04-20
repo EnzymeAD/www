@@ -66,7 +66,7 @@ entry:
 ```
 
 ## Performing AD Enzyme
-We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that `opt` should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM's plugin infrasture. Please see [the installation guide](/Installation) for more information on how to resolve this.
+We can now run Enzyme to differentiate our LLVM IR. The following command will load Enzyme and run the differentiation transformation pass. Note that `opt` should be the path to whatever opt was creating by the LLVM you built Enzyme against. If you see a segfault when trying to run opt, this is likely an issue in LLVM's plugin infrastructure. Please see [the installation guide](/Installation) for more information on how to resolve this.
 
 ```sh
 opt input.ll --load-pass-plugin=/path/to/Enzyme/enzyme/build/Enzyme/LLVMEnzyme-<VERSION>.so -passes=enzyme -o output.ll -S
@@ -134,7 +134,7 @@ We can then compile this to a final binary as follows:
 clang output_opt.ll -o a.exe
 ```
 
-For ease, we could combine the final optimization and bianry execution into one command as follows.
+For ease, we could combine the final optimization and binary execution into one command as follows.
 ```sh
 clang output.ll -O3 -o a.exe
 ```
@@ -155,7 +155,7 @@ Enzyme has several advanced options that may be of interest.
 
 #### Disabling Preprocessing
 
-The `enzyme-preopt` option disables the preprocessing optimizations run by the Enzyme pass, except for the absolute minimum neccessary.
+The `enzyme-preopt` option disables the preprocessing optimizations run by the Enzyme pass, except for the absolute minimum necessary.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so -passes=enzyme -enzyme-preopt=1
@@ -226,7 +226,7 @@ entry:
 
 #### enzyme-print-activity
 
-This option prints out the results of activity analysis as they are being derived. The output is somewaht specific to the analysis pass and is only intended for developers.
+This option prints out the results of activity analysis as they are being derived. The output is somewhat specific to the analysis pass and is only intended for developers.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-print-activity
@@ -243,7 +243,7 @@ couldnt decide nonconstants(3):  %mul = fmul double %x, %x
 
 #### enzyme-print-type
 
-This option prints out the results of type analysis as they are being derived. The output is somewaht specific to the analysis pass and is only intended for developers.
+This option prints out the results of type analysis as they are being derived. The output is somewhat specific to the analysis pass and is only intended for developers.
 
 ```sh
 $ opt input.ll -load-pass-plugin=./Enzyme/LLVMEnzyme-17.so.so -passes=enzyme -enzyme-print-type

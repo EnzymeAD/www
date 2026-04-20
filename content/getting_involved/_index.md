@@ -9,7 +9,7 @@ The Enzyme community aims to be open and welcoming, and as an LLVM Incubator Pro
 
 * Join our [mailing list](https://groups.google.com/d/forum/enzyme-dev)
 * Join our weekly [open-design call](https://mit.zoom.us/j/96000853439). See the [Enzyme Calendar](https://calendar.google.com/calendar/u/0?cid=cjQ5cjFya2V1anVycnE0ODR2MmFqbmZpZm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) for details
-* Participate in development on [Github](https://github.com/EnzymeAD/Enzyme)
+* Participate in development on [GitHub](https://github.com/EnzymeAD/Enzyme)
 
 
 <style>
