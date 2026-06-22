@@ -97,4 +97,4 @@ series = {SC '22}
 }
 ```
 
-The original Enzyme is also avaiable as a preprint on [arXiv](https://arxiv.org/pdf/2010.01709.pdf).
+The original Enzyme is also available as a preprint on [arXiv](https://arxiv.org/pdf/2010.01709.pdf).

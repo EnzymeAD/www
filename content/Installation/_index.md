@@ -48,7 +48,7 @@ cd /path/to/Enzyme/enzyme
 mkdir build && cd build
 ```
 
-From here, we can configure Enzyme via cmake, then build. Again, for ease we use Ninja (requiring the ninja build to to be installed). One can use make by omitting `-G Ninja` and running make instead of ninja.
+From here, we can configure Enzyme via CMake, then build. Again, for ease we use Ninja (requiring the ninja build to to be installed). One can use make by omitting `-G Ninja` and running make instead of ninja.
 
 ```sh
 cmake -G Ninja .. -DLLVM_DIR=/path/to/llvm/lib/cmake/llvm
@@ -79,7 +79,7 @@ Finally, we can also run Enzyme's benchmarking suite, which is composed of the r
 ninja bench-enzyme
 ````
 
-If you run Enzyme tests and get an error like `/bin/sh: 1: ../../: Permission denied` or ` ../../ not found`, it's likely that cmake wasn't able to find your version of llvm-lit, LLVM's unit tester. This often happens if you use the default Ubuntu install of LLVM as they stopped including it in their packaging. To remedy, find lit.py or lit or llvm-lit on your system and add the following flag to cmake:
+If you run Enzyme tests and get an error like `/bin/sh: 1: ../../: Permission denied` or ` ../../ not found`, it's likely that CMake wasn't able to find your version of llvm-lit, LLVM's unit tester. This often happens if you use the default Ubuntu install of LLVM as they stopped including it in their packaging. To remedy, find lit.py or lit or llvm-lit on your system and add the following flag to CMake:
 ```sh
 cmake .. -DLLVM_EXTERNAL_LIT=/path/to/lit/lit.py
 ```
