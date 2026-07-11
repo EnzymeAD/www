@@ -234,7 +234,7 @@ void grad_iter(int nTimeSteps, float* src, float* dsrc, float* dst, float* ddst)
 template <typename... Args>
 __device__ void* __enzyme_augmentfwd(Args...);
 
-// A function similar to __enzyme_autodiff, except it only calls the revese pass, taking in the tape
+// A function similar to __enzyme_autodiff, except it only calls the reverse pass, taking in the tape
 // as its last argument.
 template <typename... Args>
 __device__ void __enzyme_reverse(Args...);
