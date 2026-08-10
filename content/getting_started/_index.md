@@ -9,4 +9,7 @@ Please see the [Using Enzyme](/getting_started/UsingEnzyme) guide for informatio
 
 Please see the [Calling Convention](/getting_started/CallingConvention) guide for detailed information on Enzyme's calling convention and ABI, as well as how to specify how functions should be differentiated.
 
-Please see the [CUDA Guide](/getting_started/CUDAGuide) guide for information on working with CUDA code.
+Please see the [Fortran guide](/getting_started/FortranGuide) for information on
+using Enzyme in Fortran.
+
+Please see the [CUDA Guide](/getting_started/CUDAGuide) for information on working with CUDA code.
