@@ -5,7 +5,9 @@ draft: false
 weight: 30
 ---
 
-Enzyme can be used in Fortran via its `enzyme` bindings module.
+Enzyme can be used in Fortran via its bindings provided in the
+[`enzyme`](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/Fortran/enzyme.f90)
+module.
 
 ## Note on compilers
 
@@ -17,19 +19,20 @@ IFX Fortran compiler. We strongly recommend using the
 
 ## Running Enzyme from flang
 
-Configuring Enzyme with `-DENZYME_FLANG=ON` builds `FlangEnzyme-<LLVM version>`, a
-pass plugin that flang can load with `-fpass-plugin`. Enzyme then runs as part of
-the flang optimization pipeline, so a single command differentiates and compiles:
+Configuring Enzyme with `-DENZYME_FLANG=ON` builds `FlangEnzyme-<LLVM version>`,
+a pass plugin that flang can load with `-fpass-plugin`. Enzyme then runs as part
+of the flang optimization pipeline, so a single command differentiates and
+compiles:
 
 ```console
 $ flang -fpass-plugin=/path/to/FlangEnzyme-21.so -I /path/to/enzyme/modules program.f90 -o program
 ```
 
-The `-I` flag points at the directory holding the `enzyme.mod` module file, which is
-built by `-DENZYME_FORTRAN=ON` (see the sections below).
+The `-I` flag points at the directory holding the `enzyme.mod` module file,
+which is built by `-DENZYME_FORTRAN=ON` (see the sections below).
 
-Without the plugin the derivative has to be produced out of line, by emitting LLVM IR
-from flang and running the Enzyme pass over it with `opt`:
+Without the plugin the derivative has to be produced out of line, by emitting
+LLVM IR from flang and running the Enzyme pass over it with `opt`:
 
 ```console
 $ flang -flto -c -I /path/to/enzyme/modules program.f90 -o program.bc
@@ -37,8 +40,9 @@ $ opt -load-pass-plugin=/path/to/LLVMEnzyme-21.so -passes=enzyme program.bc -o p
 $ flang -flto program-enzyme.bc -o program
 ```
 
-Both routes are exercised by the tests in `enzyme/test/Fortran`. The plugin route is
-flang-only; with ifx use the `opt` pipeline above.
+Both routes are exercised by the tests in
+[`enzyme/test/Fortran`](https://github.com/EnzymeAD/Enzyme/tree/main/enzyme/test/Fortran).
+The plugin route is flang-only; with ifx use the `opt` pipeline above.
 
 ## Function hooks for differentiation
 
@@ -64,26 +68,22 @@ then you can compute its derivative with reverse mode with the call
   call enzyme_autodiff(square, x, dx)
 ```
 
-Similarly for
-`enzyme_fwddiff`. Thanks to the implicit interface, arbitrary signatures are
-supported, with the following caveats.
+Similarly for `enzyme_fwddiff`. Thanks to the implicit interface, arbitrary
+signatures are supported, with the following caveats.
 
-> [!NOTE]
-> A limitation of the implicit interfacing is that it only works for arguments
-> that are passed by reference - the default in Fortran. If you want to pass any
-> arguments by value using the `value` attribute then you will need to write an
-> explicit interface block to the function hook yourself.
-
-> [!WARNING]
-> The implicit interfacing approach is not supported by the Intel Fortran
-> compiler ifx when running without optimizations, i.e., running with `-O0`. If
-> you want to use ifx with `-O0` then you will need to write an explicit
-> interface block, even if you are only passing arguments by reference.
-
-> [!WARNING]
-> Differentiation with respect to procedures with assumed shape arrays is not
-> currently supported when compiling with Flang. It should work with ifx,
-> however.
+* Implicit interfacing is that it only works for arguments that are passed by
+  reference, which is the default in Fortran. If you want to pass any arguments
+  by value using the `value` attribute then you will need to write an explicit
+  interface block to the function hook yourself. See the
+  [`square_with_explicit_interface`](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/Fortran/ReverseMode/square_with_explicit_interface.f90)
+  test for an example.
+* The implicit interfacing approach is not supported by the Intel Fortran
+  compiler ifx when running without optimizations, i.e., running with `-O0`. If
+  you want to use ifx with `-O0` then you will need to write an explicit
+  interface block, even if you are only passing arguments by reference.
+* Differentiation with respect to procedures with assumed shape arrays is not
+  currently supported when compiling with Flang. It should work with ifx,
+  however.
 
 ## Activity descriptors
 
@@ -117,14 +117,13 @@ because it requires `enzyme_width` to be passed-by-value as an integer and this
 is not supported by the implicit interfacing approach used for the other
 function hooks. As such, you will need to write your own explicit `interface`
 block to handle the batching. See the Fortran
-[batching test ](../test/Fortran/BatchMode/square_with_explicit_interface.f90)
+[batching test](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/Fortran/BatchMode/square_with_explicit_interface.f90)
 for an example.
 
-> [!NOTE]
-> In C, the batched output is provided using a simple `struct`. The required
-> syntax is different in Fortran - you should instead provide each entry of the
-> output batch individually.
+Notes:
 
-> [!NOTE]
-> You will likely find that batching works more straightforwardly with
-> subroutines than with Fortran functions.
+* In C, the batched output is provided using a simple `struct`. The required
+  syntax is different in Fortran - you should instead provide each entry of the
+  output batch individually.
+* You will likely find that batching works more straightforwardly with
+  subroutines than with Fortran functions.
