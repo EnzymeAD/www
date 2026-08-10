@@ -100,24 +100,31 @@ signatures are supported, with the following caveats.
 We provide bindings for the activity descriptors `enzyme_const`, `enzyme_dup`,
 `enzyme_dupnoneed`, and `enzyme_out`, as well as the descriptors
 `enzyme_scalar`, `enzyme_width`, and `enzyme_vector`. To make use of these in
-your code, import via
+your code, import them from the bindings module and use them in calls to
+function hooks in the same way you would do in C or C++. We can write the
+example of squaring a scalar argument using the `enzyme_dup` activity descriptor
+as follows:
 ```fortran
-use enzyme, only: enzyme_const, enzyme_dup
-```
-and then include them in calls to function hooks as you would in C or C++. For
-example, if you have a subroutine
-```fortran
-  subroutine my_subroutine(n, x, y)
-    integer, intent(in) :: n
-    real, dimension(n), intent(in) :: x
-    real, dimension(n), intent(out) :: y
-    ! ...
-  end subroutine my_subroutine
-```
-then you can make use of activity descriptors like so:
-```fortran
-  call enzyme_autodiff(my_subroutine, enzyme_const, n, &
-                       enzyme_dup, x, dx, enzyme_dup, y, dy
+program main
+  use enzyme, only: enzyme_autodiff, enzyme_dup
+  implicit none
+  real :: x, dx
+
+  x = 3
+  print *, square(x)
+  dx = 0
+  call enzyme_autodiff(square, enzyme_dup, x, dx)
+  print *, dx
+
+contains
+
+  real function square(x)
+    implicit none
+    real, intent(in) :: x
+    square = x**2
+  end function square
+
+end program main
 ```
 
 ## Function hook for batching
