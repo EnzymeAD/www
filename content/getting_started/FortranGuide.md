@@ -51,21 +51,31 @@ hooks using implicit interfaces. Some Fortran compilers disallow procedure names
 starting with an underscore so we rename the function hooks to remove the
 leading double underscore.
 
-To make use of the `enzyme_autodiff` function hook in your code, import via
+To make use of the `enzyme_autodiff` function hook in your code, import it from
+the bindings module and call it as a subroutine or function as appropriate. For
+example, consider the Fortran equivalent of the example of differentiating a
+function that squares a scalar argument in the following code snippet:
 ```fortran
-use enzyme, only: enzyme_autodiff
-```
-and call it as a subroutine or function as appropriate. For example, if you have
-a function
-```fortran
+program main
+  use enzyme, only: enzyme_autodiff
+  implicit none
+  real :: x, dx
+
+  x = 3
+  print *, square(x)
+  dx = 0
+  call enzyme_autodiff(square, x, dx)
+  print *, dx
+
+contains
+
   real function square(x)
+    implicit none
     real, intent(in) :: x
     square = x**2
-  end function
-```
-then you can compute its derivative with reverse mode with the call
-```fortran
-  call enzyme_autodiff(square, x, dx)
+  end function square
+
+end program main
 ```
 
 Similarly for `enzyme_fwddiff`. Thanks to the implicit interface, arbitrary
