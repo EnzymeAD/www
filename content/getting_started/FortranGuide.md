@@ -133,9 +133,63 @@ We do not currently provide bindings for the `__enzyme_batch` function hook
 because it requires `enzyme_width` to be passed-by-value as an integer and this
 is not supported by the implicit interfacing approach used for the other
 function hooks. As such, you will need to write your own explicit `interface`
-block to handle the batching. See the Fortran
-[batching test](https://github.com/EnzymeAD/Enzyme/blob/main/enzyme/test/Fortran/BatchMode/square_with_explicit_interface.f90)
-for an example.
+block to handle the batching. The following code snippet demonstrates how to
+apply batching to the square example considered above:
+```fortran
+module squareBatch
+  implicit none
+  public
+
+  interface
+    subroutine square__enzyme_batch(sr, width_desc, width, &
+                                    vec_desc, x1, x2, x3, x4, y1, y2, y3, y4)
+      implicit none
+      interface
+        subroutine sr_decal(xx, yy)
+          implicit none
+          real, intent(in)  :: xx
+          real, intent(out) :: yy
+        end subroutine sr_decal
+      end interface
+      procedure(sr_decal)        :: sr
+      integer, value, intent(in) :: width_desc
+      integer, value, intent(in) :: width
+      integer, value, intent(in) :: vec_desc
+      real, intent(in)           :: x1, x2, x3, x4
+      real, intent(out)          :: y1, y2, y3, y4
+    end subroutine square__enzyme_batch
+  end interface
+
+contains
+
+  subroutine square(x, y)
+    implicit none
+    real, intent(in)  :: x
+    real, intent(out) :: y
+    y = x ** 2
+  end subroutine square
+
+end module squareBatch
+
+program main
+  use enzyme, only: enzyme_vector, enzyme_width
+  use squareBatch, only: square, square__enzyme_batch
+  implicit none
+  real :: x1, x2, x3, x4
+  real :: y1, y2, y3, y4
+
+  x1 = 23.1
+  x2 = 10.0
+  x3 = 100.0
+  x4 = 3.14
+
+  call square__enzyme_batch(square, enzyme_width, 4, &
+                            enzyme_vector, x1, x2, x3, x4, &
+                            y1, y2, y3, y4)
+
+  print *, y1, y2, y3, y4
+end program main
+```
 
 Notes:
 
